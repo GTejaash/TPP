@@ -1,0 +1,1053 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- 
+    - primary meta tags
+  -->
+  <title>The Placements Park</title>
+  
+
+
+  <!-- 
+    - google font link
+  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;700&display=swap" rel="stylesheet">
+
+  <!-- 
+    - custom css link
+  -->
+  <link rel="stylesheet" href="./assets/css/style.css">
+
+  <!-- 
+    - preload images
+  -->
+  <link rel="preload" as="image" href="./assets/images/hero-bg.jpg">
+  <link rel="preload" as="image" href="./assets/images/hero-slide-1.jpg">
+  <link rel="preload" as="image" href="./assets/images/hero-slide-2.jpg">
+  <link rel="preload" as="image" href="./assets/images/hero-slide-3.jpg">
+
+  
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css"/>
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css"/>
+  <style>
+    
+.clientwrapper {
+  width: 90vw;
+  height: 50vh;
+  display: flex;
+  align-items: center;
+  margin:auto;
+}
+.clientslider {
+  width: 80%;
+  height: 100px;
+  position: relative;
+  background: white;
+  align-items: center;
+  margin: auto;
+  align-items: center;
+  margin: auto;
+  
+  /* box-shadow: 0 10px 20px -10px rgba(0,0,0,0.2); */
+  display: flex;
+  overflow: hidden;
+}
+.clientslide {
+ background-color: black;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  animation: slideshow 60s linear infinite;
+}
+.clientslide img {
+  height: 100px;
+  border: 3px solid white;
+  background: white;
+  padding: 0 30px 0 30px;
+}
+@keyframes slideshow {
+  0% {transform: translateX(0);}
+  100% {transform: translateX(-100%);}
+}
+.clientslider::before, .slider::after {
+  height: 100px;
+  width: 200px;
+  position: absolute;
+  content: "";
+  background: linear-gradient(to right, white 0%, rgba(255,255,255,0) 100%);
+  z-index: 2;
+}
+.clientslider::before {
+  left: 0;
+  top: 0;
+}
+.clientslider::after {
+  right:0;
+  top:0;
+  
+  transform: rotateZ(180deg);
+}
+
+    .your-class {
+      margin: 0 auto;
+      width: 80%;
+    }
+    .cards {
+      background-color: #ccc;
+      height: 150px;
+      text-align: center;
+    }
+</style>
+</head>
+
+<body>
+
+  <!-- 
+    - #HEADER
+  -->
+
+  <header class="header" data-header>
+    <div class="container">
+
+      <a href="#" class="logo">
+        <img src="./assets/2 TPP Logos/Placement Park Logo Inverted.png" width="115" height="auto" alt="Adex home" class="logo-light">
+
+        <img src="./assets/2 TPP Logos/logo.png" width="140" height="auto" alt="Adex home" class="logo-dark">
+      </a>
+
+      <nav class="navbar" data-navbar>
+
+        <div class="navbar-top">
+
+          <button class="nav-close-btn" aria-label="close menu" data-nav-toggler>
+            <ion-icon name="close-outline" aria-hidden="true"></ion-icon>
+          </button>
+        </div>
+
+        <ul class="navbar-list">
+
+          <li>
+            <a href="index.html" class="navbar-link">Home</a>
+          </li>
+
+          <li>
+            <a href="jobseeker.html" class="navbar-link">Job seeker</a>
+          </li>
+
+          <li>
+            <a href="Companies.html" class="navbar-link">Companies</a>
+          </li>
+
+          <li>
+            <a href="crt.html" class="navbar-link">CRT & placements</a>
+          </li>
+
+          <li>
+            <a href="About.html" class="navbar-link">About Us</a>
+          </li>
+
+        </ul>
+
+        <div class="wrapper">
+          <a href="mailto:Sharukh@theplacementpark.com" class="contact-link">Sharukh@theplacementpark.com</a>
+
+          <a href="tel:+919885563355" class="contact-link">+91 9885563355</a>
+        </div>
+
+        <ul class="social-list">
+
+          <li>
+            <a href="#" class="social-link">
+              <ion-icon name="logo-twitter"></ion-icon>
+            </a>
+          </li>
+
+          <li>
+            <a href="#" class="social-link">
+              <ion-icon name="logo-facebook"></ion-icon>
+            </a>
+          </li>
+
+
+          <li>
+            <a href="#" class="social-link">
+              <ion-icon name="logo-instagram"></ion-icon>
+            </a>
+          </li>
+
+          <li>
+            <a href="#" class="social-link">
+              <ion-icon name="logo-whatsapp"></ion-icon>
+            </a>
+          </li>
+
+        </ul>
+
+      </nav>
+
+      <a href="#" class="btn btn-primary">Team Login</a>
+
+      <button class="nav-open-btn" aria-label="open menu" data-nav-toggler>
+        <ion-icon name="menu-outline" aria-hidden="true"></ion-icon>
+      </button>
+
+      <div class="overlay" data-nav-toggler data-overlay></div>
+
+    </div>
+  </header>
+
+
+
+
+
+  <main>
+    <article>
+
+      <!-- 
+        - #HERO
+      -->
+
+      <section class="section hero has-bg-image" aria-label="home"
+        style="background-color:black">
+        <div class="container">
+
+          <div class="hero-content">
+
+            <h1 class="h1 hero-title">The Placement Park <br> Driven to Skill !</h1>
+
+            <p class="hero-text">
+              We’re a creative company that focuses on establishing long-term relationships with customers.
+            </p>
+
+            <div class="btn-wrapper">
+
+              <a href="#" class="btn btn-primary">Explore Now</a>
+
+              <a href="#" class="btn btn-outline">Contact Us</a>
+
+            </div>
+
+          </div>
+
+          <div class="hero-slider" data-slider>
+
+            <div class="slider-inner">
+              <ul class="slider-container" data-slider-container>
+
+                <li class="slider-item">
+
+                  <figure class="img-holder" style="--width: 575; --height: 550;">
+                    <img src="./assets/photos/1.png" width="575" height="550" alt="" class="img-cover">
+                  </figure>
+
+                </li>
+
+                <li class="slider-item">
+
+                  <div class="hero-card">
+                    <figure class="img-holder" style="--width: 575; --height: 550;">
+                      <img src="./assets/photos/2.png" width="575" height="550" alt="hero banner"
+                        class="img-cover">
+                    </figure>
+                  </div>
+
+                </li>
+
+                <li class="slider-item">
+
+                  <figure class="img-holder" style="--width: 575; --height: 550;">
+                    <img src="./assets/photos/3.png" width="575" height="550" alt="" class="img-cover">
+                  </figure>
+
+                </li>
+
+              </ul>
+            </div>
+
+            <button class="slider-btn prev" aria-label="slide to previous" data-slider-prev>
+              <ion-icon name="arrow-back"></ion-icon>
+            </button>
+
+            <button class="slider-btn next" aria-label="slide to next" data-slider-next>
+              <ion-icon name="arrow-forward"></ion-icon>
+            </button>
+
+          </div>
+
+          <script>
+  var slider = document.querySelector('.hero-slider[data-slider]');
+  var sliderContainer = slider.querySelector('[data-slider-container]');
+  var sliderItems = sliderContainer.querySelectorAll('[data-slider-item]');
+  var sliderPrevBtn = slider.querySelector('[data-slider-prev]');
+  var sliderNextBtn = slider.querySelector('[data-slider-next]');
+  var currentSlide = 0;
+  var slideInterval = setInterval(nextSlide, 1000); // set the interval to 5000ms or 5s
+
+  function nextSlide() {
+    sliderItems[currentSlide].classList.remove('active');
+    currentSlide = (currentSlide + 1) % sliderItems.length;
+    sliderItems[currentSlide].classList.add('active');
+  }
+</script>
+
+        </div>
+      </section>
+
+
+
+
+
+      <!-- 
+        - #SERVICE right text
+      -->
+
+      <section class="section service" aria-labelledby="service-label">
+        <div class="container">
+
+          <p class="section-subtitle" id="service-label">What We Do?</p>
+
+          <h2 class="h2 section-title">
+            The service we offer is specifically designed to meet your needs.
+          </h2>
+
+          <ul class="grid-list">
+
+            <li>
+              <div class="service-card">
+
+                <div class="card-icon">
+                 <img src="./assets/2 TPP Logos/team.png" height="35px" width="35px" alt="" srcset="">
+                </div>
+
+                <h3 class="h4 card-title">Our Training team</h3>
+
+                <p class="card-text" >
+                  50+ Experienced recruitment & training team with high capability in VOLUME & 
+                  LATERAL hiring.
+                </p>
+
+                <a href="#" class="btn-text">
+                  <span class="span">Learn More</span>
+
+                  <ion-icon name="arrow-forward-outline" aria-hidden="true"></ion-icon>
+                </a>
+
+              </div>
+            </li>
+
+            <li>
+              <div class="service-card">
+
+                <div class="card-icon">
+                 <img src="./assets/2 TPP Logos/hire.png" height="35px" width="35px" alt="" srcset="">
+                </div>
+
+                <h3 class="h4 card-title">Train & Hire Model</h3>
+
+                <p class="card-text">
+                  Expertise in domains such as International Voice, 
+                  Domestic Voice, Finance & Accounting, Investment Banking, Insurance, 
+                  Analytics, IT Skillset, Etc
+
+                </p>
+
+                <a href="#" class="btn-text">
+                  <span class="span">Learn More</span>
+
+                  <ion-icon name="arrow-forward-outline" aria-hidden="true"></ion-icon>
+                </a>
+
+              </div>
+            </li>
+
+            <li>
+              <div class="service-card">
+
+                <div class="card-icon">
+                  <img src="./assets/2 TPP Logos/experience-logo.png" height="35px" width="35px" alt="" srcset="">
+                </div>
+
+                <h3 class="h4 card-title">Our Experience</h3>
+
+                <p class="card-text">
+                  8 years of Industry experience, specialized in IT/ BPO/ non Technical/ Blue Collar 
+                  recruitment in PERMANENT & CONTRACTUAL staffing
+                </p>
+
+                <a href="#" class="btn-text">
+                  <span class="span">Learn More</span>
+
+                  <ion-icon name="arrow-forward-outline" aria-hidden="true"></ion-icon>
+                </a>
+
+              </div>
+            </li>
+
+            <li>
+              <div class="service-card">
+
+                <div class="card-icon">
+                  <img src="./assets/2 TPP Logos/projects.png" height="35px" width="35px" alt="" srcset="">
+                </div>
+
+                <h3 class="h4 card-title">Projects Development</h3>
+
+                <p class="card-text">
+                  Experienced in end to end delivery of CSR & SKILL DEVELOPMENT projects
+                </p>
+
+                <a href="#" class="btn-text">
+                  <span class="span">Learn More</span>
+
+                  <ion-icon name="arrow-forward-outline" aria-hidden="true"></ion-icon>
+                </a>
+
+              </div>
+            </li>
+
+          </ul>
+
+        </div>
+      </section>
+
+      <h2 class="h2 section-title" style="text-align: center;">
+           Our Major Clients
+          </h2>
+
+<div class="clientwrapper">
+
+  <div class="clientslider">
+    <div class="clientslide">
+      <img src="./assets/3 Client Logos/1.jpg" />
+      <img src="./assets/3 Client Logos/2.jpg" />
+      <img src="./assets/3 Client Logos/3.jpg" />
+      <img src="./assets/3 Client Logos/4.png" />
+      <img src="./assets/3 Client Logos/5.png" />
+      <img src="./assets/3 Client Logos/6.png" />
+      <img src="./assets/3 Client Logos/7.png" />
+      <img src="./assets/3 Client Logos/8.jpg" />
+      <img src="./assets/3 Client Logos/9.jpg" />
+      <img src="./assets/3 Client Logos/10.png" />
+      <img src="./assets/3 Client Logos/11.png" />
+      <img src="./assets/3 Client Logos/12.jpeg" />
+      <img src="./assets/3 Client Logos/13.jpeg" />
+      <img src="./assets/3 Client Logos/14.jpeg" />
+      <img src="./assets/3 Client Logos/15.jpeg" />
+      <img src="./assets/3 Client Logos/16.jpeg" />
+      <img src="./assets/3 Client Logos/17.jpeg" />
+      <img src="./assets/3 Client Logos/18.jpeg" />
+      <img src="./assets/3 Client Logos/19.jpeg" />
+      <img src="./assets/3 Client Logos/20.jpeg" />
+      <img src="./assets/3 Client Logos/21.jpeg" />
+      <img src="./assets/3 Client Logos/22.jpeg" />
+      <img src="./assets/3 Client Logos/23.png" />
+
+    </div>
+   <div class="clientslide">
+      <img src="./assets/3 Client Logos/1.jpg" />
+      <img src="./assets/3 Client Logos/2.jpg" />
+      <img src="./assets/3 Client Logos/3.jpg" />
+      <img src="./assets/3 Client Logos/4.png" />
+      <img src="./assets/3 Client Logos/5.png" />
+      <img src="./assets/3 Client Logos/6.png" />
+      <img src="./assets/3 Client Logos/7.png" />
+      <img src="./assets/3 Client Logos/8.jpg" />
+      <img src="./assets/3 Client Logos/9.jpg" />
+      <img src="./assets/3 Client Logos/10.png" />
+      <img src="./assets/3 Client Logos/11.png" />
+      <img src="./assets/3 Client Logos/12.jpeg" />
+      <img src="./assets/3 Client Logos/13.jpeg" />
+      <img src="./assets/3 Client Logos/14.jpeg" />
+      <img src="./assets/3 Client Logos/15.jpeg" />
+      <img src="./assets/3 Client Logos/16.jpeg" />
+      <img src="./assets/3 Client Logos/17.jpeg" />
+      <img src="./assets/3 Client Logos/18.jpeg" />
+      <img src="./assets/3 Client Logos/19.jpeg" />
+      <img src="./assets/3 Client Logos/20.jpeg" />
+      <img src="./assets/3 Client Logos/21.jpeg" />
+      <img src="./assets/3 Client Logos/22.jpeg" />
+      <img src="./assets/3 Client Logos/23.png" />
+
+    </div>
+  </div>
+</div>
+
+  <a href="#" class="cr">Campus Recruitment</a>
+
+  
+
+
+      <!-- 
+        - #ABOUT left text
+      -->
+
+      <!-- <section class="about" aria-labelledby="about-label">
+        <div class="container">
+
+          <figure class="about-banner">
+            <img src="./assets/images/about-banner.png" width="800" height="580" loading="lazy" alt="about banner"
+              class="w-100">
+          </figure>
+
+          <div class="about-content">
+
+            <p class="section-subtitle" id="about-label">Why Choose Us?</p>
+
+            <h2 class="h2 section-title" style="margin-bottom: 9px;">
+              Talent tailored to perfection.
+            </h2>
+            <h4 style="padding-bottom: 20px;"> Our recruitment solutions cover Lateral & Volume hiring, pairing the right skills with the right roles.</h4>
+
+            <ul>
+
+              <li class="about-item">
+                <div class="accordion-card expanded" data-accordion>
+
+                  <h3 class="card-title">
+                    <button class="accordion-btn" data-accordion-btn>
+                      <ion-icon name="chevron-down-outline" aria-hidden="true" class="down"></ion-icon>
+
+                      <spna class="span h5">Permanent Staffing</spna>
+                    </button>
+                  </h3>
+
+                  <p class="accordion-content">
+                    Permanent staffing is the process of bringing together the jobseeker and prospective employer 
+                    so the purpose of traditional employment relationship.
+                  </p>
+
+                </div>
+              </li>
+
+              <li class="about-item">
+                <div class="accordion-card" data-accordion>
+
+                  <h3 class="card-title">
+                    <button class="accordion-btn" data-accordion-btn>
+                      <ion-icon name="chevron-down-outline" aria-hidden="true" class="down"></ion-icon>
+
+                      <spna class="span h5">Contractual Hiring</spna>
+                    </button>
+                  </h3>
+
+                  <p class="accordion-content">
+                    Contractual hiring is a fixed-term period job that allows both parties to try out a role before 
+committing to full-time employment. Contractual hiring agreements typically set out the length 
+of time the contractor will work for the employer
+                  </p>
+
+                </div>
+              </li>
+
+              <li class="about-item">
+                <div class="accordion-card" data-accordion>
+
+                  <h3 class="card-title">
+                    <button class="accordion-btn" data-accordion-btn>
+                      <ion-icon name="chevron-down-outline" aria-hidden="true" class="down"></ion-icon>
+
+                      <spna class="span h5">RPO Services</spna>
+                    </button>
+                  </h3>
+
+                  <p class="accordion-content">
+                    Recruitment Process Outsourcing (RPO) is when a company transfers all or part of its 
+permanent recruitment to an external provider. An RPO provider can act as an extension of a 
+company's HR or Resourcing function, sitting on site with the client providing hiring solution
+
+                  </p>
+
+                </div>
+              </li>
+              <li class="about-item">
+                <div class="accordion-card" data-accordion>
+
+                  <h3 class="card-title">
+                    <button class="accordion-btn" data-accordion-btn>
+                      <ion-icon name="chevron-down-outline" aria-hidden="true" class="down"></ion-icon>
+
+                      <spna class="span h5">Train & Hire</spna>
+                    </button>
+                  </h3>
+
+                  <p class="accordion-content">
+                    Train and hire model is one-of-a-kind strategy that has emerged across the globe. Freshers and 
+job seekers are put through a test to make certain they are capable and are trained on skillset 
+that ensure the organizational fitment match.
+
+
+                  </p>
+
+                </div>
+              </li>
+
+            </ul>
+
+          </div>
+
+        </div>
+      </section>
+
+ -->
+
+
+
+      <!-- 
+        - #FEATURE
+      -->
+
+      <!-- <section class="section feature" aria-labelledby="feature-label">
+        <div class="container">
+
+          <figure class="feature-banner">
+            <img src="./assets/images/feature-banner.png" width="800" height="531" loading="lazy" alt="feature banner"
+              class="w-100">
+          </figure>
+
+          <div class="feature-content">
+
+            <p class="section-subtitle" id="feautre-label">Skill Development Services</p>
+
+            <h2 class="h2 section-title" style="margin-bottom: 9px;">
+              Unlock potential, unleash success.
+            </h2>
+            <h4 style="padding-bottom: 20px;"> Our unique training methods specialize in modules that bridge the gap between capability and opportunity, delivering only the finest results.</h4>
+
+            
+
+            <ul class="feature-list">
+
+              <li>
+                <div class="feature-card">
+
+                  <div class="card-icon">
+                    <ion-icon name="checkmark" aria-hidden="true"></ion-icon>
+                  </div>
+
+                  <span class="span">
+                     Domain & Process Training
+                  </span>
+
+                </div>
+              </li>
+
+             
+
+              
+              <li>
+                <div class="feature-card">
+
+                  <div class="card-icon">
+                    <ion-icon name="checkmark" aria-hidden="true"></ion-icon>
+                  </div>
+
+                  <span class="span">
+                    Communication Training
+                  </span>
+
+                </div>
+              </li>
+
+            </ul>
+
+          </div>
+
+        </div>
+      </section> -->
+
+
+
+
+
+      <!-- 
+        - #STATS
+      -->
+
+      <!-- <section class="stats" aria-label="our stats">
+        <div class="container">
+
+          <ul class="stats-card has-bg-image" style="background-color:black">
+
+            <li>
+              <p class="card-text">
+                <span class="h1">9000+</span>
+
+                <spna class="span">Trained resources</spna>
+              </p>
+            </li>
+
+            <li>
+              <p class="card-text">
+                <span class="h1">70+</span>
+
+                <spna class="span">Partnered Colleges</spna>
+              </p>
+            </li>
+
+            <li>
+              <p class="card-text">
+                <span class="h1">70%</span>
+
+                <spna class="span">Industry offers</spna>
+              </p>
+            </li>
+
+            <li>
+              <p class="card-text">
+                <span class="h1">14+</span>
+
+                <spna class="span">Cities throughout PAN India</spna>
+              </p>
+            </li>
+
+          </ul>
+
+        </div>
+      </section> -->
+
+
+
+
+
+      <!-- 
+        - #PROJECT
+      -->
+
+      <!-- <section class="section project" aria-labelledby="project-label">
+        <div class="container">
+
+          <p class="section-subtitle" id="project-label">Case Studies</p>
+
+          <h2 class="h2 section-title">
+            Check out some of our awesome projects with creative ideas and great design.
+          </h2>
+
+          <ul class="grid-list">
+
+            <li>
+              <div class="project-card">
+
+                <figure class="card-banner img-holder" style="--width: 560; --height: 350;">
+                  <img src="./assets/images/blog-1.jpg" width="560" height="350" loading="lazy"
+                    alt="Ligula tristique quis risus" class="img-cover">
+                </figure>
+
+                <div class="card-content">
+
+                  <h3 class="h3">
+                    <a href="#" class="card-title">Database Design & Dev</a>
+                  </h3>
+
+                  <p class="card-text">
+                    Mauris convallis non ligula non interdum. Gravida vulputate convallis tempus vestibulum cras
+                    imperdiet nun eu dolor.
+                  </p>
+
+                  <ul class="card-meta-list">
+
+                    <li class="card-meta-item">
+                      <ion-icon name="calendar-outline" aria-hidden="true"></ion-icon>
+
+                      <time class="meta-text" datetime="2022-04-14">14 Apr 2022</time>
+                    </li>
+
+                    <li class="card-meta-item">
+                      <ion-icon name="document-text-outline" aria-hidden="true"></ion-icon>
+
+                      <span class="meta-text">Coding</span>
+                    </li>
+
+                  </ul>
+
+                </div>
+
+              </div>
+            </li>
+
+            <li>
+              <div class="project-card">
+
+                <figure class="card-banner img-holder" style="--width: 560; --height: 350;">
+                  <img src="./assets/images/blog-2.jpg" width="560" height="350" loading="lazy"
+                    alt="Nullam id dolor elit id nibh" class="img-cover">
+                </figure>
+
+                <div class="card-content">
+
+                  <h3 class="h3">
+                    <a href="#" class="card-title">Nullam id dolor elit id nibh</a>
+                  </h3>
+
+                  <p class="card-text">
+                    Mauris convallis non ligula non interdum. Gravida vulputate convallis tempus vestibulum cras
+                    imperdiet nun eu dolor.
+                  </p>
+
+                  <ul class="card-meta-list">
+
+                    <li class="card-meta-item">
+                      <ion-icon name="calendar-outline" aria-hidden="true"></ion-icon>
+
+                      <time class="meta-text" datetime="2022-03-29">29 Mar 2022</time>
+                    </li>
+
+                    <li class="card-meta-item">
+                      <ion-icon name="document-text-outline" aria-hidden="true"></ion-icon>
+
+                      <span class="meta-text">Workspace</span>
+                    </li>
+
+                  </ul>
+
+                </div>
+
+              </div>
+            </li>
+
+            <li>
+              <div class="project-card">
+
+                <figure class="card-banner img-holder" style="--width: 560; --height: 350;">
+                  <img src="./assets/images/blog-3.jpg" width="560" height="350" loading="lazy"
+                    alt="Ultricies fusce porta elit" class="img-cover">
+                </figure>
+
+                <div class="card-content">
+
+                  <h3 class="h3">
+                    <a href="#" class="card-title">Ultricies fusce porta elit</a>
+                  </h3>
+
+                  <p class="card-text">
+                    Mauris convallis non ligula non interdum. Gravida vulputate convallis tempus vestibulum cras
+                    imperdiet nun eu dolor.
+                  </p>
+
+                  <ul class="card-meta-list">
+
+                    <li class="card-meta-item">
+                      <ion-icon name="calendar-outline" aria-hidden="true"></ion-icon>
+
+                      <time class="meta-text" datetime="2022-02-26">26 Feb 2022</time>
+                    </li>
+
+                    <li class="card-meta-item">
+                      <ion-icon name="document-text-outline" aria-hidden="true"></ion-icon>
+
+                      <span class="meta-text">Meeting</span>
+                    </li>
+
+                  </ul>
+
+                </div>
+
+              </div>
+            </li>
+
+          </ul>
+
+        </div>
+      </section> -->
+
+
+
+
+
+      <!-- 
+        - #CTA
+      -->
+
+      <!-- <section class="cta" aria-label="call to action">
+        <div class="container">
+
+          <h2 class="h2 section-title">
+            Join our community by using our services and grow your business.
+          </h2>
+
+          <a href="#" class="btn btn-primary">Try it For Free</a>
+
+        </div>
+      </section>
+
+    </article>
+  </main> -->
+
+
+
+
+
+  <!-- 
+    - #FOOTER
+  -->
+
+  <footer class="footer" style="background-color: black;">
+    <div class="container grid-list">
+
+      <div class="footer-brand">
+
+        <a href="#" class="logo">
+          <img src="./assets/2 TPP Logos/Placement Park Logo Inverted.png" width="74" height="24" alt="Adex home">
+        </a>
+
+        <p class="footer-text">
+          &copy; 2023 Placement Park. <br> All rights reserved.
+        </p>
+
+        <ul class="social-list">
+
+          <li>
+            <a href="#" class="social-link">
+              <ion-icon name="logo-facebook"></ion-icon>
+            </a>
+          </li>
+
+          <li>
+            <a href="#" class="social-link">
+              <ion-icon name="logo-twitter"></ion-icon>
+            </a>
+          </li>
+
+          <li>
+            <a href="#" class="social-link">
+              <ion-icon name="logo-instagram"></ion-icon>
+            </a>
+          </li>
+
+          <li>
+            <a href="#" class="social-link">
+              <ion-icon name="logo-whatsapp"></ion-icon>
+            </a>
+          </li>
+
+        </ul>
+
+      </div>
+
+      <ul class="footer-list">
+
+        <li>
+          <p class="h4 footer-list-title">Get in Touch</p>
+        </li>
+
+        <li>
+          <address class="footer-text">
+            Office: The Placement Park, 50-75-27, Ganesh Nagar, Satyam Junction, Vizag 53001</address>
+        </li>
+
+        <li>
+          <a href="mailto:Sharukh@theplacementpark.com" class="footer-link">Sharukh@theplacementpark.com</a>
+        </li>
+
+        <li>
+          <a href="tel:+919885563355" class="footer-link">+91 9885563355</a>
+        </li>
+
+      </ul>
+
+      <ul class="footer-list">
+
+        <li>
+          <p class="h4 footer-list-title">Learn More</p>
+        </li>
+
+        <li>
+          <a href="#" class="footer-link">Home</a>
+        </li>
+
+        <li>
+          <a href="#" class="footer-link">About Us</a>
+        </li>
+
+        <li>
+          <a href="#" class="footer-link">Companies</a>
+        </li>
+
+        <li>
+          <a href="#" class="footer-link">CRT & Placements</a>
+        </li>
+
+        <li>
+          <a href="#" class="footer-link">Privacy Policy</a>
+        </li>
+
+      </ul>
+
+      <div class="footer-list">
+
+        <p class="h4 footer-list-title">Our CEO</p>
+
+        <p class="footer-text">
+          SharukhTirumani
+Co-Founder & CEO
+The Placement Park
+        </p>
+
+        
+      </div>
+
+    </div>
+  </footer>
+
+
+
+
+
+  <!-- 
+    - custom js link
+  -->
+  <script src="./assets/js/script.js"></script>
+
+  <!-- 
+    - ionicon
+  -->
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+   <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+  <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+  <script type="text/javascript" src="slick/slick.min.js"></script>
+   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+  <script type="text/javascript">
+    $(document).ready(function(){
+      $('.your-class').slick({
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        autoplay: true,
+        autoplaySpeed: 1000,
+        centerMode: true,
+        centerPadding: '60px',
+        responsive: [
+          {
+            breakpoint: 768,
+            settings: {
+              arrows: false,
+              centerMode: true,
+              centerPadding: '40px',
+              slidesToShow: 3
+            }
+          },
+          {
+            breakpoint: 480,
+            settings: {
+              arrows: false,
+              centerMode: true,
+              centerPadding: '40px',
+              slidesToShow: 1
+            }
+          }
+          ]
+      });
+    });
+</script>
+</body>
+
+</html>

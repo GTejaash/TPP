@@ -1,0 +1,707 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Image Slider With Next And Previous Buttons</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+     <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- 
+    - primary meta tags
+  -->
+  <title>TPP</title>
+
+  <!-- 
+    - favicon
+  -->
+  <link rel="shortcut icon" href="./favicon.svg" type="image/svg+xml">
+
+  <!-- 
+    - google font link
+  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;700&display=swap" rel="stylesheet">
+
+  <!-- 
+    - custom css link
+  -->
+  <link rel="stylesheet" href="./assets/css/style.css">
+
+  <!-- 
+    - preload images
+  -->
+  <link rel="preload" as="image" href="./assets/images/hero-bg.jpg">
+  <link rel="preload" as="image" href="./assets/images/hero-slide-1.jpg">
+  <link rel="preload" as="image" href="./assets/images/hero-slide-2.jpg">
+  <link rel="preload" as="image" href="./assets/images/hero-slide-3.jpg">
+
+  
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css"/>
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css"/>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+    background-color: black !important;
+}
+
+
+.slider{
+  position: relative;
+  background: #000116;
+  width: 90%;
+  min-height: 500px;
+  margin: auto;
+  margin-top: 110px;
+  margin-bottom: 130px;
+
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.slider .slide{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  clip-path: circle(0% at 0 50%);
+}
+
+.slider .slide.active{
+  clip-path: circle(150% at 0 50%);
+  transition: 2s;
+}
+
+.slider .slide img{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.slider .slide .info{
+  position: absolute;
+  color: #222;
+  background: rgba(255, 255, 255, 0.3);
+  width: 75%;
+  margin-top: 50px;
+  margin-left: 50px;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 5px 25px rgb(1 1 1 / 5%);
+}
+
+
+.navigation{
+  height: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.slider:hover .navigation{
+  z-index: -10;
+}
+
+.prev-btn, .next-btn{
+  z-index: 999;
+  font-size: 2em;
+  color: #222;
+  background: rgba(255, 255, 255, 0.8);
+  padding: 10px;
+  cursor: pointer;
+}
+
+.prev-btn{
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px;
+}
+
+.next-btn{
+  border-top-left-radius: 3px;
+  border-bottom-left-radius: 3px;
+}
+
+.navigation-visibility{
+  z-index: 10;
+  display: flex;
+  justify-content: center;
+}
+
+.navigation-visibility .slide-icon{
+  z-index: 10;
+  background: rgba(255, 255, 255, 0.5);
+  width: 20px;
+  height: 10px;
+  transform: translateY(-50px);
+  margin: 0 6px;
+  border-radius: 2px;
+  box-shadow: 0 5px 25px rgb(1 1 1 / 20%);
+}
+
+.navigation-visibility .slide-icon.active{
+  background: #4285F4;
+}
+
+@media (max-width: 900px){
+  .slider{
+    width: 100%;
+  }
+
+  .slider .slide .info{
+    position: relative;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@media (max-width: 500px){
+  .slider .slide .info h2{
+    font-size: 1.8em;
+    line-height: 40px;
+  }
+
+  .slider .slide .info p{
+    font-size: 0.9em;
+  }
+}
+      
+    </style>
+  </head>
+  <body>
+
+  <header class="header" data-header>
+    <div class="container">
+
+      <a href="#" class="logo">
+        <img src="./assets/2 TPP Logos/Placement Park Logo Inverted.png" width="115" height="auto" alt="Adex home" class="logo-light">
+
+        <img src="./assets/2 TPP Logos/logo.png" width="140" height="auto" alt="Adex home" class="logo-dark">
+      </a>
+
+      <nav class="navbar" data-navbar>
+
+        <div class="navbar-top">
+
+          <button class="nav-close-btn" aria-label="close menu" data-nav-toggler>
+            <ion-icon name="close-outline" aria-hidden="true"></ion-icon>
+          </button>
+        </div>
+
+        <ul class="navbar-list">
+
+          <li>
+            <a href="index.html" class="navbar-link">Home</a>
+          </li>
+
+          <li>
+            <a href="jobseeker.html" class="navbar-link">Job seeker</a>
+          </li>
+
+          <li>
+            <a href="Companies.html" class="navbar-link">Companies</a>
+          </li>
+
+          <li>
+            <a href="crt.html" class="navbar-link">CRT & placements</a>
+          </li>
+
+          <li>
+            <a href="About.html" class="navbar-link">About Us</a>
+          </li>
+
+        </ul>
+
+        <div class="wrapper">
+          <a href="mailto:Sharukh@theplacementpark.com" class="contact-link">Sharukh@theplacementpark.com</a>
+
+          <a href="tel:+919885563355" class="contact-link">+91 9885563355</a>
+        </div>
+
+        <ul class="social-list">
+
+          <li>
+            <a href="#" class="social-link">
+              <ion-icon name="logo-twitter"></ion-icon>
+            </a>
+          </li>
+
+          <li>
+            <a href="#" class="social-link">
+              <ion-icon name="logo-facebook"></ion-icon>
+            </a>
+          </li>
+
+
+          <li>
+            <a href="#" class="social-link">
+              <ion-icon name="logo-instagram"></ion-icon>
+            </a>
+          </li>
+
+          <li>
+            <a href="#" class="social-link">
+              <ion-icon name="logo-whatsapp"></ion-icon>
+            </a>
+          </li>
+
+        </ul>
+
+      </nav>
+
+      <a href="#" class="btn btn-primary">Team Login</a>
+
+      <button class="nav-open-btn" aria-label="open menu" data-nav-toggler>
+        <ion-icon name="menu-outline" aria-hidden="true"></ion-icon>
+      </button>
+
+      <div class="overlay" data-nav-toggler data-overlay></div>
+
+    </div>
+  </header>
+
+<!-- Slider -->
+<div class="slider" style="background-color: black;">
+      <div class="slide active">
+        <img src="./assets/photos/1.png" alt="">
+        
+      </div>
+      <div class="slide">
+        <img src="./assets/photos/2.png" alt="">
+        
+      </div>
+      <div class="slide">
+        <img src="./assets/photos/3.png" alt="">
+        
+      </div>
+      <div class="slide">
+        <img src="./assets/photos/4.png" alt="">
+        
+      </div>
+      <div class="slide">
+        <img src="./assets/photos/5.png" alt="">
+        
+      </div>
+      <div class="navigation">
+        <i class="fas fa-chevron-left prev-btn"></i>
+        <i class="fas fa-chevron-right next-btn"></i>
+      </div>
+      <div class="navigation-visibility">
+        <div class="slide-icon active"></div>
+        <div class="slide-icon"></div>
+        <div class="slide-icon"></div>
+        <div class="slide-icon"></div>
+        <div class="slide-icon"></div>
+      </div>
+    </div>
+        <script type="text/javascript">
+    const slider = document.querySelector(".slider");
+    const nextBtn = document.querySelector(".next-btn");
+    const prevBtn = document.querySelector(".prev-btn");
+    const slides = document.querySelectorAll(".slide");
+    const slideIcons = document.querySelectorAll(".slide-icon");
+    const numberOfSlides = slides.length;
+    var slideNumber = 0;
+
+    //image slider next button
+    nextBtn.addEventListener("click", () => {
+      slides.forEach((slide) => {
+        slide.classList.remove("active");
+      });
+      slideIcons.forEach((slideIcon) => {
+        slideIcon.classList.remove("active");
+      });
+
+      slideNumber++;
+
+      if(slideNumber > (numberOfSlides - 1)){
+        slideNumber = 0;
+      }
+
+      slides[slideNumber].classList.add("active");
+      slideIcons[slideNumber].classList.add("active");
+    });
+
+    //image slider previous button
+    prevBtn.addEventListener("click", () => {
+      slides.forEach((slide) => {
+        slide.classList.remove("active");
+      });
+      slideIcons.forEach((slideIcon) => {
+        slideIcon.classList.remove("active");
+      });
+
+      slideNumber--;
+
+      if(slideNumber < 0){
+        slideNumber = numberOfSlides - 1;
+      }
+
+      slides[slideNumber].classList.add("active");
+      slideIcons[slideNumber].classList.add("active");
+    });
+
+    //image slider autoplay
+    var playSlider;
+
+    var repeater = () => {
+      playSlider = setInterval(function(){
+        slides.forEach((slide) => {
+          slide.classList.remove("active");
+        });
+        slideIcons.forEach((slideIcon) => {
+          slideIcon.classList.remove("active");
+        });
+
+        slideNumber++;
+
+        if(slideNumber > (numberOfSlides - 1)){
+          slideNumber = 0;
+        }
+
+        slides[slideNumber].classList.add("active");
+        slideIcons[slideNumber].classList.add("active");
+      }, 2500);
+    }
+    repeater();
+
+    //stop the image slider autoplay on mouseover
+    slider.addEventListener("mouseover", () => {
+      clearInterval(playSlider);
+    });
+
+    //start the image slider autoplay again on mouseout
+    slider.addEventListener("mouseout", () => {
+      repeater();
+    });
+    </script>
+
+          <!-- 
+        - #FEATURE
+      -->
+<section style="background-color:white; color:black;" class="section feature" aria-labelledby="feature-label">
+        <div class="container">
+
+          <figure class="feature-banner">
+            <img src="./assets/images/feature-banner.png" width="800" height="531" loading="lazy" alt="feature banner"
+              class="w-100">
+          </figure>
+
+          <div class="feature-content">
+
+            <p class="section-subtitle" id="feautre-label">CRT & Placements</p>
+
+            <h1 class="h1 section-title" style="margin-bottom: 9px; color:black">
+              List of Colleges
+            </h1>
+            <h4 style="padding-bottom: 30px; padding-top: 30px;"> Our list of colleges includes top-ranked institutions from India, offering diverse programs and opportunities for students to achieve their academic goals.</h4>
+
+            
+
+            <ul class="feature-list">
+
+              <li>
+                <div class="feature-card">
+
+                  <div class="card-icon">
+                    <ion-icon style="color: black;" name="checkmark" aria-hidden="true"></ion-icon>
+                  </div>
+
+                  <span class="span">
+                    Sri Bala Sai Degree College
+                  </span>
+
+                </div>
+              </li>
+
+              <li>
+                <div class="feature-card">
+
+                  <div class="card-icon">
+                    <ion-icon style="color: black;" name="checkmark" aria-hidden="true"></ion-icon>
+                  </div>
+
+                  <span class="span">
+                    Aditya Institute Of Technology And Management
+                  </span>
+
+                </div>
+              </li>
+
+              <li>
+                <div class="feature-card">
+
+                  <div class="card-icon">
+                    <ion-icon style="color: black;" name="checkmark" aria-hidden="true"></ion-icon>
+                  </div>
+
+                  <span class="span">
+                    Samyuktha Degree College
+                  </span>
+
+                </div>
+              </li>
+
+              <li>
+                <div class="feature-card">
+
+                  <div class="card-icon">
+                    <ion-icon style="color: black;" name="checkmark" aria-hidden="true"></ion-icon>
+                  </div>
+
+                  <span class="span">
+                     Vignan's Institute Of Information Technology
+                  </span>
+
+                </div>
+              </li>
+
+              <li>
+                <div class="feature-card">
+
+                  <div class="card-icon">
+                    <ion-icon style="color: black;" name="checkmark" aria-hidden="true"></ion-icon>
+                  </div>
+
+                  <span class="span">
+                     Maharaj Vijayaram Gajapathi Raj College Of Engineering (Autonomous)
+                  </span>
+
+                </div>
+              </li>
+
+             
+
+              
+              <li>
+                <div class="feature-card">
+
+                  <div class="card-icon">
+                    <ion-icon style="color: black;" name="checkmark" aria-hidden="true"></ion-icon>
+                  </div>
+
+                  <span class="span">
+                    Raghu Institute Of Technology
+
+                  </span>
+
+                </div>
+              </li>
+
+            </ul>
+            <!-- download button -->
+            <div class="download-btn">
+              
+              <a style="display: flex; gap:10px; border:2px solid black " href="#" class="btn btn-primary"><img src="https://img.icons8.com/ios-glyphs/30/null/download-from-cloud--v1.png"/>Download List</a>
+
+          </div>
+
+        </div>
+      </section> 
+
+                 <!-- 
+        - Types of Training
+      -->
+<section style="background-color:white; padding-top:30px;" class="section feature" aria-labelledby="feature-label">
+        <div class="container">
+
+
+          <div class="feature-content">
+
+
+            <h1 class="h1 section-title" style="margin-bottom: 9px; color:black;">
+              Types of Training
+            </h1>
+            <h4 style="padding-bottom: 30px; width:90vw; padding-top: 30px;"> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Libero reiciendis quasi omnis est ipsam optio qui commodi. Eius ut harum odit, optio sit consequuntur non suscipit molestias explicabo officiis itaque!</h4>
+
+          </div>
+
+        </div>
+      </section> 
+
+      <!-- Placement services -->
+<section style="background-color:white; padding-top:30px;" class="section feature" aria-labelledby="feature-label">
+        <div class="container">
+
+
+          <div class="feature-content">
+
+
+            <h1 class="h1 section-title" style="margin-bottom: 9px; color:black;">
+              Placement Services
+            </h1>
+            <div class="asss">
+
+                <h2>Permanent staffing</h2>
+                <h4 style="padding-bottom: 30px; width:100%; padding-top: 30px;"> Permanent staffing is the process of bringing together the jobseeker and prospective employer 
+so the purpose of traditional employment relationship.</h4>
+<h2>Contractual Hiring</h2>
+            <h4 style="padding-bottom: 30px; width:90%; padding-top: 30px;"> Contractual hiring is a fixed-term period job that allows both parties to try out a role before 
+committing to full-time employment. Contractual hiring agreements typically set out the length 
+of time the contractor will work for the employer</h4>
+<h2>RPO</h2>
+            <h4 style="padding-bottom: 30px; width:90%; padding-top: 30px;"> Recruitment Process Outsourcing (RPO) is when a company transfers all or part of its 
+permanent recruitment to an external provider. An RPO provider can act as an extension of a 
+company's HR or Resourcing function, sitting on site with the client providing hiring solution</h4>
+            <h2>Train & Hire</h2>
+            <h4 style="padding-bottom: 30px; width:90%; padding-top: 30px;"> Train and hire model is one-of-a-kind strategy that has emerged across the globe. Freshers and 
+job seekers are put through a test to make certain they are capable and are trained on skillset 
+that ensure the organizational fitment match.
+</h4>
+
+</div>
+
+          </div>
+           <figure class="about-banner">
+            <img src="./assets/images/about-banner.png" width="800" height="580" loading="lazy" alt="about banner"
+              class="w-100">
+          </figure>
+
+        </div>
+      </section> 
+
+      
+  <!-- 
+    - #FOOTER
+  -->
+
+  <footer class="footer" style="background-color: black;">
+    <div class="container grid-list">
+
+      <div class="footer-brand">
+
+        <a href="#" class="logo">
+          <img src="./assets/2 TPP Logos/Placement Park Logo Inverted.png" width="74" height="24" alt="Adex home">
+        </a>
+
+        <p class="footer-text">
+          &copy; 2023 Placement Park. <br> All rights reserved.
+        </p>
+
+        <ul class="social-list">
+
+          <li>
+            <a href="#" class="social-link">
+              <ion-icon name="logo-facebook"></ion-icon>
+            </a>
+          </li>
+
+          <li>
+            <a href="#" class="social-link">
+              <ion-icon name="logo-twitter"></ion-icon>
+            </a>
+          </li>
+
+          <li>
+            <a href="#" class="social-link">
+              <ion-icon name="logo-instagram"></ion-icon>
+            </a>
+          </li>
+
+          <li>
+            <a href="#" class="social-link">
+              <ion-icon name="logo-whatsapp"></ion-icon>
+            </a>
+          </li>
+
+        </ul>
+
+      </div>
+
+      <ul class="footer-list">
+
+        <li>
+          <p class="h4 footer-list-title">Get in Touch</p>
+        </li>
+
+        <li>
+          <address class="footer-text">
+            Office: The Placement Park, 50-75-27, Ganesh Nagar, Satyam Junction, Vizag 53001</address>
+        </li>
+
+        <li>
+          <a href="mailto:Sharukh@theplacementpark.com" class="footer-link">Sharukh@theplacementpark.com</a>
+        </li>
+
+        <li>
+          <a href="tel:+919885563355" class="footer-link">+91 9885563355</a>
+        </li>
+
+      </ul>
+
+      <ul class="footer-list">
+
+        <li>
+          <p class="h4 footer-list-title">Learn More</p>
+        </li>
+
+        <li>
+          <a href="#" class="footer-link">Home</a>
+        </li>
+
+        <li>
+          <a href="#" class="footer-link">About Us</a>
+        </li>
+
+        <li>
+          <a href="#" class="footer-link">Companies</a>
+        </li>
+
+        <li>
+          <a href="#" class="footer-link">CRT & Placements</a>
+        </li>
+
+        <li>
+          <a href="#" class="footer-link">Privacy Policy</a>
+        </li>
+
+      </ul>
+
+      <div class="footer-list">
+
+        <p class="h4 footer-list-title">Our CEO</p>
+
+        <p class="footer-text">
+          SharukhTirumani
+Co-Founder & CEO
+The Placement Park
+        </p>
+
+        
+      </div>
+
+    </div>
+  </footer>
+
+
+
+
+
+  <!-- 
+    - custom js link
+  -->
+  <script src="./assets/js/script.js"></script>
+
+  <!-- 
+    - ionicon
+  -->
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+  </body>
+</html>
+      
