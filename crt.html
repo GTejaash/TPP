@@ -1,0 +1,1517 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- 
+    - primary meta tags
+  -->
+  <title>TPP</title>
+  <meta name="title" content="TPP">
+
+  <!-- 
+    - favicon
+  -->
+  <!-- <link rel="shortcut icon" href="./favicon.svg" type="image/svg+xml"> -->
+
+  <!-- 
+    - google font link
+  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" href="assets/2 TPP Logos/favicon.png" sizes="16x16">
+
+
+  <!-- 
+    - custom css link
+  -->
+  <link rel="stylesheet" href="./assets/css/style.css">
+  <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+
+  <!-- 
+    - preload images
+  -->
+  <link rel="preload" as="image" href="./assets/images/hero-bg.jpg">
+  <link rel="preload" as="image" href="./assets/images/hero-slide-1.jpg">
+  <link rel="preload" as="image" href="./assets/images/hero-slide-2.jpg">
+  <link rel="preload" as="image" href="./assets/images/hero-slide-3.jpg">
+
+</head>
+<style>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  @media (min-width: 768px){
+    
+.about .container {
+    grid-template-columns: 0fr 1fr;
+    align-items: center;
+}
+  }
+:root {
+  --d: 700ms;
+  --e: cubic-bezier(0.19, 1, 0.22, 1);
+
+}
+
+
+
+.page-content {
+  display: grid;
+  grid-gap: 1rem;
+  padding: 1rem;
+  max-width: 1024px;
+  margin: 0 auto;
+  font-family: var(--font-sans);
+}
+@media (min-width: 600px) {
+  .page-content {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (min-width: 800px) {
+  .page-content {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.card {
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  overflow: hidden;
+  padding: 1rem;
+  width: 100%;
+  text-align: center;
+  color: whitesmoke;
+  background-color: whitesmoke;
+  
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1), 0 2px 2px rgba(0, 0, 0, 0.1), 0 4px 4px rgba(0, 0, 0, 0.1), 0 8px 8px rgba(0, 0, 0, 0.1), 0 16px 16px rgba(0, 0, 0, 0.1);
+}
+.cards {
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  overflow: hidden;
+  padding: 1rem;
+  width: 100%;
+  text-align: center;
+  color: whitesmoke;
+  background-color: whitesmoke;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1), 0 2px 2px rgba(0, 0, 0, 0.1), 0 4px 4px rgba(0, 0, 0, 0.1), 0 8px 8px rgba(0, 0, 0, 0.1), 0 16px 16px rgba(0, 0, 0, 0.1);
+}
+@media (min-width: 600px) {
+  .card {
+    height: 350px;
+  }
+  .cards{
+    height: 350px;
+  }
+}
+.card:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 110%;
+  background-size: cover;
+  background-position: 0 0;
+  transition: transform calc(var(--d) * 1.5) var(--e);
+  pointer-events: none;
+}
+.cards:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 110%;
+  background-size: cover;
+  background-position: 0 0;
+  transition: transform calc(var(--d) * 1.5) var(--e);
+  pointer-events: none;
+}
+.card:after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 200%;
+  pointer-events: none;
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.009) 11.7%, rgba(0, 0, 0, 0.034) 22.1%, rgba(0, 0, 0, 0.072) 31.2%, rgba(0, 0, 0, 0.123) 39.4%, rgba(0, 0, 0, 0.182) 46.6%, rgba(0, 0, 0, 0.249) 53.1%, rgba(0, 0, 0, 0.32) 58.9%, rgba(0, 0, 0, 0.394) 64.3%, rgba(0, 0, 0, 0.468) 69.3%, rgba(0, 0, 0, 0.54) 74.1%, rgba(0, 0, 0, 0.607) 78.8%, rgba(0, 0, 0, 0.668) 83.6%, rgba(0, 0, 0, 0.721) 88.7%, rgba(0, 0, 0, 0.762) 94.1%, rgba(0, 0, 0, 0.79) 100%);
+  transform: translateY(-50%);
+  transition: transform calc(var(--d) * 2) var(--e);
+}
+.cards:after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 200%;
+  pointer-events: none;
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.009) 11.7%, rgba(0, 0, 0, 0.034) 22.1%, rgba(0, 0, 0, 0.072) 31.2%, rgba(0, 0, 0, 0.123) 39.4%, rgba(0, 0, 0, 0.182) 46.6%, rgba(0, 0, 0, 0.249) 53.1%, rgba(0, 0, 0, 0.32) 58.9%, rgba(0, 0, 0, 0.394) 64.3%, rgba(0, 0, 0, 0.468) 69.3%, rgba(0, 0, 0, 0.54) 74.1%, rgba(0, 0, 0, 0.607) 78.8%, rgba(0, 0, 0, 0.668) 83.6%, rgba(0, 0, 0, 0.721) 88.7%, rgba(0, 0, 0, 0.762) 94.1%, rgba(0, 0, 0, 0.79) 100%);
+  transform: translateY(-50%);
+  transition: transform calc(var(--d) * 2) var(--e);
+}
+.card:before {
+  background-image: url(assets/images/client.jpg);
+}
+.cards:before {
+  background-image: url(assets/images/buildings.jpg);
+}
+
+
+.content {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  padding: 1rem;
+  transition: transform var(--d) var(--e);
+  z-index: 1;
+}
+.content > * + * {
+  margin-top: 1rem;
+}
+
+.title {
+  font-size: 4rem;
+  font-weight: bold;
+  line-height: 1;
+}
+
+.copy {
+  font-family: var(--font-serif);
+  font-size: 1.125rem;
+  font-style: italic;
+  line-height: 1.35;
+}
+
+
+
+@media (hover: hover) and (min-width: 600px) {
+  .card:after {
+    transform: translateY(0);
+  }
+  .cards:after {
+    transform: translateY(0);
+  }
+
+  .content {
+    transform: translateY(calc(100% - 4.5rem));
+  }
+  .content > *:not(.title) {
+    opacity: 0;
+    transform: translateY(1rem);
+    transition: transform var(--d) var(--e), opacity var(--d) var(--e);
+  }
+
+  .card:hover,
+.card:focus-within {
+    align-items: center;
+  }
+  .card:hover:before,
+.card:focus-within:before {
+    transform: translateY(-4%);
+  }
+  .card:hover:after,
+.card:focus-within:after {
+    transform: translateY(-50%);
+  }
+  .card:hover .content,
+.card:focus-within .content {
+    transform: translateY(0);
+  }
+  .card:hover .content > *:not(.title),
+.card:focus-within .content > *:not(.title) {
+    opacity: 1;
+    transform: translateY(0);
+    transition-delay: calc(var(--d) / 8);
+  }
+
+  .cards:focus-within:before, .cards:focus-within:after,
+.cards:focus-within .content,
+.cards:focus-within .content > *:not(.title) {
+    transition-duration: 0s;
+  }
+  .cards:hover,
+.cards:focus-within {
+    align-items: center;
+  }
+  .cards:hover:before,
+.cards:focus-within:before {
+    transform: translateY(-4%);
+  }
+  .cards:hover:after,
+.cards:focus-within:after {
+    transform: translateY(-50%);
+  }
+  .cards:hover .content,
+.cards:focus-within .content {
+    transform: translateY(0);
+  }
+  .cards:hover .content > *:not(.title),
+.cards:focus-within .content > *:not(.title) {
+    opacity: 1;
+    transform: translateY(0);
+    transition-delay: calc(var(--d) / 8);
+  }
+
+  .cards:focus-within:before, .cards:focus-within:after,
+.cards:focus-within .content,
+.cards:focus-within .content > *:not(.title) {
+    transition-duration: 0s;
+  }
+}
+
+
+  .clientwrapper {
+      display: flex;
+      align-items: center;
+      margin:auto;
+    }
+    .clientslider {
+      width: 80%;
+      height: 100px;
+      position: relative;
+      background: white;
+      align-items: center;
+      margin: auto;
+      align-items: center;
+      margin: auto;
+      
+      /* box-shadow: 0 10px 20px -10px rgba(0,0,0,0.2); */
+      display: flex;
+      overflow: hidden;
+    }
+    .clientslide {
+     background-color: black;
+      height: 100px;
+      display: flex;
+      align-items: center;
+      animation: slideshow 60s linear infinite;
+    }
+    .clientslide img {
+      height: 100px;
+      border: 3px solid white;
+      background: white;
+      padding: 0 30px 0 30px;
+    }
+    @keyframes slideshow {
+      0% {transform: translateX(0);}
+      100% {transform: translateX(-100%);}
+    }
+    .clientslider::before, .slider::after {
+      height: 100px;
+      width: 200px;
+      position: absolute;
+      content: "";
+      /* background: linear-gradient(to right, white 0%, rgba(255,255,255,0) 100%); */
+      z-index: 2;
+    }
+    .clientslider::before {
+      left: 0;
+      top: 0;
+    }
+    .clientslider::after {
+      right:0;
+      top:0;
+      
+      transform: rotateZ(180deg);
+    }
+    .grid {
+	position: relative;
+	clear: both;
+	margin: 0 auto;
+	padding: 1em 0 4em;
+	max-width: 1000px;
+	list-style: none;
+	text-align: center;
+  border-radius: var(--radius-8);
+}
+
+/* Common style */
+.grid figure {
+  
+	position: relative;
+	float: left;
+	overflow: hidden;
+	margin: 10px 1%;
+	min-width: 320px;
+	max-width: 480px;
+	max-height: 360px;
+	width: 48%;
+	height: auto;
+	background: black;
+	text-align: center;
+	cursor: pointer;
+}
+
+.grid figure img {
+	position: relative;
+	display: block;
+  background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+
+	min-height: 100%;
+	max-width: 100%;
+
+}
+
+.grid figure figcaption {
+	padding: 2em;
+	color: #fff;
+	text-transform: uppercase;
+	font-size: 1.25em;
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
+}
+
+.grid figure figcaption::before,
+.grid figure figcaption::after {
+	pointer-events: none;
+}
+
+.grid figure figcaption,
+.grid figure figcaption > a {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+/* Anchor will cover the whole item by default */
+/* For some effects it will show as a button */
+.grid figure figcaption > a {
+	z-index: 1000;
+	text-indent: 200%;
+	white-space: nowrap;
+	font-size: 0;
+	opacity: 0;
+}
+
+.grid figure h2 {
+	word-spacing: -0.15em;
+	font-weight: 300;
+}
+
+.grid figure h2 span {
+	font-weight: 800;
+}
+
+.grid figure h2,
+.grid figure p {
+	margin: 0;
+}
+
+.grid figure p {
+	letter-spacing: 1px;
+	font-size: 68.5%;
+}
+
+/* Individual effects */
+
+/*---------------*/
+/***** Julia *****/
+/*---------------*/
+
+figure.effect-julia {
+	background: black;
+}
+
+figure.effect-julia img {
+  opacity: 0.3;
+  background: linear-gradient(rgba(15,25,65,0) 33%,rgb(15,25,65) 100%);
+	max-width: none;
+	height: 400px;
+	-webkit-transition: opacity 1s, -webkit-transform 1s;
+	transition: opacity 1s, transform 1s;
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
+}
+
+figure.effect-julia figcaption {
+	text-align: left;
+}
+
+figure.effect-julia h2 {
+	position: relative;
+	padding: 0.5em 0;
+}
+
+figure.effect-julia p {
+	display: inline-block;
+	margin: 0 0 0.25em;
+	padding: 0.4em 1em;
+	background: rgba(255,255,255,0.9);
+	color: black;
+	text-transform: none;
+	font-weight: 500;
+	font-size: 75%;
+	-webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+	transition: opacity 0.35s, transform 0.35s;
+	-webkit-transform: translate3d(-360px,0,0);
+	transform: translate3d(-360px,0,0);
+}
+
+figure.effect-julia p:first-child {
+	-webkit-transition-delay: 0.15s;
+	transition-delay: 0.15s;
+}
+
+figure.effect-julia p:nth-of-type(2) {
+	-webkit-transition-delay: 0.1s;
+	transition-delay: 0.1s;
+}
+
+figure.effect-julia p:nth-of-type(3) {
+	-webkit-transition-delay: 0.05s;
+	transition-delay: 0.05s;
+}
+
+figure.effect-julia:hover p:first-child {
+	-webkit-transition-delay: 0s;
+	transition-delay: 0s;
+}
+
+figure.effect-julia:hover p:nth-of-type(2) {
+	-webkit-transition-delay: 0.05s;
+	transition-delay: 0.05s;
+}
+
+figure.effect-julia:hover p:nth-of-type(3) {
+	-webkit-transition-delay: 0.1s;
+	transition-delay: 0.1s;
+}
+
+figure.effect-julia:hover img {
+	/* opacity: 0.4; */
+  opacity: 0.5;
+  filter: blur(3px); 
+  transition-duration: 0.5s;
+	-webkit-transform: scale3d(1.1,1.1,1);
+	transform: scale3d(1.1,1.1,1);
+}
+
+figure.effect-julia:hover p {
+	opacity: 1;
+	-webkit-transform: translate3d(0,0,0);
+	transform: translate3d(0,0,0);
+}
+
+/* 2 */
+.slider{
+	/* position: relative; */
+	width: 100%;
+	background: #2c3e50; /* darckblue */
+}
+.myslide{
+	height: auto;
+	display: none;
+	overflow: hidden;
+}
+
+.prev, .next{
+	position: absolute;
+	top: 55%;
+	transform: translate(0, -50%);
+	font-size: 50px;
+	padding: 15px;
+	cursor: pointer;
+	color: #fff;
+	transition: 0.1s;
+	user-select: none;
+}
+.prev:hover, .next:hover{
+	color: #00a7ff; /* blue */
+}
+.next{
+	right: 0;
+}
+.dotsbox{
+	position: absolute;
+	left: 50%;
+	transform: translate(-50%);
+	bottom: 20px;
+	cursor: pointer;
+}
+.dot{
+	display: inline-block;
+	width: 15px;
+	height: 15px;
+	border: 3px solid #fff;
+	border-radius: 50%;
+	margin: 0 10px;
+	cursor: pointer;
+}
+/* /2 */
+
+/* javascript */
+.active, .dot:hover{
+	border-color: #00a7ff; /* blue */
+}
+/* /javascript */
+
+/* muslide add fade */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: 0.8}
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: 0.8}
+  to {opacity: 1}
+}
+/* /muslide add fade */
+
+/* 3 */
+.txt{
+	position: absolute;
+	color: #fff;
+	letter-spacing: 2px;
+	line-height: 35px;
+	top: 20%;
+	left: 15%;
+	-webkit-animation-name: posi;
+  	-webkit-animation-duration: 2s;
+  	animation-name: posi;
+  	animation-duration: 2s;
+	z-index: 1;
+}
+
+@-webkit-keyframes posi {
+  from {left: 25%;}
+  to {left: 15%;}
+}
+
+
+@keyframes posi {
+  from {left: 25%;}
+  to {left: 15%;}
+}
+
+.txt h1{
+	color: #00a7ff; /* blue */
+	font-size: 50px;
+	margin-bottom: 20px;
+}
+.txt p{
+	font-weight: bold;
+	font-size: 20px;
+}
+/* /3 */
+
+
+
+
+/* 5 */
+@media screen and (max-width: 800px){
+	.myslide{
+		height: auto;
+	}
+	.txt{
+		letter-spacing: 2px;
+		line-height: 25px;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		-webkit-animation-name: posi2;
+		-webkit-animation-duration: 2s;
+		animation-name: posi2;
+		animation-duration: 2s;
+	}
+  
+.prev, .next{
+	position: absolute;
+	top: 30%;
+	transform: translate(0, -50%);
+	font-size: 30px;
+	padding: 15px;
+	cursor: pointer;
+	color: #fff;
+	transition: 0.1s;
+	user-select: none;
+}
+.prev:hover, .next:hover{
+	color: #00a7ff; /* blue */
+}
+
+	@-webkit-keyframes posi2 {
+	  from {top: 35%;}
+	  to {top: 50%;}
+	}
+
+
+	@keyframes posi2 {
+	  from {top: 35%;}
+	  to {top: 50%;}
+	}
+
+	.txt h1{
+		font-size: 40px;
+	}
+	.txt p{
+		font-size: 13px;
+	}
+
+}
+/* /5 */
+
+/* 6 */
+@media screen and (max-width: 520px){
+	.txt h1{
+		font-size: 30px;
+		margin-bottom: 20px;
+	}
+	.sign{
+		margin-right: 20px;
+	}
+	.sign a{
+		font-size: 12px;
+	}
+  
+.prev, .next{
+	position: absolute;
+	top: 25%;
+	transform: translate(0, -50%);
+	font-size: 20px;
+	padding: 15px;
+	cursor: pointer;
+	color: #fff;
+	transition: 0.1s;
+	user-select: none;
+}
+.prev:hover, .next:hover{
+	color: #00a7ff; /* blue */
+}
+}
+/* /6 */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</style>
+
+<body>
+
+  <!-- 
+    - #HEADER
+  -->
+
+  <header class="header" data-header>
+    <div class="container">
+
+      <a href="index.html" class="logo">
+        <img src="./assets/2 TPP Logos/Placement Park Logo Inverted.png" width="144"  alt="TPP home"  class="logo-light">
+
+        <img src="./assets/2 TPP Logos/Placement Park Logo Inverted.png" width="144" alt="TPP home" class="logo-dark">
+      </a>
+      <nav class="navbar" data-navbar>
+
+        <div class="navbar-top">
+          <a href="index.html" class="logo">
+            <img src="./assets/2 TPP Logos/Placement Park Logo Inverted.png" width="124" height="124" alt="Adex home">
+          </a>
+
+          <button class="nav-close-btn" aria-label="close menu" data-nav-toggler>
+            <ion-icon name="close-outline" aria-hidden="true"></ion-icon>
+          </button>
+        </div>
+
+        <ul class="navbar-list">
+
+          <li>
+            <a href="index.html" class="navbar-link">Home</a>
+          </li>
+
+          <li>
+            <a href="jobseeker.html" class="navbar-link">Job Seeker</a>
+          </li>
+
+          <li>
+            <a href="companies.html" class="navbar-link">Companies</a>
+          </li>
+
+          <li>
+            <a href="crt.html" class="active_link">Colleges</a>
+          </li>
+
+          <li>
+            <a href="about.html" class="navbar-link">About Us</a>
+          </li>
+
+        </ul>
+
+        <div class="wrapper">
+          <a href="mailto:sharukh@theplacementpark.com" class="contact-link">sharukh@theplacementpark.com</a>
+
+          <li> 
+            <a href="tel: +91 9885563355" class="footer-link" style="font-size: 1.8rem;">+91 9885563355</a>
+          </li>
+        </div>
+
+        <ul class="social-list">
+
+          <li>
+            <a href="https://www.linkedin.com/company/65595236" target="_blank" class="social-link" style="color: white;">
+              <ion-icon name="logo-linkedin"></ion-icon>
+            </a>
+          </li>
+
+          <li>
+            <a href="https://facebook.com/theplacementpark/" target="_blank" class="social-link" style="color: white;">
+              <ion-icon name="logo-facebook"></ion-icon>
+            </a>
+          </li>
+
+          <li>
+            <a href="https://wa.me/919885563355" target="_blank" class="social-link" style="color: white;">
+              <ion-icon name="logo-whatsapp"></ion-icon>
+            </a>
+          </li>
+
+          <li>
+            <a href="https://instagram.com/theplacementpark/" target="_blank" class="social-link" style="color: white;">
+              <ion-icon name="logo-instagram"></ion-icon>
+            </a>
+          </li>
+
+
+
+        </ul>
+
+      </nav>
+
+      <a href="https://theplacementpark.com/home/login" class="btn btn-primary">Login</a>
+
+      <button class="nav-open-btn" aria-label="open menu" data-nav-toggler>
+        <ion-icon name="menu-outline" aria-hidden="true"></ion-icon>
+      </button>
+
+      <div class="overlay" data-nav-toggler data-overlay></div>
+
+    </div>
+  </header>
+
+
+
+
+  <main>
+    <article>
+
+      <!-- 
+        - #HERO
+      -->
+
+      <section class="section hero has-bg-image" aria-label="home"
+      style="background-image: url('./assets/images/hero-bg.jpg'); padding-top: 120px; padding-bottom: 0px; height:auto; " >
+      <div class="slider">
+        <!-- fade css -->
+        <div class="myslide fade">
+    
+          <img src="assets/Colleges Page Carousel/College Carosel Photo New 1.jpg" style="width: 100%; ">
+        </div>
+        
+        <div class="myslide fade">
+    
+          <img src="assets/Colleges Page Carousel/College Carosel Photo New 2.jpg" style="width: 100%; ">
+        </div>
+        
+        <div class="myslide fade">
+    
+          <img src="assets/Colleges Page Carousel/College Carosel Photo New 3.jpg" style="width: 100%;">
+        </div>
+        
+        <div class="myslide fade">
+    
+          <img src="assets/Colleges Page Carousel/College Carosel Photo New 4.jpg" style="width: 100%;">
+        </div>
+        
+
+        <!-- /fade css -->
+        
+        <!-- onclick js -->
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+          <a class="next" onclick="plusSlides(1)">&#10095;</a>
+<!--         
+        <div class="dotsbox" style="text-align:center">
+          <span class="dot" onclick="currentSlide(1)"></span>
+          <span class="dot" onclick="currentSlide(2)"></span>
+          <span class="dot" onclick="currentSlide(3)"></span>
+          <span class="dot" onclick="currentSlide(4)"></span>
+          <span class="dot" onclick="currentSlide(5)"></span>
+        </div> -->
+        <!-- /onclick js -->
+      </div>
+
+      
+    </section>
+
+      
+
+
+      
+
+
+      <!-- SECTORS -->
+
+
+      <section class="section project" aria-labelledby="project-label" style="padding-top: 60px; padding-bottom: 60px;">
+        <div class="container">
+
+
+
+          <ul class="grid-list">
+
+            <li>
+              <div class="project-card" style="height: max-content;">
+
+                <figure class="card-banner img-holder" style="--width: 560; height: 250px;">
+                  <img src="./assets/images/Stock Image for Internships.jpg" width="560" height="350"
+                    alt="Ligula tristique quis risus" class="img-cover">
+                </figure>
+
+                <div class="card-content">
+
+                  <h3 class="h3">
+                    <a href="#"  style="text-align: center; margin-top: 0px;">Internships</a>
+                  </h3>
+
+                  <!-- <p class="card-text">
+                   <ul>
+                    <li> -- HR Recruitment </li>
+                   </ul>
+                  </p> -->
+
+
+
+                </div>
+
+              </div>
+            </li>
+
+            <li>
+              <div class="project-card">
+
+                <figure class="card-banner img-holder" style="--width: 560; height: 250px;">
+                  <img src="./assets/images/Stock Image for Campus Recruitment.jpg" width="560" height="350" loading="lazy"
+                    alt="Nullam id dolor elit id nibh" class="img-cover">
+                </figure>
+
+                <div class="card-content">
+
+                  <h3 class="h3">
+                    <a href="#" style="text-align: center;">Campus Recruitment</a>
+                  </h3>
+
+
+
+                </div>
+
+              </div>
+            </li>
+
+            <li>
+              <div class="project-card">
+
+                <figure class="card-banner img-holder" style="--width: 560; height: 250px;">
+                  <img src="./assets/images/Stock Image for CRT.jpg" width="560" height="350" loading="lazy"
+                    alt="Ultricies fusce porta elit" class="img-cover">
+                </figure>
+
+                <div class="card-content">
+
+                  <h3 class="h3">
+                    <a href="#"  style="text-align: center;">CRT</a>
+                  </h3>
+<!-- 
+                  <p class="card-text">
+                    <ul>
+                      <li>-- Mock Interviews</li>
+                      <li>-- Upskilling</li>
+                      <li>-- Resume Building</li>
+                      
+                    </ul>
+                  </p> -->
+
+
+
+                </div>
+
+              </div>
+            </li>
+
+          </ul>
+
+        </div>
+      </section>
+
+
+
+
+
+
+
+
+
+      <!--      
+        - #ABOUT
+      -->
+
+      <section class="section project" aria-labelledby="project-label" style="padding-top: 60px; padding-bottom: 0px;">
+        <div class="container">
+
+
+
+          <ul class="grid-lis">
+
+
+            <li>
+              <div class="project-card" style="height: max-content; box-shadow: none; padding-bottom: 60px;">
+
+                  <img src="./assets/images/school.png" style="width:150px"
+                    alt="Ligula tristique quis risus" class="img-cover">
+                
+
+                <div class="card-content" style="padding: 0px; padding-top: 30px;">
+
+                  <h3 class="h3">
+                    <a href="#" class="card-title" style="text-align: left; margin-top: 0px;">450+ Campus Drives</a>
+                  </h3>
+
+                  <p class="card-text">
+                   <ul>
+                    <li>we understand the Importance of Bridging the gap between Talented Individuals and Reputable Organizations. Our College Job Drives Program aims to Connect Top-Notch Companies with Promising Students, Providing an Exceptional Platform for Career Growth and Exploration.
+                    </li>
+                   </ul>
+                  </p>
+
+
+
+                </div>
+
+              </div>
+            </li>
+
+            <li>
+              <div class="project-card" style="height: max-content; box-shadow: none; padding-bottom: 60px; ">
+
+                  <img src="./assets/images/handshake.png" style="width:150px"
+                    alt="Ligula tristique quis risus" class="img-cover">
+                
+
+                <div class="card-content" style="padding: 0px; padding-top: 30px;">
+
+                  <h3 class="h3">
+                    <a href="#" class="card-title" style="text-align: left; margin-top: 0px;">52+ No of Clients Served</a>
+                  </h3>
+
+                  <p class="card-text">
+                   <ul>
+                    <li>We're proud to have worked with Top Companies, Spanning a wide range of Industries and Sectors. Our Clients trust us to find the Best Talent for their Organizations and our Team of Experienced Recruiters and Trainers Understand & Deliver their Specific Needs.
+                    </li>
+                   </ul>
+                  </p>
+
+
+
+                </div>
+
+              </div>
+            </li>
+            <li>
+              <div class="project-card" style="height: max-content; box-shadow: none; padding-bottom: 60px;">
+
+                  <img src="./assets/images/goal.png" style="width:150px;"
+                    alt="Ligula tristique quis risus" class="img-cover">
+                
+
+                <div class="card-content" style="padding: 0px; padding-top: 30px;">
+
+                  <h3 class="h3">
+                    <a href="#" class="card-title" style="text-align: left; margin-top: 0px;">15000+ Canditates Upskilled</a>
+                  </h3>
+
+                  <p class="card-text">
+                   <ul>
+                    <li>At The Placement Park, We pride ourselves on our Tailor made Training Programs Specifically Designed to Upskill Students and Jobseeker with Industry Ready Skillsets.
+                    </li>
+                   </ul>
+                  </p>
+
+
+
+                </div>
+
+              </div>
+            </li>
+            <li>
+              <div class="project-card" style="height: max-content; box-shadow: none; padding-bottom: 60px;">
+
+                  <img src="./assets/images/hired.png" style="width:150px"
+                    alt="Ligula tristique quis risus" class="img-cover">
+                
+
+                <div class="card-content" style="padding: 0px; padding-top: 30px;">
+
+                  <h3 class="h3">
+                    <a href="#" class="card-title" style="text-align: left; margin-top: 0px;">8000+ Canditates Placed</a>
+                  </h3>
+
+                  <p class="card-text">
+                   <ul>
+                    <li> With over 8000+ Candidates placed all over India in Top Tier MNC's and Organisations, We are Committed and Passionate to offer our Recruitment Services to Job Seekers to find their Dream Careers.</li>
+                   </ul>
+                  </p>
+
+
+
+                </div>
+
+              </div>
+            </li>
+
+
+          </ul>
+
+        </div>
+      </section>
+
+      <section class="about" aria-labelledby="about-label" style=" margin-top: 0; padding-block: var(--section-padding); background-color: #0f1941; padding-top:60px; padding-bottom: 60px;">
+        <div class="container" style="height:max-content">
+      
+          <div class="hero-content" style="height:270px">
+      
+            </h2>
+<img src="assets/images/connection.png" style="width: 250px;" alt="">
+            <p class="hero-text" style="color: black;">
+              <!-- <div class="btn-wrapper">
+              <a href="#" class="aa" style="background-color: black; color: white;">Campus Recruitment</a>
+        
+            </div> -->
+        
+          </div>
+        <!-- <figure class="about-banner">
+            <img src="./assets/images/Profile data.gif" width="800" height="580" loading="lazy" alt="about banner"
+              class="w-100">
+          </figure> -->
+          <div class="feature-content" style="color: white;">
+
+            <!-- <p class="section-subtitle" id="feautre-label">Our Solutions</p> -->
+
+            <h2 class="h2 section-title" style="color: #fff157;">
+            72+ College Connectivity
+            </h2>
+
+            <h3 class="h3" style="color: white; line-height: 1.7;">
+
+              We work closely with Colleges and Universities to Identify Top Talent. Our Campus Program includes Job Fairs, Internships, Resume Writing Workshops, Mock Interviews, and other Initiatives that help Students Prepare for the Job Market.
+            </h3>
+
+   
+
+
+          </div>
+        </div>
+      </section>
+
+
+
+
+
+      <!-- 
+        - #FEATURE
+      -->
+
+
+
+
+ 
+
+
+
+
+
+
+
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+      <!-- 
+        - #CTA
+      -->
+
+      <section class="cta" aria-label="call to action" style="background-color: white;">
+        <div class="container">
+
+         <h2 class="h2 section-title" style="color: black;">
+          For Seamless Campus Recruitment Solutions, Contact us Today!     </h2>
+
+          <div style="display: table-row;">
+
+          <h2 class="h2 section-title" style="color: black; margin-bottom: 0px;">
+            +91 9885563355
+          </h2>
+
+        </div>
+  
+        
+        
+          
+
+        </div>
+
+      </section>
+
+
+    </article>
+  </main>
+
+
+  <!-- 
+    - #FOOTER
+  -->
+  <footer class="footer" style="padding-bottom: 60px; background-color: black;" >
+    <div class="container grid-list">
+
+      <div class="footer-brand">
+
+        <a href="#" class="logo">
+          <img src="./assets/2 TPP Logos/Placement Park Logo Inverted.png" width="154" height="134" alt="Adex home">
+        </a>
+<!-- 
+        <p class="footer-text">
+          &copy; 2023 The Placement Park <br> All rights reserved.
+        </p> -->
+
+        <ul class="social-list" style="margin-top: 40px;">
+
+          <li>
+            <a href="https://facebook.com/theplacementpark/" target="_blank" class="social-link" style="color:#3b5998;">
+              <ion-icon name="logo-facebook"></ion-icon>
+            </a>
+          </li>
+
+          <li>
+            <a href="https://www.linkedin.com/company/65595236" target="_blank" class="social-link" style="color: #00acee;">
+              <ion-icon name="logo-linkedin"></ion-icon>
+            </a>
+          </li>
+
+          <li>
+            <a href="https://wa.me/919885563355" target="_blank" class="social-link" style="color: #25D366;">
+              <ion-icon name="logo-whatsapp"></ion-icon>
+            </a>
+          </li>
+
+          <li>
+            <a href="https://instagram.com/theplacementpark" target="_blank" class="social-link" style=" border-radius: 30%; background:  radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);;">
+              <ion-icon name="logo-instagram"></ion-icon>
+            </a>
+          </li>
+
+        </ul>
+        <div class="footer-list">
+
+  
+          <p class="footer-text">
+            &copy; 2023 Placement Park <br> All Rights Reserved
+          </p>
+  
+
+  
+        </div>
+
+      </div>
+
+      <ul class="footer-list" style="width: auto;">
+
+        <li>
+          <p class="h4 footer-list-title">Get in Touch</p>
+        </li>
+
+        <li>
+          <address class="footer-text">
+            Office: The Placement Park, 50-75-27, Ganesh Nagar, Satyam Junction, Vizag 530016
+          </address>
+        </li>
+        
+        <li>
+          <address class="footer-text">
+            Office: The Placement Park, KSR Towers, 6th Floor, Beside Indian Oil Pump, Madhapur, Hyderabad 500081
+          </address>
+        </li>
+
+        <!-- <li>
+          <a href="mailto:info@email.com" class="footer-link">info@email.com</a>
+        </li>
+
+        <li>
+          <a href="tel:001234567890" class="footer-link">00 (123) 456 78 90</a>
+        </li> -->
+
+      </ul>
+<!-- 
+      <ul class="footer-list">
+
+        <li>
+          <p class="h4 footer-list-title">Learn More</p>
+        </li>
+        <li>
+          <a href="#" class="footer-link"> Home</a>
+        </li>
+
+        <li>
+          <a href="#" class="footer-link"> Companies</a>
+        </li>
+
+        <li>
+          <a href="#" class="footer-link">Our Story</a>
+        </li>
+
+        <li>
+          <a href="#" class="footer-link">Colleges</a>
+        </li>
+
+        <li>
+          <a href="#" class="footer-link">Privacy Policy</a>
+        </li>
+
+      </ul> -->
+
+      <!-- <div class="footer-list">
+
+        <p class="h4 footer-list-title">Our CEO</p>
+
+        <p class="footer-text">
+          SharukhTirumani Co-Founder & CEO <br> The Placement Park
+        </p>
+
+        <li>
+          <a href="mailto:" class="footer-link">Sharukh@theplacementpark.com</a>
+        </li>
+
+        <li>
+          <a href="tel:" class="footer-link">+91 985563355</a>
+        </li>
+
+
+      </div> -->
+      <div class="footer-list" style="width: auto;">
+
+        
+        <li>
+          <p class="h4 footer-list-title">Contact</p>
+        </li>
+
+        <p class="footer-text">
+         The Placement Park
+        </p>
+        <li>
+          <a href="tel: +91 9885563355" class="footer-link" style="font-size: 1.8rem;">+91 9885563355</a>
+        </li>
+
+
+        <li>
+          <a href="mailto:sharukh@theplacementpark.com" class="footer-link" style="font-size: 1.8rem;">sharukh@theplacementpark.com</a>
+        </li>
+
+
+
+
+
+      </div>
+
+
+    </div>
+    <div class="read-more-container">
+
+
+
+    <div class="container" style="padding-top: 20px;">
+      <p>
+        <strong>Security Advice: </strong> At no point in the hiring process does The Placement Park charge a candidate a fee or money, and neither do we permit our staff to collect a fee from a candidate.  We want to make it absolutely clear that these contacts are only the work of imposters who want to defraud the candidates. The Placement Park has not given any individual permission to collect payments of any type from job seekers for our business or for anybody else involved in the hiring process.
+          <span class="read-more-text">
+            There are no fees associated with recruitment or interviewing at The Placement Park. Only official email addresses will be used for any correspondence with offer letters. The Placement Park, an expert in the field of HR services is always looking for talent. Please be aware, though, that there are some individuals posing as representatives of The Placement Park who demand payment in exchange for interviews or jobs with The Placement Park or its clients by using the company name The Placement Park or the names of our employees incorrectly. Additionally, these individuals are illegally utilising the firm's registered trademark by creating fraudulent and replicated websites to legitimise their actions and deceive unsuspecting prospects into falling for their traps.
+          </span>
+      </p>
+      <span class="read-more-btn" style="cursor: pointer;">Read More...</span>
+  </div>
+</div>
+
+  </footer>
+
+  <script>
+
+    
+const parentContainer =  document.querySelector('.read-more-container');
+
+parentContainer.addEventListener('click', event=>{
+
+    const current = event.target;
+
+    const isReadMoreBtn = current.className.includes('read-more-btn');
+
+    if(!isReadMoreBtn) return;
+
+    const currentText = event.target.parentNode.querySelector('.read-more-text');
+
+    currentText.classList.toggle('read-more-text--show');
+
+    current.textContent = current.textContent.includes('Read More') ? "Read Less..." : "Read More...";
+
+})
+
+
+
+
+    function scrollUp(){
+      const scrollUp = document.getElementById('scroll-up');
+      // When the scroll is higher than 400 viewport height, add the show-scroll class to the a tag with the scroll-top class
+      if(this.scrollY >= 0) scrollUp.classList.add('show-scroll'); else scrollUp.classList.remove('show-scroll')
+  }
+  window.addEventListener('scroll', scrollUp)
+  </script>
+            <!--=============== SCROLL UP ===============-->
+            <a href="https://api.whatsapp.com/send?phone=919885563355&amp;text= Hi, More Information about The Placement Park" target="_blank" class="scrollup" id="scroll-up"> 
+              <ion-icon id="sup" name="logo-whatsapp"></ion-icon>
+            </a>
+
+
+          <!-- JavaScript Libraries -->
+          <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+          <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+          <script src="lib/wow/wow.min.js"></script>
+          <script src="lib/easing/easing.min.js"></script>
+          <script src="lib/waypoints/waypoints.min.js"></script>
+          <script src="lib/counterup/counterup.min.js"></script>
+          <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+          <script src="lib/lightbox/js/lightbox.min.js"></script>
+      
+          <!-- Template Javascript -->
+          <script src="js/main.js"></script>
+  
+
+
+  
+
+
+
+  <!-- 
+    - custom js link
+  -->
+  <script src="./assets/js/script.js"></script>
+  <script>
+
+const myslide = document.querySelectorAll('.myslide'),
+	  dot = document.querySelectorAll('.dot');
+let counter = 1;
+slidefun(counter);
+
+let timer = setInterval(autoSlide, 8000);
+function autoSlide() {
+	counter += 1;
+	slidefun(counter);
+}
+function plusSlides(n) {
+	counter += n;
+	slidefun(counter);
+	resetTimer();
+}
+function currentSlide(n) {
+	counter = n;
+	slidefun(counter);
+	resetTimer();
+}
+function resetTimer() {
+	clearInterval(timer);
+	timer = setInterval(autoSlide, 8000);
+}
+
+function slidefun(n) {
+	
+	let i;
+	for(i = 0;i<myslide.length;i++){
+		myslide[i].style.display = "none";
+	}
+	for(i = 0;i<dot.length;i++) {
+		dot[i].className = dot[i].className.replace(' active', '');
+	}
+	if(n > myslide.length){
+	   counter = 1;
+	   }
+	if(n < 1){
+	   counter = myslide.length;
+	   }
+	myslide[counter - 1].style.display = "block";
+	dot[counter - 1].className += " active";
+}
+  </script>
+
+  <!-- 
+    - ionicon
+  -->
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+
+</body>
+
+</html>

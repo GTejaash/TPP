@@ -1,0 +1,1286 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- 
+    - primary meta tags
+  -->
+  <title>TPP</title>
+  <meta name="title" content="TPP">
+
+  <!-- 
+    - favicon
+  -->
+  <!-- <link rel="shortcut icon" href="./favicon.svg" type="image/svg+xml"> -->
+
+  <!-- 
+    - google font link
+  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;700&display=swap" rel="stylesheet">
+
+  <!-- 
+    - custom css link
+  -->
+  <link rel="stylesheet" href="./assets/css/style.css">
+  <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+  <link rel="icon" type="image/png" href="assets/2 TPP Logos/favicon.png" sizes="16x16">
+
+
+
+  <!-- 
+    - preload images
+  -->
+  <link rel="preload" as="image" href="./assets/images/hero-bg.jpg">
+  <link rel="preload" as="image" href="./assets/images/hero-slide-1.jpg">
+  <link rel="preload" as="image" href="./assets/images/hero-slide-2.jpg">
+  <link rel="preload" as="image" href="./assets/images/hero-slide-3.jpg">
+  <link rel="stylesheet" href="">
+
+</head>
+<style>
+  
+:root {
+  --d: 700ms;
+  --e: cubic-bezier(0.19, 1, 0.22, 1);
+
+}
+
+
+
+.page-content {
+  display: grid;
+  grid-gap: 1rem;
+  padding: 1rem;
+  max-width: 1024px;
+  margin: 0 auto;
+  font-family: var(--font-sans);
+}
+@media (min-width: 600px) {
+  .page-content {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (min-width: 800px) {
+  .page-content {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.card {
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  overflow: hidden;
+  padding: 1rem;
+  width: 100%;
+  text-align: center;
+  color: whitesmoke;
+  background-color: whitesmoke;
+  
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1), 0 2px 2px rgba(0, 0, 0, 0.1), 0 4px 4px rgba(0, 0, 0, 0.1), 0 8px 8px rgba(0, 0, 0, 0.1), 0 16px 16px rgba(0, 0, 0, 0.1);
+}
+.cards {
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  overflow: hidden;
+  padding: 1rem;
+  width: 100%;
+  text-align: center;
+  color: whitesmoke;
+  background-color: whitesmoke;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1), 0 2px 2px rgba(0, 0, 0, 0.1), 0 4px 4px rgba(0, 0, 0, 0.1), 0 8px 8px rgba(0, 0, 0, 0.1), 0 16px 16px rgba(0, 0, 0, 0.1);
+}
+@media (min-width: 600px) {
+  .card {
+    height: 350px;
+  }
+  .cards{
+    height: 350px;
+  }
+}
+.card:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 110%;
+  background-size: cover;
+  background-position: 0 0;
+  transition: transform calc(var(--d) * 1.5) var(--e);
+  pointer-events: none;
+}
+.cards:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 110%;
+  background-size: cover;
+  background-position: 0 0;
+  transition: transform calc(var(--d) * 1.5) var(--e);
+  pointer-events: none;
+}
+.card:after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 200%;
+  pointer-events: none;
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.009) 11.7%, rgba(0, 0, 0, 0.034) 22.1%, rgba(0, 0, 0, 0.072) 31.2%, rgba(0, 0, 0, 0.123) 39.4%, rgba(0, 0, 0, 0.182) 46.6%, rgba(0, 0, 0, 0.249) 53.1%, rgba(0, 0, 0, 0.32) 58.9%, rgba(0, 0, 0, 0.394) 64.3%, rgba(0, 0, 0, 0.468) 69.3%, rgba(0, 0, 0, 0.54) 74.1%, rgba(0, 0, 0, 0.607) 78.8%, rgba(0, 0, 0, 0.668) 83.6%, rgba(0, 0, 0, 0.721) 88.7%, rgba(0, 0, 0, 0.762) 94.1%, rgba(0, 0, 0, 0.79) 100%);
+  transform: translateY(-50%);
+  transition: transform calc(var(--d) * 2) var(--e);
+}
+.cards:after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 200%;
+  pointer-events: none;
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.009) 11.7%, rgba(0, 0, 0, 0.034) 22.1%, rgba(0, 0, 0, 0.072) 31.2%, rgba(0, 0, 0, 0.123) 39.4%, rgba(0, 0, 0, 0.182) 46.6%, rgba(0, 0, 0, 0.249) 53.1%, rgba(0, 0, 0, 0.32) 58.9%, rgba(0, 0, 0, 0.394) 64.3%, rgba(0, 0, 0, 0.468) 69.3%, rgba(0, 0, 0, 0.54) 74.1%, rgba(0, 0, 0, 0.607) 78.8%, rgba(0, 0, 0, 0.668) 83.6%, rgba(0, 0, 0, 0.721) 88.7%, rgba(0, 0, 0, 0.762) 94.1%, rgba(0, 0, 0, 0.79) 100%);
+  transform: translateY(-50%);
+  transition: transform calc(var(--d) * 2) var(--e);
+}
+.card:before {
+  background-image: url(assets/images/pexels-andrea-piacquadio-3762800.jpg);
+}
+.cards:before {
+  background-image: url(assets/images/pexels-paul-loh-233698.jpg);
+}
+
+
+.content {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  padding: 1rem;
+  transition: transform var(--d) var(--e);
+  z-index: 1;
+}
+.content > * + * {
+  margin-top: 1rem;
+}
+
+.title {
+  font-size: 4rem;
+  font-weight: bold;
+  line-height: 1;
+}
+
+.copy {
+  font-family: var(--font-serif);
+  font-size: 1.125rem;
+  font-style: italic;
+  line-height: 1.35;
+}
+
+
+
+@media (hover: hover) and (min-width: 600px) {
+  .card:after {
+    transform: translateY(0);
+  }
+  .cards:after {
+    transform: translateY(0);
+  }
+
+  .content {
+    transform: translateY(calc(100% - 4.5rem));
+  }
+  .content > *:not(.title) {
+    opacity: 0;
+    transform: translateY(1rem);
+    transition: transform var(--d) var(--e), opacity var(--d) var(--e);
+  }
+
+  .card:hover,
+.card:focus-within {
+    align-items: center;
+  }
+  .card:hover:before,
+.card:focus-within:before {
+    transform: translateY(-4%);
+  }
+  .card:hover:after,
+.card:focus-within:after {
+    transform: translateY(-50%);
+  }
+  .card:hover .content,
+.card:focus-within .content {
+    transform: translateY(0);
+  }
+  .card:hover .content > *:not(.title),
+.card:focus-within .content > *:not(.title) {
+    opacity: 1;
+    transform: translateY(0);
+    transition-delay: calc(var(--d) / 8);
+  }
+
+  .cards:focus-within:before, .cards:focus-within:after,
+.cards:focus-within .content,
+.cards:focus-within .content > *:not(.title) {
+    transition-duration: 0s;
+  }
+  .cards:hover,
+.cards:focus-within {
+    align-items: center;
+  }
+  .cards:hover:before,
+.cards:focus-within:before {
+    transform: translateY(-4%);
+  }
+  .cards:hover:after,
+.cards:focus-within:after {
+    transform: translateY(-50%);
+  }
+  .cards:hover .content,
+.cards:focus-within .content {
+    transform: translateY(0);
+  }
+  .cards:hover .content > *:not(.title),
+.cards:focus-within .content > *:not(.title) {
+    opacity: 1;
+    transform: translateY(0);
+    transition-delay: calc(var(--d) / 8);
+  }
+
+  .cards:focus-within:before, .cards:focus-within:after,
+.cards:focus-within .content,
+.cards:focus-within .content > *:not(.title) {
+    transition-duration: 0s;
+  }
+}
+
+
+  .clientwrapper {
+      display: flex;
+      align-items: center;
+      margin:auto;
+    }
+    .clientslider {
+      width: 80%;
+      height: 100px;
+      position: relative;
+      background: white;
+      align-items: center;
+      margin: auto;
+      align-items: center;
+      margin: auto;
+      
+      /* box-shadow: 0 10px 20px -10px rgba(0,0,0,0.2); */
+      display: flex;
+      overflow: hidden;
+    }
+    .clientslide {
+     background-color: black;
+      height: 100px;
+      display: flex;
+      align-items: center;
+      animation: slideshow 60s linear infinite;
+    }
+    .clientslide img {
+      height: 100px;
+      border: 3px solid white;
+      background: white;
+      padding: 0 30px 0 30px;
+    }
+    @keyframes slideshow {
+      0% {transform: translateX(0);}
+      100% {transform: translateX(-100%);}
+    }
+    .clientslider::before, .slider::after {
+      height: 100px;
+      width: 200px;
+      position: absolute;
+      content: "";
+      /* background: linear-gradient(to right, white 0%, rgba(255,255,255,0) 100%); */
+      z-index: 2;
+    }
+    .clientslider::before {
+      left: 0;
+      top: 0;
+    }
+    .clientslider::after {
+      right:0;
+      top:0;
+      
+      transform: rotateZ(180deg);
+    }
+    .grid {
+	position: relative;
+	clear: both;
+	margin: 0 auto;
+	padding: 1em 0 4em;
+	max-width: 1000px;
+	list-style: none;
+	text-align: center;
+  border-radius: var(--radius-8);
+}
+
+/* Common style */
+.grid figure {
+  
+	position: relative;
+	float: left;
+	overflow: hidden;
+	margin: 10px 1%;
+	min-width: 320px;
+	max-width: 480px;
+	max-height: 360px;
+	width: 48%;
+	height: auto;
+	background: black;
+	text-align: center;
+	cursor: pointer;
+}
+
+.grid figure img {
+	position: relative;
+	display: block;
+  background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+
+	min-height: 100%;
+	max-width: 100%;
+
+}
+
+.grid figure figcaption {
+	padding: 2em;
+	color: #fff;
+	text-transform: uppercase;
+	font-size: 1.25em;
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
+}
+
+.grid figure figcaption::before,
+.grid figure figcaption::after {
+	pointer-events: none;
+}
+
+.grid figure figcaption,
+.grid figure figcaption > a {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+/* Anchor will cover the whole item by default */
+/* For some effects it will show as a button */
+.grid figure figcaption > a {
+	z-index: 1000;
+	text-indent: 200%;
+	white-space: nowrap;
+	font-size: 0;
+	opacity: 0;
+}
+
+.grid figure h2 {
+	word-spacing: -0.15em;
+	font-weight: 300;
+}
+
+.grid figure h2 span {
+	font-weight: 800;
+}
+
+.grid figure h2,
+.grid figure p {
+	margin: 0;
+}
+
+.grid figure p {
+	letter-spacing: 1px;
+	font-size: 68.5%;
+}
+
+/* Individual effects */
+
+/*---------------*/
+/***** Julia *****/
+/*---------------*/
+
+figure.effect-julia {
+	background: black;
+}
+
+figure.effect-julia img {
+  opacity: 0.3;
+  background: linear-gradient(rgba(15,25,65,0) 33%,rgb(15,25,65) 100%);
+	max-width: none;
+	height: 400px;
+	-webkit-transition: opacity 1s, -webkit-transform 1s;
+	transition: opacity 1s, transform 1s;
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
+}
+
+figure.effect-julia figcaption {
+	text-align: left;
+}
+
+figure.effect-julia h2 {
+	position: relative;
+	padding: 0.5em 0;
+}
+
+figure.effect-julia p {
+	display: inline-block;
+	margin: 0 0 0.25em;
+	padding: 0.4em 1em;
+	background: rgba(255,255,255,0.9);
+	color: black;
+	text-transform: none;
+	font-weight: 500;
+	font-size: 75%;
+	-webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+	transition: opacity 0.35s, transform 0.35s;
+	-webkit-transform: translate3d(-360px,0,0);
+	transform: translate3d(-360px,0,0);
+}
+
+figure.effect-julia p:first-child {
+	-webkit-transition-delay: 0.15s;
+	transition-delay: 0.15s;
+}
+
+figure.effect-julia p:nth-of-type(2) {
+	-webkit-transition-delay: 0.1s;
+	transition-delay: 0.1s;
+}
+
+figure.effect-julia p:nth-of-type(3) {
+	-webkit-transition-delay: 0.05s;
+	transition-delay: 0.05s;
+}
+
+figure.effect-julia:hover p:first-child {
+	-webkit-transition-delay: 0s;
+	transition-delay: 0s;
+}
+
+figure.effect-julia:hover p:nth-of-type(2) {
+	-webkit-transition-delay: 0.05s;
+	transition-delay: 0.05s;
+}
+
+figure.effect-julia:hover p:nth-of-type(3) {
+	-webkit-transition-delay: 0.1s;
+	transition-delay: 0.1s;
+}
+
+figure.effect-julia:hover img {
+	/* opacity: 0.4; */
+  opacity: 0.5;
+  filter: blur(3px); 
+  transition-duration: 0.5s;
+	-webkit-transform: scale3d(1.1,1.1,1);
+	transform: scale3d(1.1,1.1,1);
+}
+
+figure.effect-julia:hover p {
+	opacity: 1;
+	-webkit-transform: translate3d(0,0,0);
+	transform: translate3d(0,0,0);
+}
+
+
+</style>
+
+<body>
+
+  <!-- 
+    - #HEADER
+  -->
+
+  <header class="header" data-header>
+    <div class="container">
+
+      <a href="index.html" class="logo">
+        <img src="./assets/2 TPP Logos/Placement Park Logo Inverted.png" width="144"  alt="TPP home"  class="logo-light">
+
+        <img src="./assets/2 TPP Logos/Placement Park Logo Inverted.png" width="144" alt="TPP home" class="logo-dark">
+      </a>
+      <nav class="navbar" data-navbar>
+
+        <div class="navbar-top">
+          <a href="index.html" class="logo">
+            <img src="./assets/2 TPP Logos/Placement Park Logo Inverted.png" width="124" height="124" alt="Adex home">
+          </a>
+
+          <button class="nav-close-btn" aria-label="close menu" data-nav-toggler>
+            <ion-icon name="close-outline" aria-hidden="true"></ion-icon>
+          </button>
+        </div>
+
+        <ul class="navbar-list">
+
+          <li>
+            <a href="index.html" class="navbar-link">Home</a>
+          </li>
+
+          <li>
+            <a href="jobseeker.html" class="navbar-link">Job Seeker</a>
+          </li>
+
+          <li>
+            <a href="companies.html" class="active_link">Companies</a>
+          </li>
+
+          <li>
+            <a href="crt.html" class="navbar-link">Colleges</a>
+          </li>
+
+          <li>
+            <a href="about.html" class="navbar-link">About Us</a>
+          </li>
+
+        </ul>
+        <div class="wrapper">
+          <a href="mailto:sharukh@theplacementpark.com" class="contact-link">sharukh@theplacementpark.com</a>
+
+          <li> 
+            <a href="tel: +91 9885563355" class="footer-link" style="font-size: 1.8rem;">+91 9885563355</a>
+          </li>
+        </div>
+
+        <ul class="social-list">
+
+          <li>
+            <a href="https://www.linkedin.com/company/65595236" target="_blank" class="social-link" style="color: white;">
+              <ion-icon name="logo-linkedin"></ion-icon>
+            </a>
+          </li>
+
+          <li>
+            <a href="https://facebook.com/theplacementpark/" target="_blank" class="social-link" style="color: white;">
+              <ion-icon name="logo-facebook"></ion-icon>
+            </a>
+          </li>
+
+          <li>
+            <a href="https://wa.me/919885563355" target="_blank" class="social-link" style="color: white;">
+              <ion-icon name="logo-whatsapp"></ion-icon>
+            </a>
+          </li>
+
+          <li>
+            <a href="https://instagram.com/theplacementpark/" target="_blank" class="social-link" style="color: white;">
+              <ion-icon name="logo-instagram"></ion-icon>
+            </a>
+          </li>
+
+
+
+        </ul>
+
+      </nav>
+
+      <a href="https://theplacementpark.com/home/login" class="btn btn-primary">Login</a>
+
+      <button class="nav-open-btn" aria-label="open menu" data-nav-toggler>
+        <ion-icon name="menu-outline" aria-hidden="true"></ion-icon>
+      </button>
+
+      <div class="overlay" data-nav-toggler data-overlay></div>
+
+    </div>
+  </header>
+
+
+
+
+
+  <main>
+    <article>
+
+      <!-- 
+        - #HERO
+      -->
+
+      <section class="section hero has-bg-image" aria-label="home"
+        style="background-image: url('./assets/images/hero-bg.jpg');padding-bottom: 60px;">
+        <div class="container">
+
+          <div class="hero-content" style="text-align: left; margin-inline: 0px;">
+
+            <h1 class="h1 hero-title">Bridging the gap between Talent and Organizations: Your Results, Our Priority.</h1>
+
+            <p class="hero-text">
+              We at The Placement Park have always been Committed to Providing Exceptional Recruitment and Training Services to our Clients. We Specialize in both Permanent and Contractual Hiring for IT and non-IT Positions, and we take pride in our Ability to find the best Talent that fits for our Clients.
+              <br>
+              <br>Our Commitment has led to Strong Relationships with TOP Companies across the Country. We're proud to have worked with over 50+ Clients, Spanning a wide range of Industries and Sectors. Our Clients trust us to find the Best Talent for their Organizations and our Team of Experienced Recruiters and Trainers work closely with each Client to Understand their Specific Needs. We're always looking for New Opportunities to Expand our reach and help more Organizations Succeed.
+
+            
+            
+            </p>
+
+
+
+          </div>
+
+
+
+        </div>
+      </section>
+
+
+      <!-- SECTORS -->
+
+
+      <section class="section project" aria-labelledby="project-label" style="padding-top: 60px; padding-bottom: 60px;">
+        <div class="container">
+
+
+          <h2 class="h2 section-title">
+            Services We Offer
+          </h2>
+
+          <ul class="grid-list">
+
+            <li>
+              <div class="project-card" style="height: max-content;">
+
+                <figure class="card-banner img-holder" style="--width: 560; height: 250px;">
+                  <img src="./assets/images/perrec.jpg" width="560" height="350" 
+                    alt="Ligula tristique quis risus" class="img-cover">
+                </figure>
+
+                <div class="card-content">
+
+                  <h3 class="h3">
+                    <a href="#" class="" style="text-align: center;">Permanent Recruitment</a>
+                  </h3>
+
+                </div>
+
+              </div>
+            </li>
+
+            <li>
+                <div class="project-card" style="height: max-content;">
+  
+                  <figure class="card-banner img-holder" style="--width: 560; height: 250px;">
+                    <img src="./assets/images/contract.jpg" width="560" height="350" 
+                      alt="Ligula tristique quis risus" class="img-cover">
+                  </figure>
+  
+                  <div class="card-content">
+  
+                    <h3 class="h3">
+                      <a href="#" class="" style="text-align: center;">Contractual Hiring</a>
+                    </h3>
+  
+                  </div>
+  
+                </div>
+              </li>
+
+              <li>
+                <div class="project-card" style="height: max-content;">
+  
+                  <figure class="card-banner img-holder" style="--width: 560; height: 250px;">
+                    <img src="./assets/images/payroll.jpg" width="560" height="350" 
+                      alt="Ligula tristique quis risus" class="img-cover">
+                  </figure>
+  
+                  <div class="card-content">
+  
+                    <h3 class="h3">
+                      <a href="#" class="" style="text-align: center;">Payroll Staffing</a>
+                    </h3>
+  
+                  </div>
+  
+                </div>
+              </li>
+
+              <li>
+                <div class="project-card" style="height: max-content;">
+  
+                  <figure class="card-banner img-holder" style="--width: 560; height: 250px;">
+                    <img src="./assets/images/exe.jpg" width="560" height="350" 
+                      alt="Ligula tristique quis risus" class="img-cover">
+                  </figure>
+  
+                  <div class="card-content">
+  
+                    <h3 class="h3">
+                      <a href="#" class="" style="text-align: center;">Executive Hiring</a>
+                    </h3>
+  
+                  </div>
+  
+                </div>
+              </li>
+
+              <li>
+                <div class="project-card" style="height: max-content;">
+  
+                  <figure class="card-banner img-holder" style="--width: 560; height: 250px;">
+                    <img src="./assets/images/pexels-lisa-fotios-16129700.jpg" width="560" height="350" 
+                      alt="Ligula tristique quis risus" class="img-cover">
+                  </figure>
+  
+                  <div class="card-content">
+  
+                    <h3 class="h3">
+                      <a href="#" class="" style="text-align: center;">Train and Hire</a>
+                    </h3>
+  
+                  </div>
+  
+                </div>
+              </li>
+
+              <li>
+                <div class="project-card" style="height: max-content;">
+  
+                  <figure class="card-banner img-holder" style="--width: 560; height: 250px;">
+                    <img src="./assets/images/consultation.jpg" width="560" height="350" 
+                      alt="Ligula tristique quis risus" class="img-cover">
+                  </figure>
+  
+                  <div class="card-content">
+  
+                    <h3 class="h3">
+                      <a href="#" class="" style="text-align: center;">Career Consultation</a>
+                    </h3>
+  
+                  </div>
+  
+                </div>
+              </li>
+
+          </ul>
+
+        </div>
+      </section>
+
+
+
+
+
+
+
+
+
+
+
+      <!-- 
+        - #SERVICE
+      -->
+
+
+
+
+
+
+      <!-- 
+        - #ABOUT
+      -->
+
+      <section class="about" aria-labelledby="about-label" style="background-color: #fff157 ; padding-top: 30px;">
+        <div class="container">
+
+          <figure class="about-banner">
+            <img src="./assets/images/63CBDF4D-E80B-4840-98749A22F2616B5A-1.svg" width="800" height="580" loading="lazy" alt="about banner"
+              class="w-100">
+          </figure>
+
+          <div class="about-content" style="padding-top: 30px;">
+
+
+            <h2 class="h2 section-title" style="font-size: 5rem;">
+              Connecting India     </h2>
+
+              <p class="hero-text" style="color: black;">
+                "The Placement Park has its Hiring reach Across all of India. No Matter where your Business is Located. Our Professional Team of Recruiters are Dedicated to Ensure the Hiring Process is Seamless and Efficient. Expand your Team Today with our Pan-India Recruitment Services." </p>
+
+
+
+          </div>
+
+        </div>
+      </section>
+
+
+      
+
+
+
+
+
+      <!-- 
+        - #FEATURE
+      -->
+
+
+
+
+
+
+
+      <!-- 
+        - #STATS
+      -->
+
+      <section class="stats" aria-label="our stats" style=" background-color:#fff157">
+        <div class="container">
+          
+
+          <ul class="stats-card has-bg-image" style="background-image: url('./assets/images/hero-bg.jpg')">
+
+            <li>
+              <p class="card-text">
+                <span class="h1 counter__number">8000+</span>
+
+                <spna class="span">Candidates Palced</spna>
+              </p>
+            </li>
+
+            <li>
+              <p class="card-text">
+                <span class="h1 counter1__number2">52+</span>
+
+                <spna class="span">Clients Served</spna>
+              </p>
+            </li>
+
+            <li>
+              <p class="card-text">
+                <span class="h1 counter1__number3" >70+</span>
+
+                <spna class="span">College Connectivity</spna>
+              </p>
+            </li>
+            <li>
+              <p class="card-text">
+                <span class="h1 counter1__number4">450+</span>
+
+                <spna class="span">Campus Drives</spna>
+              </p>
+            </li>
+            
+            <li>
+              <p class="card-text">
+                <span class="h1 counter__number5">15000+</span>
+
+                <spna class="span">Candidates upskilled</spna>
+              </p>
+            </li>
+
+
+          </ul>
+
+        </div>
+      </section>
+
+      
+
+
+
+
+
+
+      <!-- 
+        - #PROJECT
+      -->
+
+        
+                                    
+
+      
+
+
+
+
+
+        <!-- client Scrolling -->
+
+
+
+
+
+
+
+      <!-- 
+        - #CTA
+      -->
+
+      <section class="cta" aria-label="call to action" style="background-color: white;">
+        <div class="container">
+
+         <h2 class="h2 section-title" style="color: black;">
+          Contact us Today to learn more about our Services.        </h2>
+
+          <div style="display: table-row;">
+
+          <h2 class="h2 section-title" style="color: black; margin-bottom: 0px;">
+            +91 9885563355
+          </h2>
+          <hr>
+          
+          <h2 class="h2 section-title" style="color: black;">
+            +91 9916963444
+          </h2>
+        </div>
+  
+        
+        
+          
+
+        </div>
+
+      </section>
+
+    </article>
+  </main>
+
+
+  <!-- 
+    - #FOOTER
+  -->
+  <footer class="footer" style="padding-bottom: 60px; background-color: black;" >
+    <div class="container grid-list">
+
+      <div class="footer-brand">
+
+        <a href="#" class="logo">
+          <img src="./assets/2 TPP Logos/Placement Park Logo Inverted.png" width="154" height="134" alt="Adex home">
+        </a>
+<!-- 
+        <p class="footer-text">
+          &copy; 2023 The Placement Park <br> All rights reserved.
+        </p> -->
+
+        <ul class="social-list" style="margin-top: 40px;">
+
+          <li>
+            <a href="https://facebook.com/theplacementpark/" target="_blank" class="social-link" style="color:#3b5998;">
+              <ion-icon name="logo-facebook"></ion-icon>
+            </a>
+          </li>
+
+          <li>
+            <a href="https://www.linkedin.com/company/65595236" target="_blank" class="social-link" style="color: #00acee;">
+              <ion-icon name="logo-linkedin"></ion-icon>
+            </a>
+          </li>
+
+          <li>
+            <a href="https://wa.me/919885563355" target="_blank" class="social-link" style="color: #25D366;">
+              <ion-icon name="logo-whatsapp"></ion-icon>
+            </a>
+          </li>
+
+          <li>
+            <a href="https://instagram.com/theplacementpark" target="_blank" class="social-link" style=" border-radius: 30%; background:  radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);;">
+              <ion-icon name="logo-instagram"></ion-icon>
+            </a>
+          </li>
+
+        </ul>
+        <div class="footer-list">
+
+  
+          <p class="footer-text">
+            &copy; 2023 Placement Park <br> All Rights Reserved
+          </p>
+  
+
+  
+        </div>
+
+      </div>
+
+      <ul class="footer-list" style="width: auto;">
+
+        <li>
+          <p class="h4 footer-list-title">Get in Touch</p>
+        </li>
+
+        <li>
+          <address class="footer-text">
+            Office: The Placement Park, 50-75-27, Ganesh Nagar, Satyam Junction, Vizag 530016
+          </address>
+        </li>
+        
+        <li>
+          <address class="footer-text">
+            Office: The Placement Park, KSR Towers, 6th Floor, Beside Indian Oil Pump, Madhapur, Hyderabad 500081
+          </address>
+        </li>
+
+        <!-- <li>
+          <a href="mailto:info@email.com" class="footer-link">info@email.com</a>
+        </li>
+
+        <li>
+          <a href="tel:001234567890" class="footer-link">00 (123) 456 78 90</a>
+        </li> -->
+
+      </ul>
+<!-- 
+      <ul class="footer-list">
+
+        <li>
+          <p class="h4 footer-list-title">Learn More</p>
+        </li>
+        <li>
+          <a href="#" class="footer-link"> Home</a>
+        </li>
+
+        <li>
+          <a href="#" class="footer-link"> Companies</a>
+        </li>
+
+        <li>
+          <a href="#" class="footer-link">Our Story</a>
+        </li>
+
+        <li>
+          <a href="#" class="footer-link">Colleges</a>
+        </li>
+
+        <li>
+          <a href="#" class="footer-link">Privacy Policy</a>
+        </li>
+
+      </ul> -->
+
+      <!-- <div class="footer-list">
+
+        <p class="h4 footer-list-title">Our CEO</p>
+
+        <p class="footer-text">
+          SharukhTirumani Co-Founder & CEO <br> The Placement Park
+        </p>
+
+        <li>
+          <a href="mailto:" class="footer-link">Sharukh@theplacementpark.com</a>
+        </li>
+
+        <li>
+          <a href="tel:" class="footer-link">+91 985563355</a>
+        </li>
+
+
+      </div> -->
+      <div class="footer-list" style="width: auto;">
+
+        
+        <li>
+          <p class="h4 footer-list-title">Contact</p>
+        </li>
+
+        <p class="footer-text">
+         The Placement Park
+        </p>
+        <li>
+          <a href="tel: +91 9885563355" class="footer-link" style="font-size: 1.8rem;">+91 9885563355</a>
+        </li>
+
+
+        <li>
+          <a href="mailto:sharukh@theplacementpark.com" class="footer-link" style="font-size: 1.8rem;">sharukh@theplacementpark.com</a>
+        </li>
+
+
+
+
+
+      </div>
+
+
+    </div>
+    <div class="read-more-container">
+
+
+
+    <div class="container" style="padding-top: 20px;">
+      <p>
+        <strong>Security Advice: </strong> At no point in the hiring process does The Placement Park charge a candidate a fee or money, and neither do we permit our staff to collect a fee from a candidate.  We want to make it absolutely clear that these contacts are only the work of imposters who want to defraud the candidates. The Placement Park has not given any individual permission to collect payments of any type from job seekers for our business or for anybody else involved in the hiring process.
+          <span class="read-more-text">
+            There are no fees associated with recruitment or interviewing at The Placement Park. Only official email addresses will be used for any correspondence with offer letters. The Placement Park, an expert in the field of HR services is always looking for talent. Please be aware, though, that there are some individuals posing as representatives of The Placement Park who demand payment in exchange for interviews or jobs with The Placement Park or its clients by using the company name The Placement Park or the names of our employees incorrectly. Additionally, these individuals are illegally utilising the firm's registered trademark by creating fraudulent and replicated websites to legitimise their actions and deceive unsuspecting prospects into falling for their traps.
+          </span>
+      </p>
+      <span class="read-more-btn" style="cursor: pointer;">Read More...</span>
+  </div>
+</div>
+
+  </footer>
+
+  <script>
+
+    
+const parentContainer =  document.querySelector('.read-more-container');
+
+parentContainer.addEventListener('click', event=>{
+
+    const current = event.target;
+
+    const isReadMoreBtn = current.className.includes('read-more-btn');
+
+    if(!isReadMoreBtn) return;
+
+    const currentText = event.target.parentNode.querySelector('.read-more-text');
+
+    currentText.classList.toggle('read-more-text--show');
+
+    current.textContent = current.textContent.includes('Read More') ? "Read Less..." : "Read More...";
+
+})
+
+
+
+    function scrollUp(){
+      const scrollUp = document.getElementById('scroll-up');
+      // When the scroll is higher than 400 viewport height, add the show-scroll class to the a tag with the scroll-top class
+      if(this.scrollY >= 0) scrollUp.classList.add('show-scroll'); else scrollUp.classList.remove('show-scroll')
+  }
+  window.addEventListener('scroll', scrollUp)
+  </script>
+            <!--=============== SCROLL UP ===============-->
+            <a href="https://api.whatsapp.com/send?phone=919885563355&amp;text= Hi, More Information about The Placement Park" target="_blank" class="scrollup" id="scroll-up"> 
+              <ion-icon id="sup" name="logo-whatsapp"></ion-icon>
+            </a>
+
+  
+          <!-- JavaScript Libraries -->
+          <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+          <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+          <script src="lib/wow/wow.min.js"></script>
+          <script src="lib/easing/easing.min.js"></script>
+          <script src="lib/waypoints/waypoints.min.js"></script>
+          <script src="lib/counterup/counterup.min.js"></script>
+          <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+          <script src="lib/lightbox/js/lightbox.min.js"></script>
+      
+          <!-- Template Javascript -->
+          <script src="js/main.js"></script>
+  
+
+
+  
+          
+
+
+  <!-- 
+    - custom js link
+  -->
+  <script src="./assets/js/script.js"></script>
+
+  <!-- 
+    - ionicon
+  -->
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+<script>
+  // Function to animate bigger numbers (greater than 5000)
+function animateBiggerNumbers(element, start, end, duration) {
+  let current = start;
+  const range = end - start;
+  const increment = end > start ? 40 : -1;
+  
+  // Adjusted step time for bigger numbers
+  const stepTime = Math.abs(Math.floor(duration / range)) / 5;
+  
+  // Function to update the number value
+  const updateNumber = () => {
+    current += increment;
+    element.textContent = current+"+";
+    
+    // Stop the animation when reaching the end value
+    if ((increment > 0 && current >= end) || (increment < 0 && current <= end)) {
+      clearInterval(timer);
+    }
+  };
+  
+  // Start the animation
+  const timer = setInterval(updateNumber, stepTime);
+  updateNumber();
+}
+
+// Function to animate smaller numbers
+function animateSmallerNumbers(element, start, end, duration) {
+  let current = start;
+  const range = end - start;
+  const increment = end > start ? 1 : -1;
+  
+  // Adjusted step time for smaller numbers
+  const stepTime = Math.abs(Math.floor(duration / range));
+  
+  // Function to update the number value
+  const updateNumber = () => {
+    current += increment;
+    element.textContent = current+"+";
+    
+    // Stop the animation when reaching the end value
+    if ((increment > 0 && current >= end) || (increment < 0 && current <= end)) {
+      clearInterval(timer);
+    }
+  };
+  
+  // Start the animation
+  const timer = setInterval(updateNumber, stepTime);
+  updateNumber();
+}
+
+// Callback function when the observed section enters the viewport
+function animateOnScroll(entries) {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      // Start animating the numbers when the section is in view
+      const numbers = entry.target.querySelectorAll('.counter__number, .counter1__number2, .counter1__number3, .counter1__number4, .counter__number5');
+      numbers.forEach((number, index) => {
+        const startValue = 0;  // Start value for the number
+        const endValue = parseInt(number.textContent);  // End value from the HTML
+        const duration = 2000;  // Duration in milliseconds for the animation
+        
+        if (endValue > 5000) {
+          animateBiggerNumbers(number, startValue, endValue, duration);
+        } else {
+          animateSmallerNumbers(number, startValue, endValue, duration);
+        }
+      });
+      
+      // Stop observing once the animation starts
+      observer.unobserve(entry.target);
+    }
+  });
+}
+
+// Create a new Intersection Observer instance
+const observer = new IntersectionObserver(animateOnScroll, { threshold: 0.5 });
+
+// Select the section element to observe
+const statsSection = document.querySelector('.stats');
+
+// Start observing the section
+observer.observe(statsSection);
+
+</script>
+
+</body>
+
+</html>

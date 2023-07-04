@@ -1,0 +1,1801 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- 
+    - primary meta tags
+  -->
+  <title>TPP</title>
+  <meta name="title" content="TPP">
+
+  <!-- 
+    - favicon
+  -->
+  <!-- <link rel="shortcut icon" href="./favicon.svg" type="image/svg+xml"> -->
+
+  <!-- 
+    - google font link
+  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;700&display=swap" rel="stylesheet">
+
+  <!-- 
+    - custom css link
+  -->
+  <link rel="stylesheet" href="./assets/css/style.css">
+  <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+  <link rel="icon" type="image/png" href="assets/2 TPP Logos/favicon.png" sizes="16x16">
+
+
+
+  <!-- 
+    - preload images
+  -->
+  <link rel="preload" as="image" href="./assets/images/bpo.jpg">
+  <link rel="preload" as="image" href="./assets/images/hero-slide-1.jpg">
+  <link rel="preload" as="image" href="./assets/images/hero-slide-2.jpg">
+  <link rel="preload" as="image" href="./assets/images/hero-slide-3.jpg">
+
+</head>
+<style>
+:root {
+  --d: 700ms;
+  --e: cubic-bezier(0.19, 1, 0.22, 1);
+
+}
+
+
+
+.page-content {
+  display: grid;
+  grid-gap: 1rem;
+  padding: 1rem;
+  max-width: 1024px;
+  margin: 0 auto;
+  font-family: var(--font-sans);
+}
+@media (min-width: 600px) {
+  .page-content {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (min-width: 800px) {
+  .page-content {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.card {
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  overflow: hidden;
+  padding: 1rem;
+  width: 100%;
+  text-align: center;
+  color: whitesmoke;
+  background-color: whitesmoke;
+  
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1), 0 2px 2px rgba(0, 0, 0, 0.1), 0 4px 4px rgba(0, 0, 0, 0.1), 0 8px 8px rgba(0, 0, 0, 0.1), 0 16px 16px rgba(0, 0, 0, 0.1);
+}
+.cards {
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  overflow: hidden;
+  padding: 1rem;
+  width: 100%;
+  text-align: center;
+  color: whitesmoke;
+  background-color: whitesmoke;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1), 0 2px 2px rgba(0, 0, 0, 0.1), 0 4px 4px rgba(0, 0, 0, 0.1), 0 8px 8px rgba(0, 0, 0, 0.1), 0 16px 16px rgba(0, 0, 0, 0.1);
+}
+@media (min-width: 600px) {
+  .card {
+    height: 350px;
+  }
+  .cards{
+    height: 350px;
+  }
+}
+.card:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 110%;
+  background-size: cover;
+  background-position: 0 0;
+  transition: transform calc(var(--d) * 1.5) var(--e);
+  pointer-events: none;
+}
+.cards:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 110%;
+  background-size: cover;
+  background-position: 0 0;
+  transition: transform calc(var(--d) * 1.5) var(--e);
+  pointer-events: none;
+}
+.card:after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 200%;
+  pointer-events: none;
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.009) 11.7%, rgba(0, 0, 0, 0.034) 22.1%, rgba(0, 0, 0, 0.072) 31.2%, rgba(0, 0, 0, 0.123) 39.4%, rgba(0, 0, 0, 0.182) 46.6%, rgba(0, 0, 0, 0.249) 53.1%, rgba(0, 0, 0, 0.32) 58.9%, rgba(0, 0, 0, 0.394) 64.3%, rgba(0, 0, 0, 0.468) 69.3%, rgba(0, 0, 0, 0.54) 74.1%, rgba(0, 0, 0, 0.607) 78.8%, rgba(0, 0, 0, 0.668) 83.6%, rgba(0, 0, 0, 0.721) 88.7%, rgba(0, 0, 0, 0.762) 94.1%, rgba(0, 0, 0, 0.79) 100%);
+  transform: translateY(-50%);
+  transition: transform calc(var(--d) * 2) var(--e);
+}
+.cards:after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 200%;
+  pointer-events: none;
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.009) 11.7%, rgba(0, 0, 0, 0.034) 22.1%, rgba(0, 0, 0, 0.072) 31.2%, rgba(0, 0, 0, 0.123) 39.4%, rgba(0, 0, 0, 0.182) 46.6%, rgba(0, 0, 0, 0.249) 53.1%, rgba(0, 0, 0, 0.32) 58.9%, rgba(0, 0, 0, 0.394) 64.3%, rgba(0, 0, 0, 0.468) 69.3%, rgba(0, 0, 0, 0.54) 74.1%, rgba(0, 0, 0, 0.607) 78.8%, rgba(0, 0, 0, 0.668) 83.6%, rgba(0, 0, 0, 0.721) 88.7%, rgba(0, 0, 0, 0.762) 94.1%, rgba(0, 0, 0, 0.79) 100%);
+  transform: translateY(-50%);
+  transition: transform calc(var(--d) * 2) var(--e);
+}
+.card:before {
+  background-image: url(assets/images/pexels-andrea-piacquadio-3762800.jpg);
+}
+.cards:before {
+  background-image: url(assets/images/pexels-paul-loh-233698.jpg);
+}
+
+
+.content {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  padding: 1rem;
+  transition: transform var(--d) var(--e);
+  z-index: 1;
+}
+.content > * + * {
+  margin-top: 1rem;
+}
+
+.title {
+  font-size: 4rem;
+  font-weight: bold;
+  line-height: 1;
+}
+
+.copy {
+  font-family: var(--font-serif);
+  font-size: 1.125rem;
+  font-style: italic;
+  line-height: 1.35;
+}
+
+
+
+@media (hover: hover) and (min-width: 600px) {
+  .card:after {
+    transform: translateY(0);
+  }
+  .cards:after {
+    transform: translateY(0);
+  }
+
+  .content {
+    transform: translateY(calc(100% - 4.5rem));
+  }
+  .content > *:not(.title) {
+    opacity: 0;
+    transform: translateY(1rem);
+    transition: transform var(--d) var(--e), opacity var(--d) var(--e);
+  }
+
+  .card:hover,
+.card:focus-within {
+    align-items: center;
+  }
+  .card:hover:before,
+.card:focus-within:before {
+    transform: translateY(-4%);
+  }
+  .card:hover:after,
+.card:focus-within:after {
+    transform: translateY(-50%);
+  }
+  .card:hover .content,
+.card:focus-within .content {
+    transform: translateY(0);
+  }
+  .card:hover .content > *:not(.title),
+.card:focus-within .content > *:not(.title) {
+    opacity: 1;
+    transform: translateY(0);
+    transition-delay: calc(var(--d) / 8);
+  }
+
+  .cards:focus-within:before, .cards:focus-within:after,
+.cards:focus-within .content,
+.cards:focus-within .content > *:not(.title) {
+    transition-duration: 0s;
+  }
+  .cards:hover,
+.cards:focus-within {
+    align-items: center;
+  }
+  .cards:hover:before,
+.cards:focus-within:before {
+    transform: translateY(-4%);
+  }
+  .cards:hover:after,
+.cards:focus-within:after {
+    transform: translateY(-50%);
+  }
+  .cards:hover .content,
+.cards:focus-within .content {
+    transform: translateY(0);
+  }
+  .cards:hover .content > *:not(.title),
+.cards:focus-within .content > *:not(.title) {
+    opacity: 1;
+    transform: translateY(0);
+    transition-delay: calc(var(--d) / 8);
+  }
+
+  .cards:focus-within:before, .cards:focus-within:after,
+.cards:focus-within .content,
+.cards:focus-within .content > *:not(.title) {
+    transition-duration: 0s;
+  }
+}
+
+
+  .clientwrapper {
+      display: flex;
+      align-items: center;
+      margin:auto;
+    }
+    .clientslider {
+      width: 80%;
+      height: 100px;
+      position: relative;
+      background: white;
+      align-items: center;
+      margin: auto;
+      align-items: center;
+      margin: auto;
+      
+      /* box-shadow: 0 10px 20px -10px rgba(0,0,0,0.2); */
+      display: flex;
+      overflow: hidden;
+    }
+    .clientslide {
+     background-color: black;
+      height: 100px;
+      display: flex;
+      align-items: center;
+      animation: slideshow 60s linear infinite;
+    }
+    .clientslide img {
+      height: 100px;
+      border: 3px solid white;
+      background: white;
+      padding: 0 30px 0 30px;
+    }
+    @keyframes slideshow {
+      0% {transform: translateX(0);}
+      100% {transform: translateX(-100%);}
+    }
+    .clientslider::before, .slider::after {
+      height: 100px;
+      width: 200px;
+      position: absolute;
+      content: "";
+      /* background: linear-gradient(to right, white 0%, rgba(255,255,255,0) 100%); */
+      z-index: 2;
+    }
+    .clientslider::before {
+      left: 0;
+      top: 0;
+    }
+    .clientslider::after {
+      right:0;
+      top:0;
+      
+      transform: rotateZ(180deg);
+    }
+    .grid {
+	position: relative;
+	clear: both;
+	margin: 0 auto;
+	padding: 1em 0 4em;
+	max-width: 1000px;
+	list-style: none;
+	text-align: center;
+  border-radius: var(--radius-8);
+}
+
+/* Common style */
+.grid figure {
+  
+	position: relative;
+	float: left;
+	overflow: hidden;
+	margin: 10px 1%;
+	min-width: 320px;
+	max-width: 480px;
+	max-height: 360px;
+	width: 48%;
+	height: auto;
+	background: black;
+	text-align: center;
+	cursor: pointer;
+}
+
+.grid figure img {
+	position: relative;
+	display: block;
+  background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+
+	min-height: 100%;
+	max-width: 100%;
+
+}
+
+.grid figure figcaption {
+	padding: 2em;
+	color: #fff;
+	text-transform: uppercase;
+	font-size: 1.25em;
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
+}
+
+.grid figure figcaption::before,
+.grid figure figcaption::after {
+	pointer-events: none;
+}
+
+.grid figure figcaption,
+.grid figure figcaption > a {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+/* Anchor will cover the whole item by default */
+/* For some effects it will show as a button */
+.grid figure figcaption > a {
+	z-index: 1000;
+	text-indent: 200%;
+	white-space: nowrap;
+	font-size: 0;
+	opacity: 0;
+}
+
+.grid figure h2 {
+	word-spacing: -0.15em;
+	font-weight: 300;
+}
+
+.grid figure h2 span {
+	font-weight: 800;
+}
+
+.grid figure h2,
+.grid figure p {
+	margin: 0;
+}
+
+.grid figure p {
+	letter-spacing: 1px;
+	font-size: 68.5%;
+}
+
+/* Individual effects */
+
+/*---------------*/
+/***** Julia *****/
+/*---------------*/
+
+figure.effect-julia {
+	background: black;
+}
+
+figure.effect-julia img {
+  opacity: 0.3;
+  background: linear-gradient(rgba(15,25,65,0) 33%,rgb(15,25,65) 100%);
+	max-width: none;
+	height: 400px;
+	-webkit-transition: opacity 1s, -webkit-transform 1s;
+	transition: opacity 1s, transform 1s;
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
+}
+
+figure.effect-julia figcaption {
+	text-align: left;
+}
+
+figure.effect-julia h2 {
+	position: relative;
+	padding: 0.5em 0;
+}
+
+figure.effect-julia p {
+	display: inline-block;
+	margin: 0 0 0.25em;
+	padding: 0.4em 1em;
+	background: rgba(255,255,255,0.9);
+	color: black;
+	text-transform: none;
+	font-weight: 500;
+	font-size: 75%;
+	-webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+	transition: opacity 0.35s, transform 0.35s;
+	-webkit-transform: translate3d(-360px,0,0);
+	transform: translate3d(-360px,0,0);
+}
+
+figure.effect-julia p:first-child {
+	-webkit-transition-delay: 0.15s;
+	transition-delay: 0.15s;
+}
+
+figure.effect-julia p:nth-of-type(2) {
+	-webkit-transition-delay: 0.1s;
+	transition-delay: 0.1s;
+}
+
+figure.effect-julia p:nth-of-type(3) {
+	-webkit-transition-delay: 0.05s;
+	transition-delay: 0.05s;
+}
+
+figure.effect-julia:hover p:first-child {
+	-webkit-transition-delay: 0s;
+	transition-delay: 0s;
+}
+
+figure.effect-julia:hover p:nth-of-type(2) {
+	-webkit-transition-delay: 0.05s;
+	transition-delay: 0.05s;
+}
+
+figure.effect-julia:hover p:nth-of-type(3) {
+	-webkit-transition-delay: 0.1s;
+	transition-delay: 0.1s;
+}
+
+figure.effect-julia:hover img {
+	/* opacity: 0.4; */
+  opacity: 0.5;
+  filter: blur(3px); 
+  transition-duration: 0.5s;
+	-webkit-transform: scale3d(1.1,1.1,1);
+	transform: scale3d(1.1,1.1,1);
+}
+
+figure.effect-julia:hover p {
+	opacity: 1;
+	-webkit-transform: translate3d(0,0,0);
+	transform: translate3d(0,0,0);
+}
+/* Logo Slider */
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-250px * 24));
+  }
+}
+.slider {
+  height: 100px;
+  margin: auto;
+  overflow: hidden;
+  position: relative;
+  width: auto;
+}
+.slider .slide-track {
+  animation: scroll 40s linear infinite;
+  display: flex;
+  width: calc(250px * 24);
+}
+.slider .slide {
+  height: 100px;
+  width: 250px;
+}
+
+
+</style>
+
+<body>
+
+  <!-- 
+    - #HEADER
+  -->
+
+  <header class="header" data-header>
+    <div class="container">
+
+      <a href="index.html" class="logo">
+        <img src="./assets/2 TPP Logos/Placement Park Logo Inverted.png" width="144"  alt="TPP home"  class="logo-light">
+
+        <img src="./assets/2 TPP Logos/Placement Park Logo Inverted.png" width="144" alt="TPP home" class="logo-dark">
+      </a>
+
+
+      <nav class="navbar" data-navbar>
+
+        <div class="navbar-top">
+          <a href="index.html" class="logo">
+            <img src="./assets/2 TPP Logos/Placement Park Logo Inverted.png" width="124" height="124" alt="Adex home">
+          </a>
+
+          <button class="nav-close-btn" aria-label="close menu" data-nav-toggler>
+            <ion-icon name="close-outline" aria-hidden="true"></ion-icon>
+          </button>
+        </div>
+
+        <ul class="navbar-list">
+
+          <li>
+            <a href="index.html" class="navbar-link">Home</a>
+          </li>
+
+          <li>
+            <a href="jobseeker.html" class="active_link">Job Seeker</a>
+          </li>
+
+          <li>
+            <a href="companies.html" class="navbar-link">Companies</a>
+          </li>
+
+          <li>
+            <a href="crt.html" class="navbar-link">Colleges</a>
+          </li>
+
+          <li>
+            <a href="about.html" class="navbar-link">About Us</a>
+          </li>
+
+        </ul>
+
+        <div class="wrapper">
+          <a href="mailto:sharukh@theplacementpark.com" class="contact-link">sharukh@theplacementpark.com</a>
+
+          <li> 
+            <a href="tel: +91 9885563355" class="footer-link" style="font-size: 1.8rem;">+91 9885563355</a>
+          </li>
+        </div>
+
+        <ul class="social-list">
+
+          <li>
+            <a href="https://www.linkedin.com/company/65595236" target="_blank" class="social-link" style="color: white;">
+              <ion-icon name="logo-linkedin"></ion-icon>
+            </a>
+          </li>
+
+          <li>
+            <a href="https://facebook.com/theplacementpark/" target="_blank" class="social-link" style="color: white;">
+              <ion-icon name="logo-facebook"></ion-icon>
+            </a>
+          </li>
+
+          <li>
+            <a href="https://wa.me/919885563355" target="_blank" class="social-link" style="color: white;">
+              <ion-icon name="logo-whatsapp"></ion-icon>
+            </a>
+          </li>
+
+          <li>
+            <a href="https://instagram.com/theplacementpark/" target="_blank" class="social-link" style="color: white;">
+              <ion-icon name="logo-instagram"></ion-icon>
+            </a>
+          </li>
+
+
+
+        </ul>
+
+
+      </nav>
+
+      <a href="https://forms.gle/4qFPav6M4JbTfbHx6" target="_blank" class="btn btn-primary">Apply</a>
+
+      <button class="nav-open-btn" aria-label="open menu" data-nav-toggler>
+        <ion-icon name="menu-outline" aria-hidden="true"></ion-icon>
+      </button>
+
+      <div class="overlay" data-nav-toggler data-overlay></div>
+
+    </div>
+  </header>
+
+
+
+
+
+  <main>
+    <article>
+
+      <!-- 
+        - #HERO
+      -->
+
+      <section class="section hero has-bg-image" aria-label="home"
+        style="background-image: url('./assets/images/hero-bg.jpg'); padding-bottom: 60px;">
+        <div class="container">
+
+          <div class="hero-content" style="text-align: left; margin-inline: 0px;">
+
+            <h1 class="h1 hero-title">Discover Amazing Career Opportunities</h1>
+
+            <p class="hero-text">
+              Get Hired with our Efficient Recruitment Services, from Interview Preparation to Career Guidance and Skill Development, We will help you Navigate the Ever-Challenging Recruitment Landscape. Start your journey with us today and achieve your Career Aspirations.
+            </p>
+
+            <div class="btn-wrapper" style="justify-content: left;">
+
+              <!-- <a href="#" class="btn btn-primary">Explore Now</a> -->
+
+              <a href="https://forms.gle/4qFPav6M4JbTfbHx6" target="_blank" class="btn btn-outline">Apply for Job</a>
+
+            </div>
+
+          </div>
+
+
+
+        </div>
+      </section>
+
+
+      <!-- SECTORS -->
+
+
+      <section class="section service" aria-labelledby="service-label" style="padding-bottom: 0px; padding-top: 60px;">
+        <div class="container">
+
+          <!-- <p class="section-subtitle" id="service-label">What We Do?</p> -->
+
+          <h2 class="h2 section-title" style="text-align: center;">
+            Sectors We Hire For
+          </h2>
+
+          <ul class="grid-listss" style="padding-left: 0px;">
+
+            <li>
+              <div class="service-card">
+                <img src="./assets/images/pexels-lisa-fotios-16129700.jpg" width="560" height="350"
+                alt="Ligula tristique quis risus" class="img-cover" style="padding: 0; margin: 0;">
+                <h3 class="h4 card-title" style="padding: 20px;">IT</h3>
+
+                <!-- <p class="card-text" style="padding: 40px;">
+                  Nulla vitae elit libero, a pharetra augue. Donec id elit non mi porta gravida at eget metus cras
+                  justo.
+                </p> -->
+<!-- 
+                <a href="#" class="btn-text">
+                  <span class="span">Learn More</span>
+
+                  <ion-icon name="arrow-forward-outline" aria-hidden="true"></ion-icon>
+                </a> -->
+
+              </div>
+            </li>
+
+            <li>
+              <div class="service-card">
+                <img src="./assets/images/bpo.jpg" width="560" height="350"
+                alt="Ligula tristique quis risus" class="img-cover" style="padding: 0; margin: 0;">
+                <h3 class="h4 card-title" style="padding: 20px;">BPO</h3>
+
+                <!-- <p class="card-text" style="padding: 40px;">
+                  Nulla vitae elit libero, a pharetra augue. Donec id elit non mi porta gravida at eget metus cras
+                  justo.
+                </p> -->
+<!-- 
+                <a href="#" class="btn-text">
+                  <span class="span">Learn More</span>
+
+                  <ion-icon name="arrow-forward-outline" aria-hidden="true"></ion-icon>
+                </a> -->
+
+              </div>
+            </li>
+            <li>
+              <div class="service-card">
+                <img src="./assets/images/automobile.jpg" width="560" height="350"
+                alt="Ligula tristique quis risus" class="img-cover" style="padding: 0; margin: 0;">
+                <h3 class="h4 card-title" style="padding: 20px;">Automobile</h3>
+
+                <!-- <p class="card-text" style="padding: 40px;">
+                  Nulla vitae elit libero, a pharetra augue. Donec id elit non mi porta gravida at eget metus cras
+                  justo.
+                </p> -->
+<!-- 
+                <a href="#" class="btn-text">
+                  <span class="span">Learn More</span>
+
+                  <ion-icon name="arrow-forward-outline" aria-hidden="true"></ion-icon>
+                </a> -->
+
+              </div>
+            </li>
+            <li>
+              <div class="service-card">
+                <img src="./assets/images/aviation.jpg" width="560" height="350"
+                alt="Ligula tristique quis risus" class="img-cover" style="padding: 0; margin: 0;">
+                <h3 class="h4 card-title" style="padding: 20px;">Aviation</h3>
+
+                <!-- <p class="card-text" style="padding: 40px;">
+                  Nulla vitae elit libero, a pharetra augue. Donec id elit non mi porta gravida at eget metus cras
+                  justo.
+                </p> -->
+<!-- 
+                <a href="#" class="btn-text">
+                  <span class="span">Learn More</span>
+
+                  <ion-icon name="arrow-forward-outline" aria-hidden="true"></ion-icon>
+                </a> -->
+
+              </div>
+            </li>
+            <li>
+              <div class="service-card">
+                <img src="./assets/images/bank.jpg" width="560" height="350"
+                alt="Ligula tristique quis risus" class="img-cover" style="padding: 0; margin: 0;">
+                <h3 class="h4 card-title" style="padding: 20px;">Banking</h3>
+
+                <!-- <p class="card-text" style="padding: 40px;">
+                  Nulla vitae elit libero, a pharetra augue. Donec id elit non mi porta gravida at eget metus cras
+                  justo.
+                </p> -->
+<!-- 
+                <a href="#" class="btn-text">
+                  <span class="span">Learn More</span>
+
+                  <ion-icon name="arrow-forward-outline" aria-hidden="true"></ion-icon>
+                </a> -->
+
+              </div>
+            </li>
+            <li>
+              <div class="service-card">
+                <img src="./assets/images/pharma.jpg" width="560" height="350"
+                alt="Ligula tristique quis risus" class="img-cover" style="padding: 0; margin: 0;">
+                <h3 class="h4 card-title" style="padding: 20px;">Pharma</h3>
+
+                <!-- <p class="card-text" style="padding: 40px;">
+                  Nulla vitae elit libero, a pharetra augue. Donec id elit non mi porta gravida at eget metus cras
+                  justo.
+                </p> -->
+<!-- 
+                <a href="#" class="btn-text">
+                  <span class="span">Learn More</span>
+
+                  <ion-icon name="arrow-forward-outline" aria-hidden="true"></ion-icon>
+                </a> -->
+
+              </div>
+            </li>
+            <li>
+              <div class="service-card">
+                <img src="./assets/images/cons.jpg" width="560" height="350" 
+                alt="Ligula tristique quis risus" class="img-cover" style="padding: 0; margin: 0;">
+                <h3 class="h4 card-title" style="padding: 20px;">Constructions and Civil</h3>
+
+                <!-- <p class="card-text" style="padding: 40px;">
+                  Nulla vitae elit libero, a pharetra augue. Donec id elit non mi porta gravida at eget metus cras
+                  justo.
+                </p> -->
+<!-- 
+                <a href="#" class="btn-text">
+                  <span class="span">Learn More</span>
+
+                  <ion-icon name="arrow-forward-outline" aria-hidden="true"></ion-icon>
+                </a> -->
+
+              </div>
+            </li>
+            <li>
+              <div class="service-card">
+                <img src="./assets/images/insu.jpg" width="560" height="350" 
+                alt="Ligula tristique quis risus" class="img-cover" style="padding: 0; margin: 0;">
+                <h3 class="h4 card-title" style="padding: 20px;">Insurance</h3>
+
+                <!-- <p class="card-text" style="padding: 40px;">
+                  Nulla vitae elit libero, a pharetra augue. Donec id elit non mi porta gravida at eget metus cras
+                  justo.
+                </p> -->
+<!-- 
+                <a href="#" class="btn-text">
+                  <span class="span">Learn More</span>
+
+                  <ion-icon name="arrow-forward-outline" aria-hidden="true"></ion-icon>
+                </a> -->
+
+              </div>
+            </li>
+            <li>
+              <div class="service-card">
+                <img src="./assets/images/hosp.jpg" width="560" height="350" 
+                alt="Ligula tristique quis risus" class="img-cover" style="padding: 0; margin: 0;">
+                <h3 class="h4 card-title" style="padding: 20px;">Hospitality</h3>
+
+                <!-- <p class="card-text" style="padding: 40px;">
+                  Nulla vitae elit libero, a pharetra augue. Donec id elit non mi porta gravida at eget metus cras
+                  justo.
+                </p> -->
+<!-- 
+                <a href="#" class="btn-text">
+                  <span class="span">Learn More</span>
+
+                  <ion-icon name="arrow-forward-outline" aria-hidden="true"></ion-icon>
+                </a> -->
+
+              </div>
+            </li>
+            <li>
+              <div class="service-card">
+                <img src="./assets/images/shipping and logistics.jpg" width="560" height="350" 
+                alt="Ligula tristique quis risus" class="img-cover" style="padding: 0; margin: 0;">
+                <h3 class="h4 card-title" style="padding: 20px;">Shipping and Logistics</h3>
+
+                <!-- <p class="card-text" style="padding: 40px;">
+                  Nulla vitae elit libero, a pharetra augue. Donec id elit non mi porta gravida at eget metus cras
+                  justo.
+                </p> -->
+<!-- 
+                <a href="#" class="btn-text">
+                  <span class="span">Learn More</span>
+
+                  <ion-icon name="arrow-forward-outline" aria-hidden="true"></ion-icon>
+                </a> -->
+
+              </div>
+            </li>
+
+          </ul>
+
+        </div>
+      </section>
+
+
+        <!-- Testimonial Start -->
+        <div class="container-xxl py-5" style="">
+          <div class="container" style="padding:20px; margin-top: 60px;">
+            <h2 class="h2 section-title" style="text-align: center; margin-bottom: 50px;">
+              "Your Experience Matters"
+                    </h2>
+              <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px; ">
+                  <!-- <h6 class="section-title bg-white text-center text-primary px-3">Testimonial</h6> -->
+                  <!-- <h1 class="h2 section-title" style="text-align: center; margin-bottom: 50px; width: 1200px;"></h1> -->
+              </div>
+              <div class="owl-carousel testimonial-carousel wow fadeInUp" data-wow-delay="0.1s" >
+                <div class="testimonial-item bg-light rounded p-4" style="padding: 20px; border-radius: var(--radius-6) ;border: 1px solid black;">
+                  <div class="d-flex align-items-center mb-4">
+                      <div class="ms-4">
+                        <h3 class="h4 card-title" style="padding: 0px;">RANJITH KUMAR</h3>
+                    
+                      </div>
+                  </div>
+                  <p class="mb-0">
+                    <script src="https://cdn.lordicon.com/ritcuqlt.js"></script>
+                    <lord-icon
+                        src="https://cdn.lordicon.com/xqnbvely.json"
+                        delay="2000"
+                        colors="primary:black,secondary:#ffffff"
+                        style="width:50px;height:50px;  transform: scaleX(-1) ">
+                    </lord-icon>
+                    I had a great experience with this Platform got a good opportunity, Thankyou Placement Park
+          
+                    <div style="display: flex; padding-top: 10px; gap: 10px; font-size: 2rem;">
+                      <ion-icon name="star"></ion-icon>
+                      <ion-icon name="star"></ion-icon>
+                      <ion-icon name="star"></ion-icon>
+                      <ion-icon name="star"></ion-icon>
+                      <ion-icon name="star"></ion-icon>
+                    </div>
+          
+              </div>
+              <div class="testimonial-item bg-light rounded p-4" style="padding: 20px; border-radius: var(--radius-6) ;border: 1px solid black;">
+                <div class="d-flex align-items-center mb-4">
+                    <div class="ms-4">
+                      <h3 class="h4 card-title" style="padding: 0px;">RISHI PUKKALLA</h3>
+                  
+                    </div>
+                </div>
+                <p class="mb-0">
+                  <script src="https://cdn.lordicon.com/ritcuqlt.js"></script>
+                  <lord-icon
+                      src="https://cdn.lordicon.com/xqnbvely.json"
+                      delay="2000"
+                      colors="primary:black,secondary:#ffffff"
+                      style="width:50px;height:50px;  transform: scaleX(-1) ">
+                  </lord-icon>
+                  I've got a job in concentrix through Placement park only and they Trained me in a way so that i could crack the interview without any fail
+                  <div style="display: flex; padding-top: 10px; gap: 10px; font-size: 2rem;">
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                  </div>
+          
+            </div>
+            <div class="testimonial-item bg-light rounded p-4" style="padding: 20px; border-radius: var(--radius-6) ;border: 1px solid black;">
+              <div class="d-flex align-items-center mb-4">
+                  <div class="ms-4">
+                    <h3 class="h4 card-title" style="padding: 0px;">TEJASAI ALLA</h3>
+                
+                  </div>
+              </div>
+              <p class="mb-0">
+                <script src="https://cdn.lordicon.com/ritcuqlt.js"></script>
+                <lord-icon
+                    src="https://cdn.lordicon.com/xqnbvely.json"
+                    delay="2000"
+                    colors="primary:black,secondary:#ffffff"
+                    style="width:50px;height:50px;  transform: scaleX(-1) ">
+                </lord-icon>
+                Thankyou Placement Park for showing me the opportunities and guided me through out the process
+                <div style="display: flex; padding-top: 10px; gap: 10px; font-size: 2rem;">
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star"></ion-icon>
+                </div>
+          
+          </div>
+          <div class="testimonial-item bg-light rounded p-4" style="padding: 20px; border-radius: var(--radius-6) ;border: 1px solid black;">
+            <div class="d-flex align-items-center mb-4">
+                <div class="ms-4">
+                  <h3 class="h4 card-title" style="padding: 0px;">SOHAIL BASHA</h3>
+              
+                </div>
+            </div>
+            <p class="mb-0">
+              <script src="https://cdn.lordicon.com/ritcuqlt.js"></script>
+              <lord-icon
+                  src="https://cdn.lordicon.com/xqnbvely.json"
+                  delay="2000"
+                  colors="primary:black,secondary:#ffffff"
+                  style="width:50px;height:50px;  transform: scaleX(-1) ">
+              </lord-icon>
+              Overall it was very good, Job secure company, we can survive easily if we work in HGS, good environment
+              <div style="display: flex; padding-top: 10px; gap: 10px; font-size: 2rem;">
+                <ion-icon name="star"></ion-icon>
+                <ion-icon name="star"></ion-icon>
+                <ion-icon name="star"></ion-icon>
+                <ion-icon name="star"></ion-icon>
+                <ion-icon name="star"></ion-icon>
+              </div>
+          
+          </div>
+          <div class="testimonial-item bg-light rounded p-4" style="padding: 20px; border-radius: var(--radius-6) ;border: 1px solid black;">
+          <div class="d-flex align-items-center mb-4">
+              <div class="ms-4">
+                <h3 class="h4 card-title" style="padding: 0px;">SNEHA SANA</h3>
+            
+              </div>
+          </div>
+          <p class="mb-0">
+            <script src="https://cdn.lordicon.com/ritcuqlt.js"></script>
+            <lord-icon
+                src="https://cdn.lordicon.com/xqnbvely.json"
+                delay="2000"
+                colors="primary:black,secondary:#ffffff"
+                style="width:50px;height:50px;  transform: scaleX(-1) ">
+            </lord-icon>
+            Actually Placement Park Shown me a good path to lead my career. Manisha has helped me a lot, Loved the Experience &#128525;
+            
+            <div style="display: flex; padding-top: 10px; gap: 10px; font-size: 2rem;">
+              <ion-icon name="star"></ion-icon>
+              <ion-icon name="star"></ion-icon>
+              <ion-icon name="star"></ion-icon>
+              <ion-icon name="star"></ion-icon>
+              <ion-icon name="star"></ion-icon>
+            </div>
+          
+          </div>
+          <div class="testimonial-item bg-light rounded p-4" style="padding: 20px; border-radius: var(--radius-6) ;border: 1px solid black;">
+          <div class="d-flex align-items-center mb-4">
+            <div class="ms-4">
+              <h3 class="h4 card-title" style="padding: 0px;">ASHOK MANAM</h3>
+          
+            </div>
+          </div>
+          <p class="mb-0">
+          <script src="https://cdn.lordicon.com/ritcuqlt.js"></script>
+          <lord-icon
+              src="https://cdn.lordicon.com/xqnbvely.json"
+              delay="2000"
+              colors="primary:black,secondary:#ffffff"
+              style="width:50px;height:50px;  transform: scaleX(-1) ">
+          </lord-icon>
+          Hiring the canditates is a good process and also properly train up for the final round which is very important to get the job in the sector of BPO            
+          <div style="display: flex; padding-top: 10px; gap: 10px; font-size: 2rem;">
+            <ion-icon name="star"></ion-icon>
+            <ion-icon name="star"></ion-icon>
+            <ion-icon name="star"></ion-icon>
+            <ion-icon name="star"></ion-icon>
+            <ion-icon name="star"></ion-icon>
+          </div>
+          
+          </div>
+          <div class="testimonial-item bg-light rounded p-4" style="padding: 20px; border-radius: var(--radius-6) ;border: 1px solid black;">
+          <div class="d-flex align-items-center mb-4">
+          <div class="ms-4">
+            <h3 class="h4 card-title" style="padding: 0px;">NAVEEN KUMAR</h3>
+          
+          </div>
+          </div>
+          <p class="mb-0">
+          <script src="https://cdn.lordicon.com/ritcuqlt.js"></script>
+          <lord-icon
+            src="https://cdn.lordicon.com/xqnbvely.json"
+            delay="2000"
+            colors="primary:black,secondary:#ffffff"
+            style="width:50px;height:50px;  transform: scaleX(-1) ">
+          </lord-icon>
+          Went for Recruiter position and they have provided the opportunity and gave training before we attend the interview  for a company         
+          <div style="display: flex; padding-top: 10px; gap: 10px; font-size: 2rem;">
+          <ion-icon name="star"></ion-icon>
+          <ion-icon name="star"></ion-icon>
+          <ion-icon name="star"></ion-icon>
+          <ion-icon name="star"></ion-icon>
+          <ion-icon name="star"></ion-icon>
+          </div>
+          
+          </div>
+          
+          
+          <div class="testimonial-item bg-light rounded p-4" style="padding: 20px; border-radius: var(--radius-6) ;border: 1px solid black;">
+          <div class="d-flex align-items-center mb-4">
+          <div class="ms-4">
+          <h3 class="h4 card-title" style="padding: 0px;">AKASH</h3>
+          
+          </div>
+          </div>
+          <p class="mb-0">
+          <script src="https://cdn.lordicon.com/ritcuqlt.js"></script>
+          <lord-icon
+          src="https://cdn.lordicon.com/xqnbvely.json"
+          delay="2000"
+          colors="primary:black,secondary:#ffffff"
+          style="width:50px;height:50px;  transform: scaleX(-1) ">
+          </lord-icon>
+          Very Helpful. Good for fresher's and experienced people looking for job placements. Genuine trainers who will help you every step along the way       
+          <div style="display: flex; padding-top: 10px; gap: 10px; font-size: 2rem;">
+          <ion-icon name="star"></ion-icon>
+          <ion-icon name="star"></ion-icon>
+          <ion-icon name="star"></ion-icon>
+          <ion-icon name="star"></ion-icon>
+          <ion-icon name="star"></ion-icon>
+          </div>
+          
+          </div>
+          
+          <div class="testimonial-item bg-light rounded p-4" style="padding: 20px; border-radius: var(--radius-6) ;border: 1px solid black;">
+          <div class="d-flex align-items-center mb-4">
+          <div class="ms-4">
+          <h3 class="h4 card-title" style="padding: 0px;">KALYAN EPPILI</h3>
+          
+          </div>
+          </div>
+          <p class="mb-0">
+          <script src="https://cdn.lordicon.com/ritcuqlt.js"></script>
+          <lord-icon
+          src="https://cdn.lordicon.com/xqnbvely.json"
+          delay="2000"
+          colors="primary:black,secondary:#ffffff"
+          style="width:50px;height:50px;  transform: scaleX(-1) ">
+          </lord-icon>
+          Justifying the name, Place of Guidance and the park of opportunities. Go and get hired    
+          <div style="display: flex; padding-top: 10px; gap: 10px; font-size: 2rem;">
+          <ion-icon name="star"></ion-icon>
+          <ion-icon name="star"></ion-icon>
+          <ion-icon name="star"></ion-icon>
+          <ion-icon name="star"></ion-icon>
+          <ion-icon name="star"></ion-icon>
+          </div>
+          
+          </div>
+          <div class="testimonial-item bg-light rounded p-4" style="padding: 20px; border-radius: var(--radius-6) ;border: 1px solid black;">
+          <div class="d-flex align-items-center mb-4">
+          <div class="ms-4">
+          <h3 class="h4 card-title" style="padding: 0px;">BHAVANI MANI</h3>
+          
+          </div>
+          </div>
+          <p class="mb-0">
+          <script src="https://cdn.lordicon.com/ritcuqlt.js"></script>
+          <lord-icon
+          src="https://cdn.lordicon.com/xqnbvely.json"
+          delay="2000"
+          colors="primary:black,secondary:#ffffff"
+          style="width:50px;height:50px;  transform: scaleX(-1) ">
+          </lord-icon>
+          This is really good place for finding jobs. iam very glad that i found i found a good job with the help of the Placement Park    
+          <div style="display: flex; padding-top: 10px; gap: 10px; font-size: 2rem;">
+          <ion-icon name="star"></ion-icon>
+          <ion-icon name="star"></ion-icon>
+          <ion-icon name="star"></ion-icon>
+          <ion-icon name="star"></ion-icon>
+          <ion-icon name="star"></ion-icon>
+          </div>
+          
+          </div>
+          <div class="testimonial-item bg-light rounded p-4" style="padding: 20px; border-radius: var(--radius-6) ;border: 1px solid black;">
+          <div class="d-flex align-items-center mb-4">
+          <div class="ms-4">
+          <h3 class="h4 card-title" style="padding: 0px;">VEDHA SRI DOGGA</h3>
+          
+          </div>
+          </div>
+          <p class="mb-0">
+          <script src="https://cdn.lordicon.com/ritcuqlt.js"></script>
+          <lord-icon
+          src="https://cdn.lordicon.com/xqnbvely.json"
+          delay="2000"
+          colors="primary:black,secondary:#ffffff"
+          style="width:50px;height:50px;  transform: scaleX(-1) ">
+          </lord-icon>
+          Placement park staff members has explained us very clearly about the whole process, and gave guidance and support whenever it requires. iam very thankful to each and every members of the Placement Park
+          <div style="display: flex; padding-top: 10px; gap: 10px; font-size: 2rem;">
+          <ion-icon name="star"></ion-icon>
+          <ion-icon name="star"></ion-icon>
+          <ion-icon name="star"></ion-icon>
+          <ion-icon name="star"></ion-icon>
+          <ion-icon name="star"></ion-icon>
+          </div>
+          
+          </div>
+          
+          <div class="testimonial-item bg-light rounded p-4" style="padding: 20px; border-radius: var(--radius-6) ;border: 1px solid black;">
+          <div class="d-flex align-items-center mb-4">
+          <div class="ms-4">
+          <h3 class="h4 card-title" style="padding: 0px;">SOYAB TALKS</h3>
+          
+          </div>
+          </div>
+          <p class="mb-0">
+          <script src="https://cdn.lordicon.com/ritcuqlt.js"></script>
+          <lord-icon
+          src="https://cdn.lordicon.com/xqnbvely.json"
+          delay="2000"
+          colors="primary:black,secondary:#ffffff"
+          style="width:50px;height:50px;  transform: scaleX(-1) ">
+          </lord-icon>
+          The Placement Park is the best place for finding a suitable job with the help of staff present there, I got a job in 3 days in MNC company.. Really appreciate the team of Placement Park also (Kiran sir and Pooja Mam) for helping me to prepare the interview      
+          <div style="display: flex; padding-top: 10px; gap: 10px; font-size: 2rem;">
+          <ion-icon name="star"></ion-icon>
+          <ion-icon name="star"></ion-icon>
+          <ion-icon name="star"></ion-icon>
+          <ion-icon name="star"></ion-icon>
+          <ion-icon name="star"></ion-icon>
+          </div>
+          
+          </div>
+          <div class="testimonial-item bg-light rounded p-4" style="padding: 20px; border-radius: var(--radius-6) ;border: 1px solid black;">
+          <div class="d-flex align-items-center mb-4">
+          <div class="ms-4">
+          <h3 class="h4 card-title" style="padding: 0px;">TEJASWINI</h3>
+          
+          </div>
+          </div>
+          <p class="mb-0">
+          <script src="https://cdn.lordicon.com/ritcuqlt.js"></script>
+          <lord-icon
+          src="https://cdn.lordicon.com/xqnbvely.json"
+          delay="2000"
+          colors="primary:black,secondary:#ffffff"
+          style="width:50px;height:50px;  transform: scaleX(-1) ">
+          </lord-icon>
+          The Placcement Park is the best one to the unemployed youth to find the right job in MNC's. The people in Placement Park who are working with quality and supportive, thanks to the whole team.     
+          <div style="display: flex; padding-top: 10px; gap: 10px; font-size: 2rem;">
+          <ion-icon name="star"></ion-icon>
+          <ion-icon name="star"></ion-icon>
+          <ion-icon name="star"></ion-icon>
+          <ion-icon name="star"></ion-icon>
+          <ion-icon name="star"></ion-icon>
+          </div>
+          
+          </div>
+          
+          <div class="testimonial-item bg-light rounded p-4" style="padding: 20px; border-radius: var(--radius-6) ;border: 1px solid black;">
+          <div class="d-flex align-items-center mb-4">
+          <div class="ms-4">
+          <h3 class="h4 card-title" style="padding: 0px;">SNEHA VOONNA</h3>
+          
+          </div>
+          </div>
+          <p class="mb-0">
+          <script src="https://cdn.lordicon.com/ritcuqlt.js"></script>
+          <lord-icon
+          src="https://cdn.lordicon.com/xqnbvely.json"
+          delay="2000"
+          colors="primary:black,secondary:#ffffff"
+          style="width:50px;height:50px;  transform: scaleX(-1) ">
+          </lord-icon>
+          <strong>
+          Positive: professionalism, Quality, Responsiveness</strong>
+          
+          It's a best agency, who are searching for a job just go through it. they are very responsive, clarify our doubts and trains us to present well in interview.     
+          <div style="display: flex; padding-top: 10px; gap: 10px; font-size: 2rem;">
+          <ion-icon name="star"></ion-icon>
+          <ion-icon name="star"></ion-icon>
+          <ion-icon name="star"></ion-icon>
+          <ion-icon name="star"></ion-icon>
+          <ion-icon name="star"></ion-icon>
+          </div>
+          
+          </div>
+          
+          
+          <div class="testimonial-item bg-light rounded p-4" style="padding: 20px; border-radius: var(--radius-6) ;border: 1px solid black;">
+          <div class="d-flex align-items-center mb-4">
+          <div class="ms-4">
+          <h3 class="h4 card-title" style="padding: 0px;">VISHAL PRAJAPATI</h3>
+          
+          </div>
+          </div>
+          <p class="mb-0">
+          <script src="https://cdn.lordicon.com/ritcuqlt.js"></script>
+          <lord-icon
+          src="https://cdn.lordicon.com/xqnbvely.json"
+          delay="2000"
+          colors="primary:black,secondary:#ffffff"
+          style="width:50px;height:50px;  transform: scaleX(-1) ">
+          </lord-icon>
+          <strong>
+          Positive: professionalism, Quality, Responsiveness, Value</strong>   
+          <br>  
+          Placement Park is really a good recruitment firm, where you can find multiple of opportunities from MNC companies.. The faculty especially Manoj(HR) and puja man really helped to build my confidence levels &#128519;	
+          <div style="display: flex; padding-top: 10px; gap: 10px; font-size: 2rem;">
+          <ion-icon name="star"></ion-icon>
+          <ion-icon name="star"></ion-icon>
+          <ion-icon name="star"></ion-icon>
+          <ion-icon name="star"></ion-icon>
+          <ion-icon name="star"></ion-icon>
+          </div>
+          
+          </div>
+          
+          
+          <div class="testimonial-item bg-light rounded p-4" style="padding: 20px; border-radius: var(--radius-6) ;border: 1px solid black;">
+          <div class="d-flex align-items-center mb-4">
+          <div class="ms-4">
+          <h3 class="h4 card-title" style="padding: 0px;">VISHAL PRAJAPATI</h3>
+          
+          </div>
+          </div>
+          <p class="mb-0">
+          <script src="https://cdn.lordicon.com/ritcuqlt.js"></script>
+          <lord-icon
+          src="https://cdn.lordicon.com/xqnbvely.json"
+          delay="2000"
+          colors="primary:black,secondary:#ffffff"
+          style="width:50px;height:50px;  transform: scaleX(-1) ">
+          </lord-icon>
+          <strong>
+          Positive: professionalism, Quality, Responsiveness, Value</strong>   
+          <br>  
+          Placement Park is really a good recruitment firm, where you can find multiple of opportunities from MNC companies.. The faculty especially Manoj(HR) and puja man really helped to build my confidence levels &#128519;	
+          <div style="display: flex; padding-top: 10px; gap: 10px; font-size: 2rem;">
+          <ion-icon name="star"></ion-icon>
+          <ion-icon name="star"></ion-icon>
+          <ion-icon name="star"></ion-icon>
+          <ion-icon name="star"></ion-icon>
+          <ion-icon name="star"></ion-icon>
+          </div>
+          
+          </div>
+          
+          
+          
+          
+          
+          
+          
+          
+              </div>
+              <a href="https://search.google.com/local/writereview?placeid=ChIJf9qjvTdDOToRNNP9V14zQqA" target="_blank" class="btn btn-primary" style="display: flex;">Write a Review <ion-icon name="arrow-forward-outline" style="padding-top: 7px; padding-left: 5px;"></ion-icon>
+              </a>
+          </div>
+
+
+          </div>
+        <!-- Testimonial End -->
+
+
+
+
+      <!-- 
+        - #SERVICE
+      -->
+
+
+
+
+
+      <!-- 
+        - #ABOUT
+      -->
+
+
+
+
+
+
+      <!-- 
+        - #FEATURE
+      -->
+
+
+
+
+
+
+      <!-- 
+        - #STATS
+      -->
+
+
+
+
+
+
+
+
+      <!-- 
+        - #PROJECT
+      -->
+
+
+
+
+
+
+      
+
+
+
+
+
+
+
+        <!-- client Scrolling -->
+        <section class="section project" aria-labelledby="project-label" style="padding-top: 60px; padding-bottom: 60px;" >
+         
+          <h2 class="h2 section-title" style="color: black; padding-bottom: 30px; margin-bottom: 0px;">
+            "Powering Success: Trusted and Partnered by India's Top Companies"
+          </h2>
+          <div class="slider">
+	<div class="slide-track">
+		<div class="slide">
+			<img src="assets/3 Client Logos/2.png" height="100" width="250" alt="" />
+		</div>
+		<div class="slide">
+			<img src="assets/3 Client Logos/3.png" height="100" width="250" alt="" />
+		</div>
+		<div class="slide">
+			<img src="assets/3 Client Logos/4.png" height="100" width="250" alt="" />
+		</div>
+		<div class="slide">
+			<img src="assets/3 Client Logos/5.png" height="100" width="250" alt="" />
+		</div>
+		<div class="slide">
+			<img src="assets/3 Client Logos/6.png" height="100" width="250" alt="" />
+		</div>
+		<div class="slide">
+			<img src="assets/3 Client Logos/7.png" height="100" width="250" alt="" />
+		</div>
+    <div class="slide">
+			<img src="assets/3 Client Logos/8.png" height="100" width="250" alt="" />
+		</div>
+    <div class="slide">
+			<img src="assets/3 Client Logos/9.png" height="100" width="250" alt="" />
+		</div>
+    <div class="slide">
+			<img src="assets/3 Client Logos/10.png" height="100" width="250" alt="" />
+		</div>
+    <div class="slide">
+			<img src="assets/3 Client Logos/11.png" height="100" width="250" alt="" />
+		</div>
+    <div class="slide">
+			<img src="assets/3 Client Logos/12.png" height="100" width="250" alt="" />
+		</div>
+    <div class="slide">
+			<img src="assets/3 Client Logos/13.png" height="100" width="250" alt="" />
+		</div>
+    <div class="slide">
+			<img src="assets/3 Client Logos/14.png" height="100" width="250" alt="" />
+		</div>
+    <div class="slide">
+			<img src="assets/3 Client Logos/15.png" height="100" width="250" alt="" />
+		</div>
+    <div class="slide">
+			<img src="assets/3 Client Logos/16.png" height="100" width="250" alt="" />
+		</div>
+    <div class="slide">
+			<img src="assets/3 Client Logos/17.png" height="100" width="250" alt="" />
+		</div>
+    <div class="slide">
+			<img src="assets/3 Client Logos/18.png" height="100" width="250" alt="" />
+		</div>
+    <div class="slide">
+			<img src="assets/3 Client Logos/19.png" height="100" width="250" alt="" />
+		</div>
+    <div class="slide">
+			<img src="assets/3 Client Logos/20.png" height="100" width="250" alt="" />
+		</div>
+    <div class="slide">
+			<img src="assets/3 Client Logos/21.png" height="100" width="250" alt="" />
+		</div>
+    <div class="slide">
+			<img src="assets/3 Client Logos/22.png" height="100" width="250" alt="" />
+		</div>
+    <div class="slide">
+			<img src="assets/3 Client Logos/23.png" height="100" width="250" alt="" />
+		</div>
+    <div class="slide">
+			<img src="assets/3 Client Logos/24.png" height="100" width="250" alt="" />
+		</div>
+		<div class="slide">
+			<img src="assets/3 Client Logos/1.png" height="100" width="250" alt="" />
+		</div>
+		<div class="slide">
+			<img src="assets/3 Client Logos/2.png" height="100" width="250" alt="" />
+		</div>
+		<div class="slide">
+			<img src="assets/3 Client Logos/3.png" height="100" width="250" alt="" />
+		</div>
+		<div class="slide">
+			<img src="assets/3 Client Logos/4.png" height="100" width="250" alt="" />
+		</div>
+		<div class="slide">
+			<img src="assets/3 Client Logos/5.png" height="100" width="250" alt="" />
+		</div>
+		<div class="slide">
+			<img src="assets/3 Client Logos/6.png" height="100" width="250" alt="" />
+		</div>
+		<div class="slide">
+			<img src="assets/3 Client Logos/7.png" height="100" width="250" alt="" />
+		</div>
+    <div class="slide">
+			<img src="assets/3 Client Logos/8.png" height="100" width="250" alt="" />
+		</div>
+    <div class="slide">
+			<img src="assets/3 Client Logos/9.png" height="100" width="250" alt="" />
+		</div>
+    <div class="slide">
+			<img src="assets/3 Client Logos/10.png" height="100" width="250" alt="" />
+		</div>
+    <div class="slide">
+			<img src="assets/3 Client Logos/11.png" height="100" width="250" alt="" />
+		</div>
+    <div class="slide">
+			<img src="assets/3 Client Logos/12.png" height="100" width="250" alt="" />
+		</div>
+    <div class="slide">
+			<img src="assets/3 Client Logos/13.png" height="100" width="250" alt="" />
+		</div>
+    <div class="slide">
+			<img src="assets/3 Client Logos/14.png" height="100" width="250" alt="" />
+		</div>
+    <div class="slide">
+			<img src="assets/3 Client Logos/15.png" height="100" width="250" alt="" />
+		</div>
+    <div class="slide">
+			<img src="assets/3 Client Logos/16.png" height="100" width="250" alt="" />
+		</div>
+    <div class="slide">
+			<img src="assets/3 Client Logos/17.png" height="100" width="250" alt="" />
+		</div>
+    <div class="slide">
+			<img src="assets/3 Client Logos/18.png" height="100" width="250" alt="" />
+		</div>
+    <div class="slide">
+			<img src="assets/3 Client Logos/19.png" height="100" width="250" alt="" />
+		</div>
+    <div class="slide">
+			<img src="assets/3 Client Logos/20.png" height="100" width="250" alt="" />
+		</div>
+    <div class="slide">
+			<img src="assets/3 Client Logos/21.png" height="100" width="250" alt="" />
+		</div>
+    <div class="slide">
+			<img src="assets/3 Client Logos/22.png" height="100" width="250" alt="" />
+		</div>
+    <div class="slide">
+			<img src="assets/3 Client Logos/23.png" height="100" width="250" alt="" />
+		</div>
+    <div class="slide">
+			<img src="assets/3 Client Logos/24.png" height="100" width="250" alt="" />
+		</div>
+    
+	</div>
+</div>
+
+</section>
+
+
+
+
+
+      <!-- 
+        - #CTA
+      -->
+
+    </article>
+  </main>
+
+
+  <!-- 
+    - #FOOTER
+  -->
+  <footer class="footer" style="padding-bottom: 60px; background-color: black;" >
+    <div class="container grid-list">
+
+      <div class="footer-brand">
+
+        <a href="#" class="logo">
+          <img src="./assets/2 TPP Logos/Placement Park Logo Inverted.png" width="154" height="134" alt="Adex home">
+        </a>
+<!-- 
+        <p class="footer-text">
+          &copy; 2023 The Placement Park <br> All rights reserved.
+        </p> -->
+
+        <ul class="social-list" style="margin-top: 40px;">
+
+          <li>
+            <a href="https://facebook.com/theplacementpark/" target="_blank" class="social-link" style="color:#3b5998;">
+              <ion-icon name="logo-facebook"></ion-icon>
+            </a>
+          </li>
+
+          <li>
+            <a href="https://www.linkedin.com/company/65595236" target="_blank" class="social-link" style="color: #00acee;">
+              <ion-icon name="logo-linkedin"></ion-icon>
+            </a>
+          </li>
+
+          <li>
+            <a href="https://wa.me/919885563355" target="_blank" class="social-link" style="color: #25D366;">
+              <ion-icon name="logo-whatsapp"></ion-icon>
+            </a>
+          </li>
+
+          <li>
+            <a href="https://instagram.com/theplacementpark" target="_blank" class="social-link" style=" border-radius: 30%; background:  radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);;">
+              <ion-icon name="logo-instagram"></ion-icon>
+            </a>
+          </li>
+
+        </ul>
+        <div class="footer-list">
+
+  
+          <p class="footer-text">
+            &copy; 2023 Placement Park <br> All Rights Reserved
+          </p>
+  
+
+  
+        </div>
+
+      </div>
+
+      <ul class="footer-list" style="width: auto;">
+
+        <li>
+          <p class="h4 footer-list-title">Get in Touch</p>
+        </li>
+
+        <li>
+          <address class="footer-text">
+            Office: The Placement Park, 50-75-27, Ganesh Nagar, Satyam Junction, Vizag 530016
+          </address>
+        </li>
+        
+        <li>
+          <address class="footer-text">
+            Office: The Placement Park, KSR Towers, 6th Floor, Beside Indian Oil Pump, Madhapur, Hyderabad 500081
+          </address>
+        </li>
+
+        <!-- <li>
+          <a href="mailto:info@email.com" class="footer-link">info@email.com</a>
+        </li>
+
+        <li>
+          <a href="tel:001234567890" class="footer-link">00 (123) 456 78 90</a>
+        </li> -->
+
+      </ul>
+<!-- 
+      <ul class="footer-list">
+
+        <li>
+          <p class="h4 footer-list-title">Learn More</p>
+        </li>
+        <li>
+          <a href="#" class="footer-link"> Home</a>
+        </li>
+
+        <li>
+          <a href="#" class="footer-link"> Companies</a>
+        </li>
+
+        <li>
+          <a href="#" class="footer-link">Our Story</a>
+        </li>
+
+        <li>
+          <a href="#" class="footer-link">Colleges</a>
+        </li>
+
+        <li>
+          <a href="#" class="footer-link">Privacy Policy</a>
+        </li>
+
+      </ul> -->
+
+      <!-- <div class="footer-list">
+
+        <p class="h4 footer-list-title">Our CEO</p>
+
+        <p class="footer-text">
+          SharukhTirumani Co-Founder & CEO <br> The Placement Park
+        </p>
+
+        <li>
+          <a href="mailto:" class="footer-link">Sharukh@theplacementpark.com</a>
+        </li>
+
+        <li>
+          <a href="tel:" class="footer-link">+91 985563355</a>
+        </li>
+
+
+      </div> -->
+      <div class="footer-list" style="width: auto;">
+
+        
+        <li>
+          <p class="h4 footer-list-title">Contact</p>
+        </li>
+
+        <p class="footer-text">
+         The Placement Park
+        </p>
+        <li>
+          <a href="tel: +91 9885563355" class="footer-link" style="font-size: 1.8rem;">+91 9885563355</a>
+        </li>
+
+
+        <li>
+          <a href="mailto:sharukh@theplacementpark.com" class="footer-link" style="font-size: 1.8rem;">sharukh@theplacementpark.com</a>
+        </li>
+
+
+
+
+
+      </div>
+
+
+    </div>
+    <div class="read-more-container">
+
+
+
+    <div class="container" style="padding-top: 20px;">
+      <p>
+        <strong>Security Advice: </strong> At no point in the hiring process does The Placement Park charge a candidate a fee or money, and neither do we permit our staff to collect a fee from a candidate.  We want to make it absolutely clear that these contacts are only the work of imposters who want to defraud the candidates. The Placement Park has not given any individual permission to collect payments of any type from job seekers for our business or for anybody else involved in the hiring process.
+          <span class="read-more-text">
+            There are no fees associated with recruitment or interviewing at The Placement Park. Only official email addresses will be used for any correspondence with offer letters. The Placement Park, an expert in the field of HR services is always looking for talent. Please be aware, though, that there are some individuals posing as representatives of The Placement Park who demand payment in exchange for interviews or jobs with The Placement Park or its clients by using the company name The Placement Park or the names of our employees incorrectly. Additionally, these individuals are illegally utilising the firm's registered trademark by creating fraudulent and replicated websites to legitimise their actions and deceive unsuspecting prospects into falling for their traps.
+          </span>
+      </p>
+      <span class="read-more-btn" style="cursor: pointer;">Read More...</span>
+  </div>
+</div>
+
+  </footer>
+
+  <script>
+
+    
+const parentContainer =  document.querySelector('.read-more-container');
+
+parentContainer.addEventListener('click', event=>{
+
+    const current = event.target;
+
+    const isReadMoreBtn = current.className.includes('read-more-btn');
+
+    if(!isReadMoreBtn) return;
+
+    const currentText = event.target.parentNode.querySelector('.read-more-text');
+
+    currentText.classList.toggle('read-more-text--show');
+
+    current.textContent = current.textContent.includes('Read More') ? "Read Less..." : "Read More...";
+
+})
+
+
+
+    function scrollUp(){
+      const scrollUp = document.getElementById('scroll-up');
+      // When the scroll is higher than 400 viewport height, add the show-scroll class to the a tag with the scroll-top class
+      if(this.scrollY >= 0) scrollUp.classList.add('show-scroll'); else scrollUp.classList.remove('show-scroll')
+  }
+  window.addEventListener('scroll', scrollUp)
+  </script>
+            <!--=============== SCROLL UP ===============-->
+            <a href="https://api.whatsapp.com/send?phone=919885563355&amp;text= Hi, More Information about The Placement Park" target="_blank" class="scrollup" id="scroll-up"> 
+              <ion-icon id="sup" name="logo-whatsapp"></ion-icon>
+            </a>
+
+
+  
+          <!-- JavaScript Libraries -->
+          <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+          <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+          <script src="lib/wow/wow.min.js"></script>
+          <script src="lib/easing/easing.min.js"></script>
+          <script src="lib/waypoints/waypoints.min.js"></script>
+          <script src="lib/counterup/counterup.min.js"></script>
+          <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+          <script src="lib/lightbox/js/lightbox.min.js"></script>
+      
+          <!-- Template Javascript -->
+          <script src="js/main.js"></script>
+  
+
+
+  
+
+
+
+  <!-- 
+    - custom js link
+  -->
+  <script src="./assets/js/script.js"></script>
+
+  <!-- 
+    - ionicon
+  -->
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+</body>
+
+</html>

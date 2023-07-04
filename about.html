@@ -1,0 +1,1484 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- 
+    - primary meta tags
+  -->
+  <title>TPP</title>
+  <meta name="title" content="TPP">
+
+  <!-- 
+    - favicon
+  -->
+  <!-- <link rel="shortcut icon" href="./favicon.svg" type="image/svg+xml"> -->
+
+  <!-- 
+    - google font link
+  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;700&display=swap" rel="stylesheet">
+
+  <!-- 
+    - custom css link
+  -->
+  <link rel="stylesheet" href="./assets/css/style.css">
+  <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+  <link rel="icon" type="image/png" href="assets/2 TPP Logos/favicon.png" >
+
+
+
+  <!-- 
+    - preload images
+  -->
+  <link rel="preload" as="image" href="./assets/images/hero-bg.jpg">
+  <link rel="preload" as="image" href="./assets/images/hero-slide-1.jpg">
+  <link rel="preload" as="image" href="./assets/images/hero-slide-2.jpg">
+  <link rel="preload" as="image" href="./assets/images/hero-slide-3.jpg">
+
+</head>
+<style>
+  @media (min-width: 768px){
+    
+    .about .container {
+        grid-template-columns: 0fr 1fr;
+        align-items: center;
+    }
+      }
+:root {
+  --d: 700ms;
+  --e: cubic-bezier(0.19, 1, 0.22, 1);
+
+}
+
+
+
+.page-content {
+  display: grid;
+  grid-gap: 1rem;
+  padding: 1rem;
+  max-width: 1024px;
+  margin: 0 auto;
+  font-family: var(--font-sans);
+}
+@media (min-width: 600px) {
+  .page-content {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (min-width: 800px) {
+  .page-content {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.card {
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  overflow: hidden;
+  padding: 1rem;
+  width: 100%;
+  text-align: center;
+  color: whitesmoke;
+  background-color: whitesmoke;
+  
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1), 0 2px 2px rgba(0, 0, 0, 0.1), 0 4px 4px rgba(0, 0, 0, 0.1), 0 8px 8px rgba(0, 0, 0, 0.1), 0 16px 16px rgba(0, 0, 0, 0.1);
+}
+.cards {
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  overflow: hidden;
+  padding: 1rem;
+  width: 100%;
+  text-align: center;
+  color: whitesmoke;
+  background-color: whitesmoke;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1), 0 2px 2px rgba(0, 0, 0, 0.1), 0 4px 4px rgba(0, 0, 0, 0.1), 0 8px 8px rgba(0, 0, 0, 0.1), 0 16px 16px rgba(0, 0, 0, 0.1);
+}
+@media (min-width: 600px) {
+  .card {
+    height: 350px;
+  }
+  .cards{
+    height: 350px;
+  }
+}
+.card:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 110%;
+  background-size: cover;
+  background-position: 0 0;
+  transition: transform calc(var(--d) * 1.5) var(--e);
+  pointer-events: none;
+}
+.cards:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 110%;
+  background-size: cover;
+  background-position: 0 0;
+  transition: transform calc(var(--d) * 1.5) var(--e);
+  pointer-events: none;
+}
+.card:after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 200%;
+  pointer-events: none;
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.009) 11.7%, rgba(0, 0, 0, 0.034) 22.1%, rgba(0, 0, 0, 0.072) 31.2%, rgba(0, 0, 0, 0.123) 39.4%, rgba(0, 0, 0, 0.182) 46.6%, rgba(0, 0, 0, 0.249) 53.1%, rgba(0, 0, 0, 0.32) 58.9%, rgba(0, 0, 0, 0.394) 64.3%, rgba(0, 0, 0, 0.468) 69.3%, rgba(0, 0, 0, 0.54) 74.1%, rgba(0, 0, 0, 0.607) 78.8%, rgba(0, 0, 0, 0.668) 83.6%, rgba(0, 0, 0, 0.721) 88.7%, rgba(0, 0, 0, 0.762) 94.1%, rgba(0, 0, 0, 0.79) 100%);
+  transform: translateY(-50%);
+  transition: transform calc(var(--d) * 2) var(--e);
+}
+.cards:after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 200%;
+  pointer-events: none;
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.009) 11.7%, rgba(0, 0, 0, 0.034) 22.1%, rgba(0, 0, 0, 0.072) 31.2%, rgba(0, 0, 0, 0.123) 39.4%, rgba(0, 0, 0, 0.182) 46.6%, rgba(0, 0, 0, 0.249) 53.1%, rgba(0, 0, 0, 0.32) 58.9%, rgba(0, 0, 0, 0.394) 64.3%, rgba(0, 0, 0, 0.468) 69.3%, rgba(0, 0, 0, 0.54) 74.1%, rgba(0, 0, 0, 0.607) 78.8%, rgba(0, 0, 0, 0.668) 83.6%, rgba(0, 0, 0, 0.721) 88.7%, rgba(0, 0, 0, 0.762) 94.1%, rgba(0, 0, 0, 0.79) 100%);
+  transform: translateY(-50%);
+  transition: transform calc(var(--d) * 2) var(--e);
+}
+.card:before {
+  background-image: url(assets/images/client.jpg);
+}
+.cards:before {
+  background-image: url(assets/images/buildings.jpg);
+}
+
+
+.content {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  padding: 1rem;
+  transition: transform var(--d) var(--e);
+  z-index: 1;
+}
+.content > * + * {
+  margin-top: 1rem;
+}
+
+.title {
+  font-size: 4rem;
+  font-weight: bold;
+  line-height: 1;
+}
+
+.copy {
+  font-family: var(--font-serif);
+  font-size: 1.125rem;
+  font-style: italic;
+  line-height: 1.35;
+}
+
+
+
+@media (hover: hover) and (min-width: 600px) {
+  .card:after {
+    transform: translateY(0);
+  }
+  .cards:after {
+    transform: translateY(0);
+  }
+
+  .content {
+    transform: translateY(calc(100% - 4.5rem));
+  }
+  .content > *:not(.title) {
+    opacity: 0;
+    transform: translateY(1rem);
+    transition: transform var(--d) var(--e), opacity var(--d) var(--e);
+  }
+
+  .card:hover,
+.card:focus-within {
+    align-items: center;
+  }
+  .card:hover:before,
+.card:focus-within:before {
+    transform: translateY(-4%);
+  }
+  .card:hover:after,
+.card:focus-within:after {
+    transform: translateY(-50%);
+  }
+  .card:hover .content,
+.card:focus-within .content {
+    transform: translateY(0);
+  }
+  .card:hover .content > *:not(.title),
+.card:focus-within .content > *:not(.title) {
+    opacity: 1;
+    transform: translateY(0);
+    transition-delay: calc(var(--d) / 8);
+  }
+
+  .cards:focus-within:before, .cards:focus-within:after,
+.cards:focus-within .content,
+.cards:focus-within .content > *:not(.title) {
+    transition-duration: 0s;
+  }
+  .cards:hover,
+.cards:focus-within {
+    align-items: center;
+  }
+  .cards:hover:before,
+.cards:focus-within:before {
+    transform: translateY(-4%);
+  }
+  .cards:hover:after,
+.cards:focus-within:after {
+    transform: translateY(-50%);
+  }
+  .cards:hover .content,
+.cards:focus-within .content {
+    transform: translateY(0);
+  }
+  .cards:hover .content > *:not(.title),
+.cards:focus-within .content > *:not(.title) {
+    opacity: 1;
+    transform: translateY(0);
+    transition-delay: calc(var(--d) / 8);
+  }
+
+  .cards:focus-within:before, .cards:focus-within:after,
+.cards:focus-within .content,
+.cards:focus-within .content > *:not(.title) {
+    transition-duration: 0s;
+  }
+}
+
+
+  .clientwrapper {
+      display: flex;
+      align-items: center;
+      margin:auto;
+    }
+    .clientslider {
+      width: 80%;
+      height: 100px;
+      position: relative;
+      background: white;
+      align-items: center;
+      margin: auto;
+      align-items: center;
+      margin: auto;
+      
+      /* box-shadow: 0 10px 20px -10px rgba(0,0,0,0.2); */
+      display: flex;
+      overflow: hidden;
+    }
+    .clientslide {
+     background-color: black;
+      height: 100px;
+      display: flex;
+      align-items: center;
+      animation: slideshow 60s linear infinite;
+    }
+    .clientslide img {
+      height: 100px;
+      border: 3px solid white;
+      background: white;
+      padding: 0 30px 0 30px;
+    }
+    @keyframes slideshow {
+      0% {transform: translateX(0);}
+      100% {transform: translateX(-100%);}
+    }
+    .clientslider::before, .slider::after {
+      height: 100px;
+      width: 200px;
+      position: absolute;
+      content: "";
+      /* background: linear-gradient(to right, white 0%, rgba(255,255,255,0) 100%); */
+      z-index: 2;
+    }
+    .clientslider::before {
+      left: 0;
+      top: 0;
+    }
+    .clientslider::after {
+      right:0;
+      top:0;
+      
+      transform: rotateZ(180deg);
+    }
+    .grid {
+	position: relative;
+	clear: both;
+	margin: 0 auto;
+	padding: 1em 0 4em;
+	max-width: 1000px;
+	list-style: none;
+	text-align: center;
+  border-radius: var(--radius-8);
+}
+
+/* Common style */
+.grid figure {
+  
+	position: relative;
+	float: left;
+	overflow: hidden;
+	margin: 10px 1%;
+	min-width: 320px;
+	max-width: 480px;
+	max-height: 360px;
+	width: 48%;
+	height: auto;
+	background: black;
+	text-align: center;
+	cursor: pointer;
+}
+
+.grid figure img {
+	position: relative;
+	display: block;
+  background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+
+	min-height: 100%;
+	max-width: 100%;
+
+}
+
+.grid figure figcaption {
+	padding: 2em;
+	color: #fff;
+	text-transform: uppercase;
+	font-size: 1.25em;
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
+}
+
+.grid figure figcaption::before,
+.grid figure figcaption::after {
+	pointer-events: none;
+}
+
+.grid figure figcaption,
+.grid figure figcaption > a {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+/* Anchor will cover the whole item by default */
+/* For some effects it will show as a button */
+.grid figure figcaption > a {
+	z-index: 1000;
+	text-indent: 200%;
+	white-space: nowrap;
+	font-size: 0;
+	opacity: 0;
+}
+
+.grid figure h2 {
+	word-spacing: -0.15em;
+	font-weight: 300;
+}
+
+.grid figure h2 span {
+	font-weight: 800;
+}
+
+.grid figure h2,
+.grid figure p {
+	margin: 0;
+}
+
+.grid figure p {
+	letter-spacing: 1px;
+	font-size: 68.5%;
+}
+
+/* Individual effects */
+
+/*---------------*/
+/***** Julia *****/
+/*---------------*/
+
+figure.effect-julia {
+	background: black;
+}
+
+figure.effect-julia img {
+  opacity: 0.3;
+  background: linear-gradient(rgba(15,25,65,0) 33%,rgb(15,25,65) 100%);
+	max-width: none;
+	height: 400px;
+	-webkit-transition: opacity 1s, -webkit-transform 1s;
+	transition: opacity 1s, transform 1s;
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
+}
+
+figure.effect-julia figcaption {
+	text-align: left;
+}
+
+figure.effect-julia h2 {
+	position: relative;
+	padding: 0.5em 0;
+}
+
+figure.effect-julia p {
+	display: inline-block;
+	margin: 0 0 0.25em;
+	padding: 0.4em 1em;
+	background: rgba(255,255,255,0.9);
+	color: black;
+	text-transform: none;
+	font-weight: 500;
+	font-size: 75%;
+	-webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+	transition: opacity 0.35s, transform 0.35s;
+	-webkit-transform: translate3d(-360px,0,0);
+	transform: translate3d(-360px,0,0);
+}
+
+figure.effect-julia p:first-child {
+	-webkit-transition-delay: 0.15s;
+	transition-delay: 0.15s;
+}
+
+figure.effect-julia p:nth-of-type(2) {
+	-webkit-transition-delay: 0.1s;
+	transition-delay: 0.1s;
+}
+
+figure.effect-julia p:nth-of-type(3) {
+	-webkit-transition-delay: 0.05s;
+	transition-delay: 0.05s;
+}
+
+figure.effect-julia:hover p:first-child {
+	-webkit-transition-delay: 0s;
+	transition-delay: 0s;
+}
+
+figure.effect-julia:hover p:nth-of-type(2) {
+	-webkit-transition-delay: 0.05s;
+	transition-delay: 0.05s;
+}
+
+figure.effect-julia:hover p:nth-of-type(3) {
+	-webkit-transition-delay: 0.1s;
+	transition-delay: 0.1s;
+}
+
+figure.effect-julia:hover img {
+	/* opacity: 0.4; */
+  opacity: 0.5;
+  filter: blur(3px); 
+  transition-duration: 0.5s;
+	-webkit-transform: scale3d(1.1,1.1,1);
+	transform: scale3d(1.1,1.1,1);
+}
+
+figure.effect-julia:hover p {
+	opacity: 1;
+	-webkit-transform: translate3d(0,0,0);
+	transform: translate3d(0,0,0);
+}
+
+
+</style>
+
+<body>
+
+  <!-- 
+    - #HEADER
+  -->
+
+
+  <header class="header" data-header>
+    <div class="container">
+
+      <a href="index.html" class="logo">
+        <img src="./assets/2 TPP Logos/Placement Park Logo Inverted.png" width="144"  alt="TPP home"  class="logo-light">
+
+        <img src="./assets/2 TPP Logos/Placement Park Logo Inverted.png" width="144" alt="TPP home" class="logo-dark">
+      </a>
+
+      <nav class="navbar" data-navbar>
+
+        <div class="navbar-top">
+          <a href="index.html" class="logo">
+            <img src="./assets/2 TPP Logos/Placement Park Logo Inverted.png" width="124" height="124" alt="Adex home">
+          </a>
+
+          <button class="nav-close-btn" aria-label="close menu" data-nav-toggler>
+            <ion-icon name="close-outline" aria-hidden="true"></ion-icon>
+          </button>
+        </div>
+
+        <ul class="navbar-list">
+
+          <li>
+            <a href="index.html" class="navbar-link">Home</a>
+          </li>
+
+          <li>
+            <a href="jobseeker.html" class="navbar-link">Job Seeker</a>
+          </li>
+
+          <li>
+            <a href="companies.html" class="navbar-link">Companies</a>
+          </li>
+
+          <li>
+            <a href="crt.html" class="navbar-link">Colleges</a>
+          </li>
+
+          <li>
+            <a href="about.html" class="active_link">About Us</a>
+          </li>
+
+        </ul>
+
+        <div class="wrapper">
+          <a href="mailto:sharukh@theplacementpark.com" class="contact-link">sharukh@theplacementpark.com</a>
+
+          <li> 
+            <a href="tel: +91 9885563355" class="footer-link" style="font-size: 1.8rem;">+91 9885563355</a>
+          </li>
+        </div>
+
+        <ul class="social-list">
+
+          <li>
+            <a href="https://www.linkedin.com/company/65595236" target="_blank" class="social-link" style="color: white;">
+              <ion-icon name="logo-linkedin"></ion-icon>
+            </a>
+          </li>
+
+          <li>
+            <a href="https://facebook.com/theplacementpark/" target="_blank" class="social-link" style="color: white;">
+              <ion-icon name="logo-facebook"></ion-icon>
+            </a>
+          </li>
+
+          <li>
+            <a href="https://wa.me/919885563355" target="_blank" class="social-link" style="color: white;">
+              <ion-icon name="logo-whatsapp"></ion-icon>
+            </a>
+          </li>
+
+          <li>
+            <a href="https://instagram.com/theplacementpark/" target="_blank" class="social-link" style="color: white;">
+              <ion-icon name="logo-instagram"></ion-icon>
+            </a>
+          </li>
+
+
+
+        </ul>
+      </nav>
+
+      <a href="https://theplacementpark.com/home/login" class="btn btn-primary">Login</a>
+
+      <button class="nav-open-btn" aria-label="open menu" data-nav-toggler>
+        <ion-icon name="menu-outline" aria-hidden="true"></ion-icon>
+      </button>
+
+      <div class="overlay" data-nav-toggler data-overlay></div>
+
+    </div>
+  </header>
+
+
+
+
+
+  <main>
+    <article>
+
+      <!-- 
+        - #HERO
+      -->
+
+      <section class="section hero has-bg-image" aria-label="home"
+        style="background-image: url('./assets/images/hero-bg.jpg'); padding-bottom: 60px;">
+        <div class="container" style="text-align: left;">
+
+          <div class="hero-content" style="margin-inline: 0px;">
+
+            <h1 class="h1 hero-title">Our Story</h1>
+
+            <p class="hero-text">
+              Our story began with an idea to make Talent Acquisition easy for every Company and help Job Seekers find Amazing Career Opportunities, Since our Inception in 2014, we have been Unwavering in our Commitment to Exceptional Recruitment and Training Services. Our efforts have led to Remarkable Outcomes, with 8000+ Candidates Successfully Securing Jobs through our Platform. We take Pride in Onboarding 50+ Esteemed Companies as Valued Clients.
+              <br>
+              <br>
+              Since the beginning, Our aim has been to build a Trusted Brand that Exemplifies Excellence in the Industry. Fuelled by Unwavering Passion, We infuse Enthusiasm and Dedication into Every Aspect of our Company. Looking ahead, We strive to become a renowned name synonymous with Trust and Reliability. With our Passion as the Driving Force, We are Confident in achieving our Future Goals and making a Positive Impact in the Recruitment and Training Landscape. 
+            </p>
+
+
+          </div>
+
+
+
+        </div>
+      </section>
+
+
+      <!-- SECTORS -->
+
+      
+      <section class="section project" aria-labelledby="project-label" style="padding-top: 60px; padding-bottom: 60px;">
+        <div class="container">
+
+
+          <h2 class="h2 section-title">
+            Core Values
+          </h2>
+
+          <ul class="grid-li">
+
+            <li>
+              <div class="project-card">
+
+                <figure class="card-banner img-holder"  style="height: max-content;">
+                  <img src="./assets/TPP Values/Diversity.jpg" 
+                    alt="Ligula tristique quis risus" class="img-cover">
+                </figure>
+
+
+              </div>
+            </li>
+
+            <li>
+              <div class="project-card">
+
+                <figure class="card-banner img-holder"  style="height: max-content;">
+                    <img src="./assets/TPP Values/Equality.jpg" 
+                      alt="Ligula tristique quis risus" class="img-cover">
+                  </figure>
+
+              </div>
+            </li>
+
+            <li>
+              <div class="project-card">
+
+                <figure class="card-banner img-holder"  style="height: max-content;">
+                    <img src="./assets/TPP Values/innovation.jpg" 
+                      alt="Ligula tristique quis risus" class="img-cover">
+                  </figure>
+
+
+              </div>
+            </li>
+            <li>
+                <div class="project-card">
+  
+                  <figure class="card-banner img-holder"  style="height: max-content;">
+                      <img src="./assets/TPP Values/Quality.jpg" 
+                        alt="Ligula tristique quis risus" class="img-cover">
+                    </figure>
+  
+  
+                </div>
+              </li>
+              <li>
+                <div class="project-card">
+  
+                  <figure class="card-banner img-holder"  style="height: max-content;">
+                      <img src="./assets/TPP Values/TPP Values Board (INTEGRITYi).jpg" 
+                        alt="Ligula tristique quis risus" class="img-cover">
+                    </figure>
+  
+  
+                </div>
+              </li>
+              <li>
+                <div class="project-card">
+  
+                  <figure class="card-banner img-holder"  style="height: max-content;">
+                      <img src="./assets/TPP Values/Trust.jpg" 
+                        alt="Ligula tristique quis risus" class="img-cover">
+                    </figure>
+  
+  
+                </div>
+              </li>
+
+          </ul>
+
+        </div>
+      </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+      <!--      
+        - #ABOUT
+      -->
+
+      <section class="about" aria-labelledby="about-label" style="background-color: #fff157; padding-top: 40px; padding-bottom: 50px;">
+        <h2 class="h2 section-title" style="text-align: center;">
+          Our Team
+        </h2>
+        
+        <div class="container">
+
+          <figure class="about-banner">
+            <img src="./assets/Employee Photos/Sharukh Tirumani.jpg"  style="width: 200px; border-radius: 50%;" alt="about banner"
+              class="w-100">
+          </figure>
+
+          <div class="feature-content">
+
+
+            <h2 class="h2 section-title" style="margin-bottom: 0px;">
+              Sharukh Tirumani
+            </h2>
+            <h3 class="h2 section-title" style="font-size: 2rem;" >Co-founder, CEO</h3>
+
+
+            <p class="section-text" style="margin-block: 25px 30px; color: black;">As the CEO of The Placement Park, I bring over 9+ years of Industry Expertise and a Passion for Connecting Exceptional Talent with Top-Notch Organizations. I possess a Diverse Skill set in End-to-End Recruitment that includes Expertise in Client Acquisitions, Client Management, Training & Development while establishing Strong Relationships with Companies, Colleges, Universities and Government Skill Development Centres all over India.</p>
+
+            <div class="btn-wrapper" style="justify-content:left; ">
+
+                <ul class="social-list">
+    
+                  <li>
+                    <a href="https://www.linkedin.com/in/sharukh-tirumani-5143ab180/" target="_blank" class="social-link-team">
+                      <ion-icon name="logo-linkedin"></ion-icon>
+                    </a>
+                  </li>
+        
+                </ul>
+              </div>
+
+
+
+          </div>
+        </div>
+      </section>
+
+
+
+
+
+      <!-- 
+        - #FEATURE
+      -->
+
+      <section class="section feature" aria-labelledby="feature-label" style="background-color: #fff157; padding-top: 0px; padding-bottom: 0px;">
+        <div class="container">
+
+          <figure class="feature-banner">
+            <img src="./assets/Employee Photos/Srikanth Yediri.jpg" style="border-radius: 50%; width: 200px;" alt="feature banner"
+              class="w-100">
+          </figure>
+
+          <div class="feature-content" style="text-align: left;">
+
+            <h2 class="h2 section-title" >
+             Srikanth Yediri
+            </h2>
+            <h3 class="h2 section-title" style="font-size: 2rem;" >Client Management Lead</h3>
+
+
+            <p class="section-text" style="color: black;">
+             
+              With 9+ years of Experience in Recruitment and Client Management, I have a proven track record of Delivering Exceptional Results. Thoughout the Years i have Developed a Deep Understanding of the Intricacies Involved in Building and Maintaining Successful Client Relationships and with a Unique combination of Strategic Thinking, Interpersonal Skills, and Business Acumen. I excel at Identifying Clients' needs and Developing Tailored Solutions that Drive Growth and Maximize Client Satisfaction.
+            </p>
+            <div class="btn-wrapper" style="justify-content:left;">
+
+                <ul class="social-list">
+    
+                  <li>
+                    <a href="https://www.linkedin.com/in/yediri-srikanth-1b2a61237/" target="_blank" class="social-link-team">
+                      <ion-icon name="logo-linkedin"></ion-icon>
+                    </a>
+                  </li>
+        
+
+        
+                </ul>
+              </div>
+
+
+
+          </div>
+
+        </div>
+      </section>
+
+      <section class="about" aria-labelledby="about-label" style="background-color: #fff157; padding-top: 40px; padding-bottom: 50px;">
+        <div class="container">
+
+          <figure class="about-banner">
+            <img src="./assets/Employee Photos/Pooja Singh.jpg" style="width: 200px; border-radius: 50%;" alt="about banner"
+              class="w-100">
+          </figure>
+
+          <div class="feature-content">
+
+
+            <h2 class="h2 section-title" style="margin-bottom: 0px;">
+             Pooja Singh
+            </h2>
+            <h3 class="h2 section-title" style="font-size: 2rem;" >Training and development Lead</h3>
+
+
+            <p class="section-text" style="margin-block: 25px 30px; color: black;">I'm Pooja Singh, a Highly Skilled Professional with a Wealth of Expertise in Corporate Training and Development. Over the past 8+ years, I have Dedicated myself to Designing and Delivering Impactful Training Programs that Drive Organizational Growth and Enhance Employee Performance. My Expertise spans a Wide Range of Topics, including Leadership Development, Communication Skills and Employee Engagement.
+            </p>
+
+            <div class="btn-wrapper" style="justify-content:left; ">
+
+                <ul class="social-list">
+    
+                  <li>
+                    <a href="https://www.linkedin.com/in/pooja-s-3730a326b/" target="_blank" class="social-link-team">
+                      <ion-icon name="logo-linkedin"></ion-icon>
+                    </a>
+                  </li>
+        
+        
+                </ul>
+              </div>
+
+
+
+          </div>
+        </div>
+      </section>
+
+      <section class="section feature" aria-labelledby="feature-label" style="background-color: #fff157; padding-bottom: 0px; padding-top: 0px;">
+        <div class="container">
+
+          <figure class="feature-banner">
+            <img src="./assets/Employee Photos/Chandrashekar Gandavarpu.jpg"  style="border-radius: 50%; width: 200px;" alt="feature banner"
+              class="w-100">
+          </figure>
+
+          <div class="feature-content">
+
+            <h2 class="h2 section-title">
+             Chandrashekar Gandavarapu
+            </h2>
+            <h3 class="h2 section-title" style="font-size: 2rem;" >Client Acquisition Lead</h3>
+
+
+            <p class="section-text" style="color: black;">
+              With over 7+ years of Experience in Recruitment and Client Acquisition, I have honed my skills in Client Acquisition, utilizing a combination of Strategic Planning, Market Analysis and Relationship Management. I excel at Identifying Potential Clients, Understanding their Needs and Developing Tailored Solutions that meet their Objectives.
+            </p>
+            <div class="btn-wrapper" style="justify-content:left;">
+
+                <ul class="social-list">
+    
+                  <li>
+                    <a href="https://www.linkedin.com/in/chandu-g-a3bb04106" target="_blank" class="social-link-team">
+                      <ion-icon name="logo-linkedin"></ion-icon>
+                    </a>
+                  </li>
+        
+                </ul>
+              </div>
+
+
+
+          </div>
+
+        </div>
+      </section>
+
+      
+      <section class="about" aria-labelledby="about-label" style="background-color: #fff157; padding-top: 40px; padding-bottom: 50px;">
+        <div class="container">
+
+          <figure class="about-banner">
+            <img src="./assets/Employee Photos/Surendra Varma.jpg" style="width: 200px; border-radius: 50%;" alt="about banner"
+              class="w-100">
+          </figure>
+
+          <div class="feature-content">
+
+
+            <h2 class="h2 section-title" style="margin-bottom: 0px;">
+             Surendra Varma
+            </h2>
+            <h3 class="h2 section-title" style="font-size: 2rem;" >On campus Manager</h3>
+
+
+            <p class="section-text" style="margin-block: 25px 30px; color: black;">With over 9 years of Experience in Training and Project Management, I bring a Wealth of Knowledge and Expertise to help as the On-Campus manager at TPP, With a ton of Experience in Training and Project Management. Throughout the years I have Cultivated and Maintained Strong Ties with Multiple Colleges and Universities, Creating a bridge between the clients and the Students. I have developed a deep understanding of the Industry and honed my skills to provide Effective Training Solutions and Manage Projects. </p>
+
+            <div class="btn-wrapper" style="justify-content:left; ">
+
+                <ul class="social-list">
+    
+                  <li>
+                    <a href="https://www.linkedin.com/in/surendra-varma/" target="_blank" class="social-link-team">
+                      <ion-icon name="logo-linkedin"></ion-icon>
+                    </a>
+                  </li>
+        
+  
+              </div>
+
+
+
+          </div>
+        </div>
+      </section>
+
+      <section class="section feature" aria-labelledby="feature-label" style="background-color: #fff157; padding-top:0px ; padding-bottom: 30px;">
+        <div class="container">
+
+          <figure class="feature-banner">
+            <img src="./assets/Employee Photos/Sameer Tirumani.jpg" style="border-radius: 50%; width: 200px;" alt="feature banner"
+              class="w-100">
+          </figure>
+
+          <div class="feature-content">
+
+            <h2 class="h2 section-title">
+            Sameer Tirumani
+            </h2>
+            <h3 class="h2 section-title" style="font-size: 2rem;" >Digital Consulting Manager</h3>
+
+
+            <p class="section-text" style="color: black;">
+              With over 6+ years of Experience in Content Creation and Social Media Handling, I am a Mixed Media Artist and Digital Designer well versed in Multiple Industry Standard Softwares and Skills. I have developed a deep understanding of the Industry and the Latest Trends and Techniques in Content Creation and Social Media Management and been Consistently Delivering High Quality Content that Resonates with our Target Audience.
+            </p>
+            <div class="btn-wrapper" style="justify-content:left;">
+
+                <ul class="social-list">
+    
+                  <li>
+                    <a href="https://www.linkedin.com/in/sameer-tirumani-5a2886124/" target="_blank" class="social-link-team">
+                      <ion-icon name="logo-linkedin"> </ion-icon> 
+
+                    </a>
+                  </li>
+  
+                </ul>
+              </div>
+
+
+
+          </div>
+
+        </div>
+      </section>
+
+
+      
+
+
+
+
+
+
+
+
+      <section class="section project" aria-labelledby="project-label" style="padding-top: 60px; padding-bottom: 60px;">
+        <div class="container">
+          <h2 class="h2 section-title" style="text-align: center; color: black; padding:5px;" >Visit Us Today</h2>
+
+
+          <ul class="grid-list-loc">
+
+
+
+            <li>
+              <div class="project-card">
+
+                <figure class="card-banner img-holder" style="--width: 560; height: 250px;">
+                  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3800.219459608518!2d83.30935697506716!3d17.73429568321333!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a394337bda3da7f%3A0xa042335e57fdd334!2sThe%20Placement%20Park!5e0!3m2!1sen!2sin!4v1682166566837!5m2!1sen!2sin" width="300" height="225" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" class="img-cover"></iframe>
+                </figure>
+
+                <div class="card-content">
+
+                  <h3 class="h3">
+                    <a href="#" class="card-title" style="text-align: center;">Andhra Pradesh</a>
+                  </h3>
+                  <p class="card-text">
+                    <div class="feature-card">
+
+                      <div class="card-icon" >
+                        <ion-icon name="checkmark" aria-hidden="true"></ion-icon>
+                      </div>
+    
+                      <span class="span" style="text-align: left;">
+                        50-75-27/2, Ganesh Nagar, Seetamma Peta, Satyam Junction, Visakhapatnam, Andhra Pradesh 530016                  </span>
+    
+                    </div>
+                  </p>
+
+
+
+                </div>
+
+              </div>
+            </li>
+
+            <li>
+              <div class="project-card">
+
+                <figure class="card-banner img-holder" style="--width: 560; height: 250px;">
+                  <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3806.389823946216!2d78.3912918!3d17.4410464!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb914fd73bf605%3A0xdb3b84c37c19a2b9!2sThe%20Placement%20Park!5e0!3m2!1sen!2sin!4v1682166350224!5m2!1sen!2sin" width="300" height="225" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" class="img-cover"></iframe>
+                </figure>
+
+                <div class="card-content">
+
+                  <h3 class="h3">
+                    <a href="#" class="card-title" style="text-align: center;">Telangana</a>
+                  </h3>
+      
+                  <p class="card-text">    
+                    <div class="feature-card">
+
+                      <div class="card-icon">
+                        <ion-icon name="checkmark" aria-hidden="true"></ion-icon>
+                      </div>
+    
+                      <span class="span" style="text-align: left;">
+                        6th Floor, KSR Towers, beside Indian Oil Petrol Pump, Phase 2, Kavuri Hills, Madhapur, Hyderabad, Telangana 500081                  
+                      </span>
+    
+                    </div>
+                    </p>
+
+
+
+                </div>
+
+              </div>
+            </li>
+
+          </ul>
+
+        </div>
+      </section>
+
+
+
+
+
+
+      <section class="section feature" aria-labelledby="feature-label" style="background-color: #fff157; padding-top:50px ; padding-bottom: 30px;">
+        <div class="container">
+
+          <figure class="feature-banner">
+            <img src="assets/images/Careers At TPP.jpg" style="border-radius: 0%; width: 350px;" alt="feature banner"
+              class="w-100">
+          </figure>
+
+          <div class="feature-content">
+
+            <h2 class="h2 section-title">
+            Careers at The Placement Park
+            </h2>
+
+
+            <p class="section-text" style="color: black;">
+              At The Placement Park, we believe in Creating an Environment that Blends Enjoyment, Inspiration, Respect, and Growth. Our Workplace is Designed to be Fun and Vibrant, Fostering a Positive Atmosphere where our Employees can Thrive.
+              We strive to inspire our Team Members through Challenging Projects, Innovation and a Supportive Culture that encourages them to reach their Full Potential.
+              <br>
+              <br>
+              Respect is at the core of our Values, Promoting Inclusivity, Open Communication and a Sense of Belonging. Our Work Environment provides Ample Opportunities for Professional Growth and Exposure, allowing individuals to Broaden their Horizons and Achieve Remarkable Career Milestones.
+            </p>
+            <div class="btn-wrapper" style="justify-content:left;">
+
+                <ul class="social-list">
+    
+
+                </ul>
+              </div>
+
+
+
+          </div>
+          
+
+        </div>
+        
+      </section>
+      <!-- <section class="section project" aria-labelledby="project-label" style=" background-color: #fff157;">
+        <div class="container">
+
+
+
+          <ul class="grid-list-collage">
+
+            <li>
+              <div class="project-card" style="height: max-content;">
+
+                <figure class="card-banner img-holder" style="--width: 560; height:300px;">
+                  <img src="1.jpg" width="560" height="450" 
+                    alt="Ligula tristique quis risus" class="img-cover">
+                </figure>
+
+
+              </div>
+            </li>
+
+            <li>
+                <div class="project-card" style="height: max-content;">
+  
+                  <figure class="card-banner img-holder" style="--width: 560; height: 300px;">
+                    <img src="2.jpg" width="560" height="350" 
+                      alt="Ligula tristique quis risus" class="img-cover">
+                  </figure>
+
+  
+                </div>
+              </li>
+
+              <li>
+                <div class="project-card" style="height: max-content;">
+  
+                  <figure class="card-banner img-holder" style="--width: 560; height: 300px;">
+                    <img src="3.jpg" width="560" height="350" 
+                      alt="Ligula tristique quis risus" class="img-cover">
+                  </figure>
+
+                </div>
+              </li>
+
+              <li>
+                <div class="project-card" style="height: max-content;">
+  
+                  <figure class="card-banner img-holder" style="--width: 560; height: 300px;">
+                    <img src="4.jpg" width="560" height="350" 
+                      alt="Ligula tristique quis risus" class="img-cover">
+                  </figure>
+  
+
+  
+                </div>
+              </li>
+
+
+
+
+          </ul>
+
+        </div>
+      </section> -->
+
+
+
+
+      
+    
+
+
+
+
+
+      <!-- 
+        - #CTA
+      -->
+
+      <section class="cta" aria-label="call to action" style="background-color: white;">
+        <div class="container">
+
+         <h2 class="h2 section-title" style="color: black;">
+          Join our Journey and our Vision to Shape the Future
+        </h2>
+
+          <div style="display: table-row;">
+
+          <h2 class="h2 section-title" style="color: black; margin-bottom: 0px;">
+            +91 9885563355
+          </h2>
+
+        </div>
+  
+        
+        
+          
+
+        </div>
+
+      </section>
+    </article>
+  </main>
+
+
+  <!-- 
+    - #FOOTER
+  -->
+  <footer class="footer" style="padding-bottom: 60px; background-color: black;" >
+    <div class="container grid-list">
+
+      <div class="footer-brand">
+
+        <a href="#" class="logo">
+          <img src="./assets/2 TPP Logos/Placement Park Logo Inverted.png" width="154" height="134" alt="Adex home">
+        </a>
+<!-- 
+        <p class="footer-text">
+          &copy; 2023 The Placement Park <br> All rights reserved.
+        </p> -->
+
+        <ul class="social-list" style="margin-top: 40px;">
+
+          <li>
+            <a href="https://facebook.com/theplacementpark/" target="_blank" class="social-link" style="color:#3b5998;">
+              <ion-icon name="logo-facebook"></ion-icon>
+            </a>
+          </li>
+
+          <li>
+            <a href="https://www.linkedin.com/company/65595236" target="_blank" class="social-link" style="color: #00acee;">
+              <ion-icon name="logo-linkedin"></ion-icon>
+            </a>
+          </li>
+
+          <li>
+            <a href="https://wa.me/919885563355" target="_blank" class="social-link" style="color: #25D366;">
+              <ion-icon name="logo-whatsapp"></ion-icon>
+            </a>
+          </li>
+
+          <li>
+            <a href="https://instagram.com/theplacementpark" target="_blank" class="social-link" style=" border-radius: 30%; background:  radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);;">
+              <ion-icon name="logo-instagram"></ion-icon>
+            </a>
+          </li>
+
+        </ul>
+        <div class="footer-list">
+
+  
+          <p class="footer-text">
+            &copy; 2023 Placement Park <br> All Rights Reserved
+          </p>
+  
+
+  
+        </div>
+
+      </div>
+
+      <ul class="footer-list" style="width: auto;">
+
+        <li>
+          <p class="h4 footer-list-title">Get in Touch</p>
+        </li>
+
+        <li>
+          <address class="footer-text">
+            Office: The Placement Park, 50-75-27, Ganesh Nagar, Satyam Junction, Vizag 530016
+          </address>
+        </li>
+        
+        <li>
+          <address class="footer-text">
+            Office: The Placement Park, KSR Towers, 6th Floor, Beside Indian Oil Pump, Madhapur, Hyderabad 500081
+          </address>
+        </li>
+
+        <!-- <li>
+          <a href="mailto:info@email.com" class="footer-link">info@email.com</a>
+        </li>
+
+        <li>
+          <a href="tel:001234567890" class="footer-link">00 (123) 456 78 90</a>
+        </li> -->
+
+      </ul>
+<!-- 
+      <ul class="footer-list">
+
+        <li>
+          <p class="h4 footer-list-title">Learn More</p>
+        </li>
+        <li>
+          <a href="#" class="footer-link"> Home</a>
+        </li>
+
+        <li>
+          <a href="#" class="footer-link"> Companies</a>
+        </li>
+
+        <li>
+          <a href="#" class="footer-link">Our Story</a>
+        </li>
+
+        <li>
+          <a href="#" class="footer-link">Colleges</a>
+        </li>
+
+        <li>
+          <a href="#" class="footer-link">Privacy Policy</a>
+        </li>
+
+      </ul> -->
+
+      <!-- <div class="footer-list">
+
+        <p class="h4 footer-list-title">Our CEO</p>
+
+        <p class="footer-text">
+          SharukhTirumani Co-Founder & CEO <br> The Placement Park
+        </p>
+
+        <li>
+          <a href="mailto:" class="footer-link">Sharukh@theplacementpark.com</a>
+        </li>
+
+        <li>
+          <a href="tel:" class="footer-link">+91 985563355</a>
+        </li>
+
+
+      </div> -->
+      <div class="footer-list" style="width: auto;">
+
+        
+        <li>
+          <p class="h4 footer-list-title">Contact</p>
+        </li>
+
+        <p class="footer-text">
+         The Placement Park
+        </p>
+        <li>
+          <a href="tel: +91 9885563355" class="footer-link" style="font-size: 1.8rem;">+91 9885563355</a>
+        </li>
+
+
+        <li>
+          <a href="mailto:sharukh@theplacementpark.com" class="footer-link" style="font-size: 1.8rem;">sharukh@theplacementpark.com</a>
+        </li>
+
+
+
+
+
+      </div>
+
+
+    </div>
+    <div class="read-more-container">
+
+
+
+    <div class="container" style="padding-top: 20px;">
+      <p>
+        <strong>Security Advice: </strong> At no point in the hiring process does The Placement Park charge a candidate a fee or money, and neither do we permit our staff to collect a fee from a candidate.  We want to make it absolutely clear that these contacts are only the work of imposters who want to defraud the candidates. The Placement Park has not given any individual permission to collect payments of any type from job seekers for our business or for anybody else involved in the hiring process.
+          <span class="read-more-text">
+            There are no fees associated with recruitment or interviewing at The Placement Park. Only official email addresses will be used for any correspondence with offer letters. The Placement Park, an expert in the field of HR services is always looking for talent. Please be aware, though, that there are some individuals posing as representatives of The Placement Park who demand payment in exchange for interviews or jobs with The Placement Park or its clients by using the company name The Placement Park or the names of our employees incorrectly. Additionally, these individuals are illegally utilising the firm's registered trademark by creating fraudulent and replicated websites to legitimise their actions and deceive unsuspecting prospects into falling for their traps.
+          </span>
+      </p>
+      <span class="read-more-btn" style="cursor: pointer;">Read More...</span>
+  </div>
+</div>
+
+  </footer>
+
+
+
+  <script>
+
+    
+const parentContainer =  document.querySelector('.read-more-container');
+
+parentContainer.addEventListener('click', event=>{
+
+    const current = event.target;
+
+    const isReadMoreBtn = current.className.includes('read-more-btn');
+
+    if(!isReadMoreBtn) return;
+
+    const currentText = event.target.parentNode.querySelector('.read-more-text');
+
+    currentText.classList.toggle('read-more-text--show');
+
+    current.textContent = current.textContent.includes('Read More') ? "Read Less..." : "Read More...";
+
+})
+
+
+
+    function scrollUp(){
+      const scrollUp = document.getElementById('scroll-up');
+      // When the scroll is higher than 400 viewport height, add the show-scroll class to the a tag with the scroll-top class
+      if(this.scrollY >= 0) scrollUp.classList.add('show-scroll'); else scrollUp.classList.remove('show-scroll')
+  }
+  window.addEventListener('scroll', scrollUp)
+  </script>
+            <!--=============== SCROLL UP ===============-->
+            <a href="https://api.whatsapp.com/send?phone=919885563355&amp;text= Hi, More Information about The Placement Park" target="_blank" class="scrollup" id="scroll-up"> 
+              <ion-icon id="sup" name="logo-whatsapp"></ion-icon>
+            </a>
+
+
+
+  
+          <!-- JavaScript Libraries -->
+          <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+          <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+          <script src="lib/wow/wow.min.js"></script>
+          <script src="lib/easing/easing.min.js"></script>
+          <script src="lib/waypoints/waypoints.min.js"></script>
+          <script src="lib/counterup/counterup.min.js"></script>
+          <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+          <script src="lib/lightbox/js/lightbox.min.js"></script>
+      
+          <!-- Template Javascript -->
+          <script src="js/main.js"></script>
+  
+
+
+  
+
+
+
+  <!-- 
+    - custom js link
+  -->
+  <script src="./assets/js/script.js"></script>
+
+  <!-- 
+    - ionicon
+  -->
+  
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+</body>
+
+</html>
